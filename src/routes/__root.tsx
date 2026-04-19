@@ -29,14 +29,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "geochallengedaily" },
+      { name: "description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
+De experto a fácil. Bilingüe ES/EN." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "geochallengedaily" },
+      { property: "og:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
+De experto a fácil. Bilingüe ES/EN." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "geochallengedaily" },
+      { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
+De experto a fácil. Bilingüe ES/EN." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9164b186-5ed7-444c-ac66-babc6d18a4f4/id-preview-4fc48d81--92e6c05b-0eb3-4f46-bc61-145ceb55a740.lovable.app-1776620514001.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9164b186-5ed7-444c-ac66-babc6d18a4f4/id-preview-4fc48d81--92e6c05b-0eb3-4f46-bc61-145ceb55a740.lovable.app-1776620514001.png" },
     ],
     links: [
       {
