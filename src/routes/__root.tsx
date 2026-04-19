@@ -42,8 +42,8 @@ De experto a fácil. Bilingüe ES/EN." },
       { name: "twitter:title", content: "geochallengedaily" },
       { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
 De experto a fácil. Bilingüe ES/EN." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9164b186-5ed7-444c-ac66-babc6d18a4f4/id-preview-4fc48d81--92e6c05b-0eb3-4f46-bc61-145ceb55a740.lovable.app-1776620514001.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9164b186-5ed7-444c-ac66-babc6d18a4f4/id-preview-4fc48d81--92e6c05b-0eb3-4f46-bc61-145ceb55a740.lovable.app-1776620514001.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/180f51b5-9c14-48f2-94d0-f19adc757866" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/180f51b5-9c14-48f2-94d0-f19adc757866" },
     ],
     links: [
       {
