@@ -63,25 +63,38 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+
+  /* GeoChallenge palette */
+  --background: oklch(0.985 0 0);              /* #fafafa */
+  --foreground: oklch(0.205 0 0);              /* #1a1a1a */
+  --card: oklch(1 0 0);                         /* #ffffff */
+  --card-foreground: oklch(0.205 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --popover-foreground: oklch(0.205 0 0);
+
+  --primary: oklch(0.68 0.17 145);             /* green #4CAF50 */
+  --primary-foreground: oklch(1 0 0);
+  --primary-soft: oklch(0.93 0.07 145);
+
+  --secondary: oklch(0.96 0 0);                /* #f0f0f0 */
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.55 0 0);          /* #666 */
+
+  --accent: oklch(0.85 0.16 85);               /* yellow #FFC107 */
+  --accent-foreground: oklch(0.25 0.02 80);
+
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.92 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.68 0.17 145);
+
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-pop: 0 10px 30px -8px rgba(0, 0, 0, 0.18);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -137,8 +150,37 @@
     border-color: var(--color-border);
   }
 
+  html, body {
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
 }
+
+/* ── GeoChallenge animations ───────────────────────────── */
+@keyframes gc-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes gc-pop-in {
+  0%   { opacity: 0; transform: scale(0.85); }
+  60%  { opacity: 1; transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+@keyframes gc-progress-fill {
+  from { width: 0%; }
+}
+@keyframes gc-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.gc-fade-in    { animation: gc-fade-in 200ms ease-out both; }
+.gc-pop-in     { animation: gc-pop-in 320ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.gc-overlay-in { animation: gc-overlay-in 180ms ease-out both; }
+
