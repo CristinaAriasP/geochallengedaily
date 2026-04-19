@@ -1183,13 +1183,13 @@ export const countries: Country[] = [
   },
   {
     id: 78,
-    name: "Cuba",
-    name_en: "Cuba",
+    name: "Bután",
+    name_en: "Bhutan",
     hints: [
-      { difficulty: "expert", text_es: "Su archipiélago alberga uno de los reptiles más pequeños del mundo, una pequeña rana del tamaño de una uña.", text_en: "Its archipelago is home to one of the smallest reptiles in the world, a tiny frog the size of a fingernail." },
-      { difficulty: "hard", text_es: "Su capital fue fundada en 1519 y conserva uno de los cascos históricos coloniales mejor preservados de América.", text_en: "Its capital was founded in 1519 and preserves one of the best-kept colonial old towns in the Americas." },
-      { difficulty: "medium", text_es: "Famoso por sus playas de arena blanca, la salsa cubana y los puros de Vuelta Abajo.", text_en: "Famous for its white-sand beaches, Cuban salsa, and Vuelta Abajo cigars." },
-      { difficulty: "easy", text_es: "Su capital es La Habana y es la mayor isla del Caribe.", text_en: "Its capital is Havana and it is the largest island in the Caribbean." },
+      { difficulty: "expert", text_es: "Es el único país del mundo que mide su progreso a través del índice de Felicidad Nacional Bruta en lugar del PIB.", text_en: "It is the only country in the world that measures its progress through a Gross National Happiness index rather than GDP." },
+      { difficulty: "hard", text_es: "Es el primer país del planeta con balance de carbono negativo: absorbe más CO₂ del que emite.", text_en: "It is the first country on the planet to be carbon negative: it absorbs more CO₂ than it emits." },
+      { difficulty: "medium", text_es: "Famoso por sus monasterios budistas colgados de acantilados, como el Nido del Tigre.", text_en: "Famous for its Buddhist monasteries clinging to cliffs, such as the Tiger's Nest." },
+      { difficulty: "easy", text_es: "Su capital es Timbu y se sitúa en el Himalaya, entre la India y China.", text_en: "Its capital is Thimphu and it lies in the Himalayas, between India and China." },
     ],
   },
   {
