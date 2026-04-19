@@ -1,6 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
+import type { Difficulty } from "@/data/countries";
+import {
+  DIFFICULTY_ORDER,
+  MAX_ATTEMPTS,
+  getCountryName,
+  getTodayKey,
+  getTodaysCountry,
+  isRealCountry,
+  matchesCountry,
+  normalizeString,
+  type Lang,
+} from "@/lib/geo";
+import { t } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,34 +34,127 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Difficulty = "Experto" | "Difícil" | "Medio" | "Fácil";
-
 const difficultyStyles: Record<Difficulty, string> = {
-  Experto: "bg-foreground text-background",
-  Difícil: "bg-destructive/10 text-destructive",
-  Medio: "bg-accent/30 text-accent-foreground",
-  Fácil: "bg-primary/15 text-primary",
+  expert: "bg-foreground text-background",
+  hard: "bg-destructive/10 text-destructive",
+  medium: "bg-accent/30 text-accent-foreground",
+  easy: "bg-primary/15 text-primary",
 };
 
-function Index() {
-  // Visual-only placeholder state (no game logic yet)
-  const [lang, setLang] = useState<"es" | "en">("es");
-  const [showInvalid, setShowInvalid] = useState(false);
-  const [resultState] = useState<"none" | "win" | "lose">("none");
+type GameState = "playing" | "won" | "lost";
 
-  const progress = 50;
-  const failedAttempts = ["Brasil", "México"];
-  const currentDifficulty: Difficulty = "Medio";
-  const totalAttempts = 4;
-  const usedAttempts = 2;
+interface SavedState {
+  date: string;
+  lang: Lang;
+  hintIndex: number;
+  attempts: number;
+  gameState: GameState;
+  guesses: string[];
+}
+
+const STORAGE_KEY = "geoChallenge";
+
+function loadSaved(): SavedState | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as SavedState;
+  } catch {
+    return null;
+  }
+}
+
+function Index() {
+  const todaysCountry = useMemo(() => getTodaysCountry(), []);
+  const todayKey = useMemo(() => getTodayKey(), []);
+
+  const [lang, setLang] = useState<Lang>("es");
+  const [hintIndex, setHintIndex] = useState(0);
+  const [attempts, setAttempts] = useState(0);
+  const [guess, setGuess] = useState("");
+  const [gameState, setGameState] = useState<GameState>("playing");
+  const [guesses, setGuesses] = useState<string[]>([]);
+  const [showInvalid, setShowInvalid] = useState(false);
+  const hydrated = useRef(false);
+
+  // Load saved progress on mount (only if same day)
+  useEffect(() => {
+    const saved = loadSaved();
+    if (saved && saved.date === todayKey) {
+      setLang(saved.lang);
+      setHintIndex(saved.hintIndex);
+      setAttempts(saved.attempts);
+      setGameState(saved.gameState);
+      setGuesses(saved.guesses);
+    }
+    hydrated.current = true;
+  }, [todayKey]);
+
+  // Persist on every change (after hydration)
+  useEffect(() => {
+    if (!hydrated.current || typeof window === "undefined") return;
+    const payload: SavedState = {
+      date: todayKey,
+      lang,
+      hintIndex,
+      attempts,
+      gameState,
+      guesses,
+    };
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  }, [todayKey, lang, hintIndex, attempts, gameState, guesses]);
+
+  const tx = t(lang);
+  const currentDifficulty = DIFFICULTY_ORDER[Math.min(hintIndex, DIFFICULTY_ORDER.length - 1)];
+  const currentHint = todaysCountry.hints[hintIndex];
+  const hintText = currentHint
+    ? lang === "es"
+      ? currentHint.text_es
+      : currentHint.text_en
+    : "";
+  const progress = Math.min(100, (hintIndex / (MAX_ATTEMPTS - 1)) * 100);
+  const correctName = getCountryName(todaysCountry, lang);
+  const isOver = gameState !== "playing";
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const value = guess.trim();
+    if (!value || isOver) return;
+
+    if (!isRealCountry(value)) {
+      setShowInvalid(true);
+      return;
+    }
+
+    if (matchesCountry(value, todaysCountry)) {
+      setGameState("won");
+      setGuess("");
+      return;
+    }
+
+    // Wrong but valid country: count attempt, show next hint
+    const nextAttempts = attempts + 1;
+    const displayName = normalizeString(value).toUpperCase();
+    const nextGuesses = [...guesses, displayName];
+    setGuesses(nextGuesses);
+    setAttempts(nextAttempts);
+
+    if (nextAttempts >= MAX_ATTEMPTS) {
+      setGameState("lost");
+    } else {
+      setHintIndex((i) => Math.min(i + 1, DIFFICULTY_ORDER.length - 1));
+    }
+    setGuess("");
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
-        {/* 1. HEADER */}
+        {/* HEADER */}
         <header className="gc-fade-in flex items-center justify-between">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            🌍 GeoChallenge
+            🌍 {tx.title}
           </h1>
           <button
             type="button"
@@ -60,116 +166,124 @@ function Index() {
           </button>
         </header>
 
-        {/* 2. PROGRESS BAR */}
-        <section className="gc-fade-in mt-6" style={{ animationDelay: "60ms" }}>
-          <div className="h-3 w-full overflow-hidden rounded-full bg-secondary">
-            <div
-              className="h-full rounded-full bg-primary transition-[width] duration-500 ease-out"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-
-          {/* failed attempts */}
-          {failedAttempts.length > 0 && (
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="text-xs font-medium text-muted-foreground">
-                Intentos fallidos:
-              </span>
-              {failedAttempts.map((country) => (
-                <span
-                  key={country}
-                  className="inline-flex items-center gap-1 rounded-full bg-accent/30 px-3 py-1 text-xs font-medium text-accent-foreground"
-                >
-                  ✗ {country}
-                </span>
-              ))}
+        {/* PROGRESS */}
+        {!isOver && (
+          <section className="gc-fade-in mt-6" style={{ animationDelay: "60ms" }}>
+            <div className="h-3 w-full overflow-hidden rounded-full bg-secondary">
+              <div
+                className="h-full rounded-full bg-primary transition-[width] duration-500 ease-out"
+                style={{ width: `${progress}%` }}
+              />
             </div>
-          )}
-        </section>
 
-        {/* 3. HINT BOX */}
-        <section
-          className="gc-fade-in mt-6 rounded-[10px] bg-card p-5 shadow-[var(--shadow-soft)]"
-          style={{ animationDelay: "120ms" }}
-        >
-          <span
-            className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${difficultyStyles[currentDifficulty]}`}
-          >
-            {currentDifficulty}
-          </span>
-          <p className="mt-4 text-lg leading-relaxed text-foreground sm:text-xl">
-            Este país es famoso por sus fiordos espectaculares y por ser uno de
-            los principales productores de salmón del mundo.
-          </p>
-        </section>
+            {guesses.length > 0 && (
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="text-xs font-medium text-muted-foreground">
+                  {tx.failedAttempts}
+                </span>
+                {guesses.map((country, i) => (
+                  <span
+                    key={`${country}-${i}`}
+                    className="inline-flex items-center gap-1 rounded-full bg-accent/30 px-3 py-1 text-xs font-medium text-accent-foreground"
+                  >
+                    ✗ {country}
+                  </span>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
 
-        {/* 4. INPUT + BUTTON */}
-        <section
-          className="gc-fade-in mt-6"
-          style={{ animationDelay: "180ms" }}
-        >
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              // Demo: open invalid popup so users can see it
-              setShowInvalid(true);
-            }}
-            className="flex items-stretch gap-2"
+        {/* HINT */}
+        {!isOver && (
+          <section
+            className="gc-fade-in mt-6 rounded-[10px] bg-card p-5 shadow-[var(--shadow-soft)]"
+            style={{ animationDelay: "120ms" }}
+            key={hintIndex}
           >
-            <input
-              type="text"
-              placeholder="Escribe un país..."
-              className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
-            />
-            <button
-              type="submit"
-              aria-label="Enviar"
-              className="flex shrink-0 items-center justify-center rounded-[10px] bg-primary px-5 text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:bg-primary/90 hover:shadow-md active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+            <span
+              className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${difficultyStyles[currentDifficulty]}`}
             >
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </form>
-        </section>
+              {tx.difficulty[currentDifficulty]}
+            </span>
+            <p className="mt-4 text-lg leading-relaxed text-foreground sm:text-xl">
+              {hintText}
+            </p>
+          </section>
+        )}
 
-        {/* 5. RESULT MESSAGE (conditional) */}
-        {resultState === "win" && (
-          <section className="gc-pop-in mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-pop)] ring-2 ring-primary/30">
+        {/* INPUT */}
+        {!isOver && (
+          <section className="gc-fade-in mt-6" style={{ animationDelay: "180ms" }}>
+            <form onSubmit={handleSubmit} className="flex items-stretch gap-2">
+              <input
+                type="text"
+                value={guess}
+                onChange={(e) => setGuess(e.target.value)}
+                placeholder={tx.placeholder}
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
+                className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
+              />
+              <button
+                type="submit"
+                aria-label={tx.submit}
+                className="flex shrink-0 items-center justify-center rounded-[10px] bg-primary px-5 text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:bg-primary/90 hover:shadow-md active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+              >
+                <ArrowRight className="h-5 w-5" />
+              </button>
+            </form>
+          </section>
+        )}
+
+        {/* RESULT — WIN */}
+        {gameState === "won" && (
+          <section className="gc-pop-in mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-pop)] ring-2 ring-primary/40">
             <div className="text-5xl">🎉</div>
             <p className="mt-2 text-sm font-medium uppercase tracking-wider text-primary">
-              ¡Victoria!
+              {tx.win}
             </p>
-            <p className="mt-1 text-3xl font-bold">Noruega</p>
+            <p className="mt-1 text-3xl font-bold sm:text-4xl">{correctName}</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              {tx.winSubtitle(attempts + 1)}
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">{tx.comeBack}</p>
           </section>
         )}
 
-        {resultState === "lose" && (
-          <section className="gc-fade-in mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-soft)]">
-            <p className="text-sm font-medium text-muted-foreground">
-              No fue esta vez. El país era:
-            </p>
-            <p className="mt-2 text-2xl font-bold">Noruega</p>
+        {/* RESULT — LOSE */}
+        {gameState === "lost" && (
+          <section className="gc-fade-in mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-soft)] ring-2 ring-destructive/40">
+            <p className="text-sm font-medium text-muted-foreground">{tx.lose}</p>
+            <p className="mt-2 text-3xl font-bold">{correctName}</p>
+            <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
           </section>
         )}
 
-        {/* 6. STATS */}
-        <section
-          className="gc-fade-in mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground"
-          style={{ animationDelay: "240ms" }}
-        >
-          <span className="font-medium text-foreground">{usedAttempts}/{totalAttempts}</span>
-          <span>intentos usados</span>
-        </section>
+        {/* STATS */}
+        {!isOver && (
+          <section
+            className="gc-fade-in mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground"
+            style={{ animationDelay: "240ms" }}
+          >
+            <span className="font-medium text-foreground">
+              {attempts}/{MAX_ATTEMPTS}
+            </span>
+            <span>{tx.attemptsUsed}</span>
+          </section>
+        )}
 
-        {/* 7. FOOTER */}
+        {/* FOOTER */}
         <footer
           className="gc-fade-in mt-10 text-center text-xs text-muted-foreground"
           style={{ animationDelay: "300ms" }}
         >
-          Un país diferente cada día 🌎
+          {tx.footer}
         </footer>
       </div>
 
-      {/* INVALID COUNTRY POPUP */}
+      {/* INVALID POPUP */}
       {showInvalid && (
         <div
           className="gc-overlay-in fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
@@ -182,22 +296,20 @@ function Index() {
             <button
               type="button"
               onClick={() => setShowInvalid(false)}
-              aria-label="Cerrar"
+              aria-label={tx.close}
               className="absolute right-3 top-3 rounded-full p-1 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               <X className="h-4 w-4" />
             </button>
             <div className="text-3xl">🤔</div>
-            <h2 className="mt-2 text-lg font-semibold">País no válido</h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Asegúrate de escribir un nombre de país correctamente.
-            </p>
+            <h2 className="mt-2 text-lg font-semibold">{tx.invalidTitle}</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{tx.invalidBody}</p>
             <button
               type="button"
               onClick={() => setShowInvalid(false)}
               className="mt-5 w-full rounded-[10px] bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-[0.98]"
             >
-              Entendido
+              {tx.gotIt}
             </button>
           </div>
         </div>
