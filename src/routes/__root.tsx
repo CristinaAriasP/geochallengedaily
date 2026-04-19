@@ -30,18 +30,15 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "geochallengedaily" },
-      { name: "description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
-De experto a fácil. Bilingüe ES/EN." },
+      { name: "description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. De experto a fácil. Bilingüe ES/EN." },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "geochallengedaily" },
-      { property: "og:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
-De experto a fácil. Bilingüe ES/EN." },
+      { property: "og:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. De experto a fácil. Bilingüe ES/EN." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "geochallengedaily" },
-      { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. 
-De experto a fácil. Bilingüe ES/EN." },
+      { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. De experto a fácil. Bilingüe ES/EN." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/180f51b5-9c14-48f2-94d0-f19adc757866" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/180f51b5-9c14-48f2-94d0-f19adc757866" },
     ],
