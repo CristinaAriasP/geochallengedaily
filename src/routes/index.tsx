@@ -14,6 +14,16 @@ import {
   type Lang,
 } from "@/lib/geo";
 import { t } from "@/lib/i18n";
+import { AnimatedBackground, type BgVariant } from "@/components/AnimatedBackground";
+
+const BG_STORAGE_KEY = "geoChallenge:bgVariant";
+const BG_VARIANTS: { value: BgVariant; label: string }[] = [
+  { value: "none", label: "Ninguno" },
+  { value: "aurora", label: "Aurora" },
+  { value: "meridians", label: "Meridianos" },
+  { value: "constellation", label: "Constelación" },
+  { value: "pattern", label: "Patrón" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,7 +86,22 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [showInvalid, setShowInvalid] = useState(false);
+  const [bgVariant, setBgVariant] = useState<BgVariant>("aurora");
   const hydrated = useRef(false);
+
+  // Load background preference
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const saved = window.localStorage.getItem(BG_STORAGE_KEY) as BgVariant | null;
+    if (saved && ["none", "aurora", "meridians", "constellation", "pattern"].includes(saved)) {
+      setBgVariant(saved);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(BG_STORAGE_KEY, bgVariant);
+  }, [bgVariant]);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
@@ -149,8 +174,9 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <AnimatedBackground variant={bgVariant} />
+      <div className="relative mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
         {/* HEADER */}
         <header className="gc-fade-in flex items-center justify-between">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
