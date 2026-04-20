@@ -249,6 +249,30 @@ function Index() {
               {tx.winSubtitle(attempts + 1)}
             </p>
             <p className="mt-1 text-sm text-muted-foreground">{tx.comeBack}</p>
+
+            <div className="mt-6 border-t border-border pt-5 text-left">
+              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {tx.allHintsTitle}
+              </p>
+              <ul className="space-y-3">
+                {todaysCountry.hints.map((h, i) => (
+                  <li
+                    key={h.difficulty}
+                    className="gc-fade-in rounded-[10px] bg-secondary/40 p-3"
+                    style={{ animationDelay: `${120 + i * 80}ms` }}
+                  >
+                    <span
+                      className={`inline-block rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${difficultyStyles[h.difficulty]}`}
+                    >
+                      {tx.difficulty[h.difficulty]}
+                    </span>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground">
+                      {lang === "es" ? h.text_es : h.text_en}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
         )}
 
