@@ -480,23 +480,23 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del Sudeste Asiático que nunca fue colonizado por una potencia europea, y su nombre significa literalmente «Tierra de los Libres».",
-        text_en: "It is the only Southeast Asian country never colonized by a European power, and its name literally means 'Land of the Free'.",
+        text_es: "En la historia de sus relaciones marítimas, ha tenido un rol crucial en el comercio de la gamboge, una resina gomosa utilizada como pigmento amarillo.",
+        text_en: "In the history of its maritime relations, it played a crucial role in the trade of gamboge, a gummy resin used as a yellow pigment.",
       },
       {
         difficulty: "hard",
-        text_es: "El nombre ceremonial de su capital es el más largo del mundo, con 168 letras según el Récord Guinness.",
-        text_en: "The ceremonial name of its capital is the longest in the world, with 168 letters according to the Guinness Records.",
+        text_es: "Es el único país en su subregión del sudeste asiático continental que nunca ha sido colonizado por potencias europeas.",
+        text_en: "It is the only country in its continental Southeast Asian subregion that has never been colonized by European powers.",
       },
       {
         difficulty: "medium",
-        text_es: "Famoso por el pad thai, los templos budistas dorados, el muay thai y los elefantes.",
-        text_en: "Famous for pad thai, golden Buddhist temples, Muay Thai, and elephants.",
+        text_es: "Su cocina es famosa por equilibrar cinco sabores fundamentales: dulce, agrio, salado, amargo y picante.",
+        text_en: "Its cuisine is renowned for balancing five fundamental flavors: sweet, sour, salty, bitter, and spicy.",
       },
       {
         difficulty: "easy",
-        text_es: "Su capital es Bangkok y se conoce como «el país de las sonrisas».",
-        text_en: "Its capital is Bangkok and it's known as the 'Land of Smiles'.",
+        text_es: "Una gran parte de su economía depende de la exportación de arroz, siendo uno de los mayores exportadores mundiales de este cereal.",
+        text_en: "A large part of its economy relies on rice exports, making it one of the world's largest exporters of this grain.",
       },
     ],
   },
@@ -586,10 +586,26 @@ export const countries: Country[] = [
     name: "Estados Unidos",
     name_en: "United States",
     hints: [
-      { difficulty: "expert", text_es: "Su constitución es la más antigua aún vigente del mundo y solo ha sido enmendada 27 veces desde 1789.", text_en: "Its constitution is the oldest still in effect in the world and has only been amended 27 times since 1789." },
-      { difficulty: "hard", text_es: "Posee el mayor PIB nominal del planeta y emite la moneda de reserva mundial.", text_en: "It has the largest nominal GDP on the planet and issues the world's reserve currency." },
-      { difficulty: "medium", text_es: "Famoso por Hollywood, Silicon Valley, el jazz y la NBA.", text_en: "Famous for Hollywood, Silicon Valley, jazz, and the NBA." },
-      { difficulty: "easy", text_es: "Su capital es Washington D.C., tiene 50 estados y la Estatua de la Libertad en Nueva York.", text_en: "Its capital is Washington D.C., it has 50 states, and the Statue of Liberty stands in New York." },
+      {
+        difficulty: "expert",
+        text_es: "Su punto más oriental, ubicado en el Atlántico, se encuentra en la isla de Semisopochnoi, en las Aleutianas, al oeste de la línea internacional de cambio de fecha.",
+        text_en: "Its easternmost point, located in the Atlantic, is on Semisopochnoi Island, in the Aleutians, west of the International Date Line.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el único país industrializado que no ha ratificado la Convención sobre los Derechos del Niño.",
+        text_en: "It is the only industrialized nation that has not ratified the Convention on the Rights of the Child.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su territorio incluye una masa terrestre no contigua significativamente grande, más allá de sus límites principales.",
+        text_en: "Its territory includes a significantly large non-contiguous landmass, beyond its main borders.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es la sede de la Organización de las Naciones Unidas.",
+        text_en: "It is the headquarters of the United Nations.",
+      },
     ],
   },
   {
@@ -1110,10 +1126,26 @@ export const countries: Country[] = [
     name: "Vietnam",
     name_en: "Vietnam",
     hints: [
-      { difficulty: "expert", text_es: "Es el segundo mayor exportador mundial de café y el primero de la variedad robusta.", text_en: "It is the world's second-largest coffee exporter and the largest exporter of robusta beans." },
-      { difficulty: "hard", text_es: "Su forma alargada se extiende más de 1.600 km a lo largo del mar de China Meridional.", text_en: "Its elongated shape stretches more than 1,600 km along the South China Sea." },
-      { difficulty: "medium", text_es: "Famoso por la sopa pho, la bahía de Ha Long y los túneles de Cu Chi.", text_en: "Famous for pho soup, Ha Long Bay, and the Cu Chi tunnels." },
-      { difficulty: "easy", text_es: "Su capital es Hanói y se conoce mundialmente por la guerra que libró contra Estados Unidos.", text_en: "Its capital is Hanoi and it is globally known for the war it fought against the United States." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los dos únicos países sin frontera terrestre con Laos que han estado en guerra con Camboya desde 1970.",
+        text_en: "It is one of only two countries without a land border with Laos that have been at war with Cambodia since 1970.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Gran parte de su territorio se encuentra dentro de la península de Indochina, y en su historia fue hogar de la cultura Đông Sơn.",
+        text_en: "Much of its territory lies within the Indochinese Peninsula, and in its history, it was home to the Đông Sơn culture.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su costa se extiende por más de 3.200 kilómetros y es conocida por sus bahías cársticas de piedra caliza.",
+        text_en: "Its coastline stretches for over 3,200 kilometers and is known for its limestone karst bays.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es el segundo mayor exportador mundial de café, centrándose principalmente en la variedad Robusta.",
+        text_en: "It is the world's second-largest exporter of coffee, focusing primarily on the Robusta variety.",
+      },
     ],
   },
   {
@@ -1121,10 +1153,26 @@ export const countries: Country[] = [
     name: "Corea del Sur",
     name_en: "South Korea",
     hints: [
-      { difficulty: "expert", text_es: "Su alfabeto fue inventado en el siglo XV por el rey Sejong y está considerado uno de los sistemas de escritura más científicos del mundo.", text_en: "Its alphabet was invented in the 15th century by King Sejong and is considered one of the most scientific writing systems in the world." },
-      { difficulty: "hard", text_es: "Empresas como Samsung, Hyundai y LG han convertido al país en una potencia tecnológica e industrial.", text_en: "Companies like Samsung, Hyundai, and LG have turned the country into a technological and industrial powerhouse." },
-      { difficulty: "medium", text_es: "Famoso por el K-pop, los dramas televisivos, el kimchi y la barbacoa coreana.", text_en: "Famous for K-pop, TV dramas, kimchi, and Korean barbecue." },
-      { difficulty: "easy", text_es: "Su capital es Seúl y comparte península con su vecino del norte.", text_en: "Its capital is Seoul and it shares its peninsula with its northern neighbor." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los pocos países en el mundo que utiliza un sistema de edad diferente al estándar internacional, donde las personas son consideradas un año al nacer.",
+        text_en: "It is one of the few countries in the world that uses a different age system from the international standard, where people are considered one year old at birth.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su costa oriental experimenta el fenómeno del 'mar de Donghae', caracterizado por mareas frías y profundas que influyen en su biodiversidad marina y clima local.",
+        text_en: "Its eastern coast experiences the 'Donghae Sea' phenomenon, characterized by cold and deep tides that influence its marine biodiversity and local climate.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Posee una de las redes de internet más rápidas y con mayor penetración a nivel global.",
+        text_en: "It boasts one of the fastest and most highly penetrated internet networks globally.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Este país se encuentra en una península en el este de Asia y comparte una frontera terrestre con solo otra nación.",
+        text_en: "This country is located on a peninsula in East Asia and shares a land border with only one other nation.",
+      },
     ],
   },
   {
@@ -1132,10 +1180,26 @@ export const countries: Country[] = [
     name: "Singapur",
     name_en: "Singapore",
     hints: [
-      { difficulty: "expert", text_es: "Es uno de los tres únicos países-ciudad soberanos del mundo y obtuvo su independencia tras ser expulsado de una federación en 1965.", text_en: "It is one of only three sovereign city-states in the world and gained independence after being expelled from a federation in 1965." },
-      { difficulty: "hard", text_es: "Su puerto es uno de los más activos del planeta y su PIB per cápita está entre los más altos del mundo.", text_en: "Its port is one of the busiest on the planet and its GDP per capita is among the highest in the world." },
-      { difficulty: "medium", text_es: "Famoso por sus rascacielos futuristas, los Gardens by the Bay y el hotel Marina Bay Sands.", text_en: "Famous for its futuristic skyscrapers, the Gardens by the Bay, and the Marina Bay Sands hotel." },
-      { difficulty: "easy", text_es: "Es una pequeña isla-Estado del sudeste asiático con cuatro idiomas oficiales.", text_en: "It is a small island city-state in Southeast Asia with four official languages." },
+      {
+        difficulty: "expert",
+        text_es: "Su reserva de agua está gestionada por un sistema de cuatro grifos, que incluye agua desalinizada, agua recuperada y agua importada.",
+        text_en: "Its water supply is managed by a Four National Taps system, which includes desalinated water, reclaimed water, and imported water.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Fue fundado como un puesto comercial británico en 1819 por Sir Stamford Raffles.",
+        text_en: "It was founded as a British trading post in 1819 by Sir Stamford Raffles.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es uno de los tres estados-ciudad soberanos que quedan en el mundo.",
+        text_en: "It is one of only three sovereign city-states remaining in the world.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es un archipiélago compuesto por una isla principal y más de 60 islas satélite más pequeñas.",
+        text_en: "It is an archipelago consisting of one main island and over 60 smaller satellite islands.",
+      },
     ],
   },
   {
@@ -1143,10 +1207,26 @@ export const countries: Country[] = [
     name: "Malasia",
     name_en: "Malaysia",
     hints: [
-      { difficulty: "expert", text_es: "Su territorio está dividido por el mar de China Meridional en dos zonas separadas por más de 600 km.", text_en: "Its territory is split by the South China Sea into two parts more than 600 km apart." },
-      { difficulty: "hard", text_es: "Fue el primer lugar del mundo en producir caucho natural a gran escala y aún es uno de los grandes exportadores de aceite de palma.", text_en: "It was the first place in the world to produce natural rubber on a massive scale and is still one of the top palm oil exporters." },
-      { difficulty: "medium", text_es: "Famoso por las Torres Petronas, las playas de Langkawi y la gastronomía multicultural.", text_en: "Famous for the Petronas Towers, the beaches of Langkawi, and its multicultural cuisine." },
-      { difficulty: "easy", text_es: "Su capital es Kuala Lumpur y limita con Tailandia, Indonesia y Brunéi.", text_en: "Its capital is Kuala Lumpur and it borders Thailand, Indonesia, and Brunei." },
+      {
+        difficulty: "expert",
+        text_es: "Su sistema legal incorpora la 'Ley del Camino Real' desde la era colonial británica.",
+        text_en: "Its legal system incorporates the 'Law of the Royal Way' from the British colonial era.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Una porción de su masa terrestre se encuentra en una isla compartida con otras naciones.",
+        text_en: "A portion of its landmass is located on an island shared with other nations.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es un importante productor y exportador mundial de un aceite vegetal muy utilizado.",
+        text_en: "It is a major global producer and exporter of a widely used vegetable oil.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Está situado en el sudeste asiático, con costas en el Mar de China Meridional y el Estrecho de Malaca.",
+        text_en: "It is located in Southeast Asia, with coastlines on the South China Sea and the Strait of Malacca.",
+      },
     ],
   },
   {
@@ -1154,10 +1234,26 @@ export const countries: Country[] = [
     name: "Nepal",
     name_en: "Nepal",
     hints: [
-      { difficulty: "expert", text_es: "Es el único país del mundo cuya bandera no es rectangular: está formada por dos triángulos superpuestos.", text_en: "It is the only country in the world whose flag is not rectangular: it is made of two stacked triangles." },
-      { difficulty: "hard", text_es: "Lugar de nacimiento de Buda en Lumbini hace más de 2.500 años.", text_en: "Birthplace of the Buddha in Lumbini more than 2,500 years ago." },
-      { difficulty: "medium", text_es: "Famoso por albergar ocho de las catorce montañas más altas del mundo.", text_en: "Famous for hosting eight of the world's fourteen highest mountains." },
-      { difficulty: "easy", text_es: "Su capital es Katmandú y en su frontera norte se eleva el monte Everest.", text_en: "Its capital is Kathmandu and Mount Everest rises along its northern border." },
+      {
+        difficulty: "expert",
+        text_es: "Es el único estado con una bandera no cuadrangular, formada por dos triángulos superpuestos que representan el Himalaya y las dos religiones principales.",
+        text_en: "It is the only state with a non-quadrangular flag, consisting of two superimposed triangles representing the Himalayas and the two main religions.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Una de sus festividades más significativas, Dashain, celebra la victoria del bien sobre el mal y se extiende por quince días lunares.",
+        text_en: "One of its most significant festivals, Dashain, celebrates the victory of good over evil and spans fifteen lunar days.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su territorio es famoso por albergar ocho de las diez montañas más altas de la Tierra.",
+        text_en: "Its territory is famous for hosting eight of the ten highest mountains on Earth.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es un país mayoritariamente montañoso ubicado en el sur de Asia, sin salida al mar.",
+        text_en: "It is a predominantly mountainous landlocked country located in South Asia.",
+      },
     ],
   },
   {
@@ -1165,10 +1261,26 @@ export const countries: Country[] = [
     name: "Sri Lanka",
     name_en: "Sri Lanka",
     hints: [
-      { difficulty: "expert", text_es: "Es el mayor exportador mundial de canela de Ceilán y uno de los principales productores de zafiros.", text_en: "It is the world's largest exporter of Ceylon cinnamon and one of the top sapphire producers." },
-      { difficulty: "hard", text_es: "Tiene dos capitales reconocidas oficialmente: una administrativa y otra ejecutiva.", text_en: "It has two officially recognized capitals: an administrative one and an executive one." },
-      { difficulty: "medium", text_es: "Famoso por sus plantaciones de té, los elefantes asiáticos y las playas tropicales.", text_en: "Famous for its tea plantations, Asian elephants, and tropical beaches." },
-      { difficulty: "easy", text_es: "Es una isla con forma de gota al sur de la India y antes se llamaba Ceilán.", text_en: "It is a teardrop-shaped island south of India and was formerly called Ceylon." },
+      {
+        difficulty: "expert",
+        text_es: "Una especie de rana arbórea microhílida endémica de este lugar, Kaloula taprobanica, comparte su nombre con una antigua designación sánscrita para la isla.",
+        text_en: "A microhylid tree frog species endemic to this location, Kaloula taprobanica, shares its name with an ancient Sanskrit designation for the island.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el mayor exportador mundial de un tipo específico de canela verdadera (Cinnamomum verum), una especia muy valorada globalmente.",
+        text_en: "It is the world's largest exporter of a specific type of true cinnamon (Cinnamomum verum), a globally valued spice.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Este territorio insular es reconocido por sus exportaciones de gemas, siendo el zafiro azul una de las más destacadas.",
+        text_en: "This island territory is renowned for its gem exports, with blue sapphire being one of the most prominent.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Su silueta a menudo se describe como la de una lágrima u, ocasionalmente, una perla, al sur de un gran subcontinente.",
+        text_en: "Its silhouette is often described as resembling a teardrop or, occasionally, a pearl, located south of a large subcontinent.",
+      },
     ],
   },
   {
@@ -1176,10 +1288,26 @@ export const countries: Country[] = [
     name: "Sudáfrica",
     name_en: "South Africa",
     hints: [
-      { difficulty: "expert", text_es: "Es el único país del mundo con tres capitales oficiales reconocidas constitucionalmente.", text_en: "It is the only country in the world with three constitutionally recognized capitals." },
-      { difficulty: "hard", text_es: "Posee 11 idiomas oficiales y fue el primer país en abandonar voluntariamente su programa de armas nucleares.", text_en: "It has 11 official languages and was the first country to voluntarily abandon its nuclear weapons program." },
-      { difficulty: "medium", text_es: "Famoso por los safaris en el parque Kruger y por la lucha de Nelson Mandela contra el apartheid.", text_en: "Famous for safaris in Kruger National Park and for Nelson Mandela's fight against apartheid." },
-      { difficulty: "easy", text_es: "Sus ciudades más conocidas son Ciudad del Cabo y Johannesburgo, y se sitúa en el extremo sur del continente africano.", text_en: "Its most famous cities are Cape Town and Johannesburg, and it lies at the southern tip of the African continent." },
+      {
+        difficulty: "expert",
+        text_es: "Una especie particular de escarabajo pelotero, la Circellium bacchus, endémica de una pequeña región, muestra un comportamiento de anidación inusual que implica el movimiento de estiércol a distancias considerables para sus cámaras de cría.",
+        text_en: "A particular species of dung beetle, Circellium bacchus, endemic to a small region, exhibits unusual nesting behavior involving significant distances of dung transport for its brood chambers.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el único país del mundo que ha abandonado y luego vuelto a unirse a la Commonwealth de Naciones.",
+        text_en: "It is the only country in the world to have left and then rejoined the Commonwealth of Nations.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "La Cuna de la Humanidad, un sitio que contiene una de las concentraciones más ricas de yacimientos de homínidos fósiles en el mundo, está ubicada dentro de sus fronteras.",
+        text_en: "The Cradle of Humankind, a site containing one of the richest concentrations of hominid fossil sites in the world, is located within its borders.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Limita con dos países sin litoral que son completamente enclavados dentro de sus propias fronteras.",
+        text_en: "It borders two landlocked countries that are completely enclaved within its own borders.",
+      },
     ],
   },
   {
@@ -1187,10 +1315,26 @@ export const countries: Country[] = [
     name: "Nigeria",
     name_en: "Nigeria",
     hints: [
-      { difficulty: "expert", text_es: "Su industria cinematográfica produce más películas al año que Hollywood y se conoce con un apodo propio.", text_en: "Its film industry produces more movies per year than Hollywood and is known by its own nickname." },
-      { difficulty: "hard", text_es: "Es el país más poblado de África y la mayor economía del continente.", text_en: "It is the most populous country in Africa and the continent's largest economy." },
-      { difficulty: "medium", text_es: "Famoso por la música afrobeats, el petróleo del delta del Níger y el fútbol de las 'Súper Águilas'.", text_en: "Famous for afrobeats music, the oil of the Niger Delta, and the 'Super Eagles' football team." },
-      { difficulty: "easy", text_es: "Su capital es Abuya y limita con el golfo de Guinea al sur.", text_en: "Its capital is Abuja and it borders the Gulf of Guinea to the south." },
+      {
+        difficulty: "expert",
+        text_es: "Una especie de ave, la chova piquirroja, tiene su subespecie africana, 'niger', que recibe su nombre de una denominación histórica de su región geográfica.",
+        text_en: "A species of bird, the red-billed chough, has its African subspecies, 'niger', named after a historical denomination of its geographical region.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los pocos países del mundo que ha sido sede del Festival Mundial de Artes Negras dos veces, en 1977.",
+        text_en: "It is one of the few countries in the world to have hosted the World Festival of Black Arts twice, in 1977.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su área contiene la mayor diversidad de mariposas de toda África.",
+        text_en: "Its area contains the greatest diversity of butterflies in all of Africa.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Este país es habitado por más de 250 grupos étnicos, siendo los tres más grandes los Hausa, Igbo y Yoruba.",
+        text_en: "This country is inhabited by over 250 ethnic groups, with the three largest being the Hausa, Igbo, and Yoruba.",
+      },
     ],
   },
   {
@@ -1198,10 +1342,26 @@ export const countries: Country[] = [
     name: "Kenia",
     name_en: "Kenya",
     hints: [
-      { difficulty: "expert", text_es: "Su Valle del Rift es considerado por los paleontólogos como una de las cunas de la humanidad.", text_en: "Its Rift Valley is considered by paleontologists to be one of the cradles of humankind." },
-      { difficulty: "hard", text_es: "Sus corredores de fondo dominan los maratones internacionales desde hace décadas.", text_en: "Its long-distance runners have dominated international marathons for decades." },
-      { difficulty: "medium", text_es: "Famoso por la gran migración de ñus en el Masái Mara y por el monte Kilimanjaro en su frontera.", text_en: "Famous for the great wildebeest migration in the Masai Mara and for Mount Kilimanjaro on its border." },
-      { difficulty: "easy", text_es: "Su capital es Nairobi y se sitúa en el este de África, atravesado por el ecuador.", text_en: "Its capital is Nairobi and it lies in East Africa, crossed by the equator." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los veinticinco países en el mundo que se encuentra en la Gran Falla del Rift y que tiene salida al mar.",
+        text_en: "It is one of twenty-five countries in the world that lies within the Great Rift Valley and has an outlet to the sea.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su nombre se deriva de un pico volcánico prominente, y sus límites modernos fueron establecidos por intereses coloniales vinculados a una ruta comercial hacia un gran lago interior.",
+        text_en: "Its name is derived from a prominent volcanic peak, and its modern boundaries were set by colonial interests linked to a trade route to a large inland lake.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es un exportador significativo de té y café, y gran parte de su economía se beneficia de un género específico de turismo que implica la observación de fauna salvaje en grandes reservas naturales.",
+        text_en: "It is a significant exporter of tea and coffee, and much of its economy benefits from a specific genre of tourism involving wildlife observation in large nature reserves.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Este país de África Oriental tiene una costa en el Océano Índico y es ampliamente reconocido por sus vastas sabanas y la Gran Migración anual de ñus que cruza sus parques nacionales.",
+        text_en: "This East African country has a coastline on the Indian Ocean and is widely recognized for its vast savannas and the annual Great Migration of wildebeests that crosses its national parks.",
+      },
     ],
   },
   {
@@ -1209,10 +1369,26 @@ export const countries: Country[] = [
     name: "Etiopía",
     name_en: "Ethiopia",
     hints: [
-      { difficulty: "expert", text_es: "Es el único país africano que nunca fue colonizado de forma duradera por una potencia europea, y emplea su propio calendario de 13 meses.", text_en: "It is the only African country never permanently colonized by a European power and it uses its own 13-month calendar." },
-      { difficulty: "hard", text_es: "Se considera el lugar de origen del café y aún hoy una ceremonia tradicional gira en torno a su preparación.", text_en: "It is considered the birthplace of coffee, and a traditional ceremony still revolves around its preparation today." },
-      { difficulty: "medium", text_es: "Famoso por las iglesias rupestres de Lalibela talladas en roca volcánica.", text_en: "Famous for the rock-hewn churches of Lalibela, carved into volcanic stone." },
-      { difficulty: "easy", text_es: "Su capital es Adís Abeba y se sitúa en el Cuerno de África.", text_en: "Its capital is Addis Ababa and it lies in the Horn of Africa." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus formaciones geológicas, la Depresión de Afar, presenta puntos de triple unión donde tres placas tectónicas se separan actualmente.",
+        text_en: "One of its geological formations, the Afar Depression, features triple junction points where three tectonic plates are currently pulling apart.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el país sin salida al mar más poblado del continente africano y sufre de una conexión limitada a los puertos marítimos internacionales.",
+        text_en: "It is the most populous landlocked country on the African continent and suffers from limited access to international seaports.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Cuenta con un calendario único que tiene 13 meses y es aproximadamente siete años y ocho meses atrasado con respecto al calendario gregoriano.",
+        text_en: "It has a unique calendar that features 13 months and is roughly seven years and eight months behind the Gregorian calendar.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es ampliamente reconocido como el lugar de origen del café Arábica, que se cree que fue descubierto por un pastor de cabras llamado Kaldi.",
+        text_en: "It is widely recognized as the birthplace of Arabica coffee, believed to have been discovered by a goat herder named Kaldi.",
+      },
     ],
   },
   {
@@ -1220,10 +1396,26 @@ export const countries: Country[] = [
     name: "Argelia",
     name_en: "Algeria",
     hints: [
-      { difficulty: "expert", text_es: "Es el país más extenso de África y del mundo árabe, con más del 80% de su territorio cubierto por el Sáhara.", text_en: "It is the largest country in Africa and in the Arab world, with more than 80% of its territory covered by the Sahara." },
-      { difficulty: "hard", text_es: "Es uno de los principales exportadores mundiales de gas natural a Europa.", text_en: "It is one of the world's major natural gas exporters to Europe." },
-      { difficulty: "medium", text_es: "Famoso por las ruinas romanas de Tipasa y por su lucha de independencia contra Francia.", text_en: "Famous for the Roman ruins of Tipasa and for its independence struggle against France." },
-      { difficulty: "easy", text_es: "Su capital es Argel y limita al norte con el mar Mediterráneo.", text_en: "Its capital is Algiers and it borders the Mediterranean Sea to the north." },
+      {
+        difficulty: "expert",
+        text_es: "Una red de 'foggara' subterránea alimenta sus oasis, crucial para su agricultura en zonas áridas.",
+        text_en: "An underground 'foggara' network feeds its oases, crucial for its agriculture in arid zones.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su territorio fue una provincia clave del Imperio Romano, productora de grano y conocida como 'el granero de Roma'.",
+        text_en: "Its territory was a key province of the Roman Empire, a grain producer known as 'the breadbasket of Rome'.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es el país con mayor extensión territorial del continente africano.",
+        text_en: "It is the country with the largest land area on the African continent.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Gran parte de su masa terrestre está cubierta por una extensa área desértica en el norte de África.",
+        text_en: "A large portion of its landmass is covered by an extensive desert area in North Africa.",
+      },
     ],
   },
   {
@@ -1231,10 +1423,26 @@ export const countries: Country[] = [
     name: "Túnez",
     name_en: "Tunisia",
     hints: [
-      { difficulty: "expert", text_es: "Sobre sus ruinas se levantó la antigua Cartago, que rivalizó con Roma durante las guerras púnicas.", text_en: "On its ruins once stood ancient Carthage, which rivaled Rome during the Punic Wars." },
-      { difficulty: "hard", text_es: "En 2011 fue el origen de la Primavera Árabe tras la caída de su régimen autoritario.", text_en: "In 2011 it sparked the Arab Spring after the fall of its authoritarian regime." },
-      { difficulty: "medium", text_es: "Famoso por sus oasis del Sáhara y por servir de escenario a varias películas de Star Wars.", text_en: "Famous for its Saharan oases and for serving as a filming location for several Star Wars movies." },
-      { difficulty: "easy", text_es: "Su capital lleva el mismo nombre que el país y limita con el Mediterráneo.", text_en: "Its capital shares its name with the country and it borders the Mediterranean." },
+      {
+        difficulty: "expert",
+        text_es: "Es el único país en su continente que ha alcanzado el estatus de 'democracia plena' en el Índice de Democracia de The Economist Intelligence Unit desde 2014.",
+        text_en: "It is the only country on its continent to have achieved 'full democracy' status in The Economist Intelligence Unit's Democracy Index since 2014.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su ubicación fue clave para la antigua civilización púnica, que estableció una de las potencias navales y comerciales más significativas del Mediterráneo.",
+        text_en: "Its location was key for the ancient Punic civilization, which established one of the most significant naval and commercial powers in the Mediterranean.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Gran parte de su territorio se encuentra dentro del desierto más grande del mundo, pero también cuenta con una extensa costa en el mar interior de Europa y África.",
+        text_en: "A large part of its territory lies within the world's largest desert, but it also boasts an extensive coastline on the inland sea of Europe and Africa.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en la parte más septentrional de África, con costas tanto al este como al norte del continente.",
+        text_en: "It is located in the northernmost part of Africa, with coastlines to both the east and north of the continent.",
+      },
     ],
   },
   {
@@ -1242,10 +1450,26 @@ export const countries: Country[] = [
     name: "Ghana",
     name_en: "Ghana",
     hints: [
-      { difficulty: "expert", text_es: "Fue la primera colonia subsahariana en independizarse de un imperio europeo, en 1957.", text_en: "It was the first sub-Saharan colony to gain independence from a European empire, in 1957." },
-      { difficulty: "hard", text_es: "Es uno de los mayores productores mundiales de cacao y de oro.", text_en: "It is one of the world's largest producers of cocoa and gold." },
-      { difficulty: "medium", text_es: "Famoso por sus vibrantes mercados, los tambores tradicionales y las playas del golfo de Guinea.", text_en: "Famous for its vibrant markets, traditional drumming, and the beaches of the Gulf of Guinea." },
-      { difficulty: "easy", text_es: "Su capital es Acra y limita con Costa de Marfil, Burkina Faso y Togo.", text_en: "Its capital is Accra and it borders Ivory Coast, Burkina Faso, and Togo." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los pocos lugares del mundo donde se puede encontrar el pez-gato Kribi.",
+        text_en: "It is one of the few places in the world where the Kribi Freshwater Catfish can be found.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su costa es conocida por haber sido un centro clave en el comercio de un valioso metal durante siglos, incluso antes de la colonización europea a gran escala. Más de 100 fortificaciones históricas salpican su litoral.",
+        text_en: "Its coast was known as a key center for the trade of a valuable metal for centuries, even before large-scale European colonization. Over 100 historical fortifications dot its shoreline.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Ostenta el título de ser el primer país subsahariano en lograr la independencia de una potencia colonial europea, y su primer líder fue una figura panafricanista prominente.",
+        text_en: "It holds the distinction of being the first sub-Saharan country to achieve independence from a European colonial power, and its first leader was a prominent pan-Africanist figure.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Situado en el golfo de Guinea, al oeste de Togo, cuenta con una de las mayores producciones de cacao del mundo.",
+        text_en: "Located on the Gulf of Guinea, west of Togo, it boasts one of the largest cocoa productions in the world.",
+      },
     ],
   },
   {
@@ -1253,10 +1477,26 @@ export const countries: Country[] = [
     name: "Senegal",
     name_en: "Senegal",
     hints: [
-      { difficulty: "expert", text_es: "Su isla de Gorea fue uno de los principales centros del comercio transatlántico de esclavos.", text_en: "Its Gorée Island was one of the main centers of the transatlantic slave trade." },
-      { difficulty: "hard", text_es: "Acoge el famoso lago Rosa, cuyas aguas adquieren un tono rosado por sus algas y su alta salinidad.", text_en: "It is home to the famous Pink Lake, whose waters take on a pink hue due to its algae and high salinity." },
-      { difficulty: "medium", text_es: "Famoso por la música mbalax, su selección de fútbol y la hospitalidad de la 'teranga'.", text_en: "Famous for mbalax music, its national football team, and the hospitality of 'teranga'." },
-      { difficulty: "easy", text_es: "Su capital es Dakar y se sitúa en el extremo más occidental del continente africano.", text_en: "Its capital is Dakar and it lies at the westernmost tip of the African continent." },
+      {
+        difficulty: "expert",
+        text_es: "Es el punto más occidental del continente africano, en la península de Cabo Verde.",
+        text_en: "It is the westernmost point of the African continent, on the Cap-Vert peninsula.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su territorio fue la cuna del Reino de Wólof y más tarde del Imperio de Wólof, que floreció entre los siglos XIII y XVI.",
+        text_en: "Its territory was the birthplace of the Jolof Kingdom and later the Jolof Empire, which flourished between the 13th and 16th centuries.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Gran parte de su frontera sur está definida por un río que lleva el mismo nombre que la nación.",
+        text_en: "Much of its southern border is defined by a river bearing the same name as the nation.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en África Occidental y su costa está bañada por el Océano Atlántico.",
+        text_en: "It is located in West Africa, and its coast is bathed by the Atlantic Ocean.",
+      },
     ],
   },
   {
@@ -1264,10 +1504,26 @@ export const countries: Country[] = [
     name: "Madagascar",
     name_en: "Madagascar",
     hints: [
-      { difficulty: "expert", text_es: "Aproximadamente el 90% de su fauna y flora es endémica y no existe en ninguna otra parte del planeta.", text_en: "Roughly 90% of its wildlife and plants are endemic and exist nowhere else on the planet." },
-      { difficulty: "hard", text_es: "Es la cuarta isla más grande del mundo y se separó del continente africano hace decenas de millones de años.", text_en: "It is the fourth-largest island in the world and broke away from mainland Africa tens of millions of years ago." },
-      { difficulty: "medium", text_es: "Famoso por los lémures, los baobabs y las plantaciones de vainilla.", text_en: "Famous for lemurs, baobab trees, and vanilla plantations." },
-      { difficulty: "easy", text_es: "Su capital es Antananarivo y se sitúa en el océano Índico, frente a la costa este africana.", text_en: "Its capital is Antananarivo and it lies in the Indian Ocean, off the east coast of Africa." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus subespecies de lémur, el lémur bambú dorado, fue descubierto para la ciencia en 1986 por el Dr. Ganzhorn como parte de su investigación sobre la ecología y conservación de los lémures.",
+        text_en: "One of its lemur subspecies, the golden bamboo lemur, was discovered for science in 1986 by Dr. Ganzhorn as part of his research on lemur ecology and conservation.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Mucho de su paisaje se caracteriza por los tsingy, formaciones kársticas de piedra caliza con bordes afilados que se elevan verticalmente, esculpidas por la erosión.",
+        text_en: "Much of its landscape is characterized by tsingy, sharp-edged limestone karst formations that rise vertically, sculpted by erosion.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es el lugar de origen de la planta de vainilla Planifolia, de donde se obtiene el extracto más común, y lidera su producción mundial.",
+        text_en: "It is the origin point of the Planifolia vanilla plant, from which the most common extract is obtained, and it leads global production of it.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es la isla más grande del continente africano y la cuarta isla más grande del mundo.",
+        text_en: "It is the largest island off the African continent and the fourth largest island in the world.",
+      },
     ],
   },
   {
@@ -1275,10 +1531,26 @@ export const countries: Country[] = [
     name: "Chile",
     name_en: "Chile",
     hints: [
-      { difficulty: "expert", text_es: "Alberga el desierto no polar más árido del mundo, donde algunos puntos no han registrado lluvia en siglos.", text_en: "It hosts the driest non-polar desert in the world, where some spots have not recorded rainfall in centuries." },
-      { difficulty: "hard", text_es: "Es el mayor productor mundial de cobre y posee uno de los mejores cielos para la observación astronómica.", text_en: "It is the world's largest copper producer and has some of the best skies on Earth for astronomical observation." },
-      { difficulty: "medium", text_es: "Famoso por la isla de Pascua y sus moáis, los vinos de Maipo y la cordillera de los Andes.", text_en: "Famous for Easter Island and its moai, Maipo Valley wines, and the Andes mountain range." },
-      { difficulty: "easy", text_es: "Su capital es Santiago y se extiende como una larga franja a lo largo del Pacífico sudamericano.", text_en: "Its capital is Santiago and it stretches as a long strip along the South American Pacific coast." },
+      {
+        difficulty: "expert",
+        text_es: "Su territorio incluye el Polo de Inaccesibilidad del Pacífico, el punto oceánico más alejado de cualquier masa continental.",
+        text_en: "Its territory includes the Pacific Pole of Inaccessibility, the oceanic point furthest from any landmass.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los dos únicos países de América del Sur que no comparte frontera terrestre con Brasil.",
+        text_en: "It is one of only two South American countries that does not share a land border with Brazil.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Alberga algunos de los telescopios astronómicos más avanzados del mundo debido a sus condiciones atmosféricas únicas y cielos despejados.",
+        text_en: "It hosts some of the most advanced astronomical telescopes in the world due to its unique atmospheric conditions and clear skies.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se extiende a lo largo de una extensa franja costera del Pacífico en la parte occidental de América del Sur.",
+        text_en: "It stretches along an extensive Pacific coastline in the western part of South America.",
+      },
     ],
   },
   {
@@ -1286,10 +1558,26 @@ export const countries: Country[] = [
     name: "Perú",
     name_en: "Peru",
     hints: [
-      { difficulty: "expert", text_es: "Sus líneas de Nazca son geoglifos gigantes visibles solo desde el aire y datan de hace más de 2.000 años.", text_en: "Its Nazca Lines are giant geoglyphs visible only from the air and date back more than 2,000 years." },
-      { difficulty: "hard", text_es: "Comparte con Bolivia el lago navegable más alto del mundo a más de 3.800 metros de altitud.", text_en: "It shares with Bolivia the highest navigable lake in the world, at more than 3,800 meters of altitude." },
-      { difficulty: "medium", text_es: "Famoso por el ceviche, la quinoa y la ciudadela inca de Machu Picchu.", text_en: "Famous for ceviche, quinoa, and the Inca citadel of Machu Picchu." },
-      { difficulty: "easy", text_es: "Su capital es Lima y limita al oeste con el océano Pacífico.", text_en: "Its capital is Lima and it borders the Pacific Ocean to the west." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus festividades más coloridas es la Candelaria, reconocida por su sincretismo cultural y danzas puneñas, siendo Patrimonio Inmaterial de la Humanidad.",
+        text_en: "One of its most colorful festivities is the Candelaria, recognized for its cultural syncretism and Puno dances, being an Intangible Cultural Heritage of Humanity.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el segundo productor mundial y exportador de espárragos, superado solo por China.",
+        text_en: "It is the world's second-largest producer and exporter of asparagus, surpassed only by China.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "En su territorio se encuentra el lago navegable a mayor altitud del mundo, compartido con una nación vecina.",
+        text_en: "Within its territory lies the highest navigable lake in the world, shared with a neighboring nation.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es un país sudamericano conocido por ser cuna de una de las civilizaciones prehispánicas más importantes de la historia.",
+        text_en: "It is a South American country known as the cradle of one of the most important pre-Hispanic civilizations in history.",
+      },
     ],
   },
   {
@@ -1297,10 +1585,26 @@ export const countries: Country[] = [
     name: "Colombia",
     name_en: "Colombia",
     hints: [
-      { difficulty: "expert", text_es: "Es uno de los países megadiversos del mundo y cuenta con dos cordilleras separadas por uno de los ríos más caudalosos del continente.", text_en: "It is one of the world's megadiverse countries and has two separate mountain ranges divided by one of the continent's mightiest rivers." },
-      { difficulty: "hard", text_es: "Es el primer productor mundial de esmeraldas y uno de los mayores exportadores de café arábica.", text_en: "It is the world's leading emerald producer and one of the largest exporters of Arabica coffee." },
-      { difficulty: "medium", text_es: "Famoso por la cumbia, la salsa, la literatura de García Márquez y la ciudad amurallada de Cartagena de Indias.", text_en: "Famous for cumbia, salsa, García Márquez's literature, and the walled city of Cartagena de Indias." },
-      { difficulty: "easy", text_es: "Su capital es Bogotá y es el único país sudamericano con costas en los océanos Pacífico y Atlántico.", text_en: "Its capital is Bogotá and it is the only South American country with coasts on both the Pacific and the Atlantic." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus formaciones geológicas notables es el 'Cañón del Chicamocha', un accidente geográfico que a menudo se compara con el Gran Cañón, pero es el segundo cañón más grande de su continente.",
+        text_en: "One of its notable geological formations is the 'Chicamocha Canyon,' a geographical feature often compared to the Grand Canyon but is the second-largest canyon on its continent.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el único país de América del Sur que cuenta con costas tanto en el océano Pacífico como en el mar Caribe, ofreciendo una amplia diversidad de ecosistemas marinos.",
+        text_en: "It is the only country in South America to have coastlines on both the Pacific Ocean and the Caribbean Sea, offering a wide diversity of marine ecosystems.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es uno de los países con mayor biodiversidad del mundo, albergando una asombrosa variedad de especies de flora y fauna, incluyendo una gran cantidad de aves endémicas.",
+        text_en: "It is one of the most biodiverse countries in the world, home to an astonishing variety of flora and fauna species, including a large number of endemic birds.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en el noroeste de América del Sur y es conocido por sus famosas esmeraldas y su producción de café de alta calidad.",
+        text_en: "It is located in the northwest of South America and is known for its famous emeralds and high-quality coffee production.",
+      },
     ],
   },
   {
@@ -1308,10 +1612,26 @@ export const countries: Country[] = [
     name: "Venezuela",
     name_en: "Venezuela",
     hints: [
-      { difficulty: "expert", text_es: "Posee las mayores reservas probadas de petróleo del planeta, por delante incluso de Arabia Saudita.", text_en: "It holds the largest proven oil reserves on the planet, even ahead of Saudi Arabia." },
-      { difficulty: "hard", text_es: "Alberga la cascada ininterrumpida más alta del mundo, con casi un kilómetro de caída libre.", text_en: "It is home to the world's highest uninterrupted waterfall, with nearly a kilometer of free fall." },
-      { difficulty: "medium", text_es: "Famoso por las arepas, los tepuyes de la Gran Sabana y por haber sido cuna del libertador Simón Bolívar.", text_en: "Famous for arepas, the tepuis of the Gran Sabana, and for being the birthplace of liberator Simón Bolívar." },
-      { difficulty: "easy", text_es: "Su capital es Caracas y limita al norte con el mar Caribe.", text_en: "Its capital is Caracas and it borders the Caribbean Sea to the north." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus formaciones geológicas más prominentes es una meseta de arenisca que ha inspirado la obra \"El Mundo Perdido\".",
+        text_en: "One of its most prominent geological formations is a sandstone plateau that inspired the work 'The Lost World'.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el hogar de una especie de delfín de río rosado, que nada en uno de sus grandes sistemas fluviales.",
+        text_en: "It is home to a species of pink river dolphin, which swims in one of its large river systems.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Posee una de las reservas de hidrocarburos más grandes del mundo, concentradas en una cuenca occidental.",
+        text_en: "It possesses one of the world's largest hydrocarbon reserves, concentrated in a western basin.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "En este país se encuentra la cascada de caída libre más alta del mundo.",
+        text_en: "The world's highest uninterrupted waterfall is located in this country.",
+      },
     ],
   },
   {
@@ -1319,10 +1639,26 @@ export const countries: Country[] = [
     name: "Cuba",
     name_en: "Cuba",
     hints: [
-      { difficulty: "expert", text_es: "Su sistema sanitario forma a más médicos por habitante que casi cualquier otro país y los exporta como cooperación internacional.", text_en: "Its healthcare system trains more doctors per capita than almost any other country and exports them as international cooperation." },
-      { difficulty: "hard", text_es: "Es la mayor isla del Caribe y uno de los principales productores mundiales de azúcar y tabaco.", text_en: "It is the largest island in the Caribbean and one of the world's leading producers of sugar and tobacco." },
-      { difficulty: "medium", text_es: "Famoso por el son, el ron, los puros habanos y los coches clásicos americanos de los años 50.", text_en: "Famous for son music, rum, Havana cigars, and classic American cars from the 1950s." },
-      { difficulty: "easy", text_es: "Su capital es La Habana y vivió una revolución liderada por Fidel Castro en 1959.", text_en: "Its capital is Havana and it underwent a revolution led by Fidel Castro in 1959." },
+      {
+        difficulty: "expert",
+        text_es: "Su constitución de 1976 identificó al marxismo-leninismo como la base filosófica del estado, un concepto que fue revisado en un referéndum constitucional en 2019.",
+        text_en: "Its 1976 constitution identified Marxism-Leninism as the philosophical basis of the state, a concept that was revised in a 2019 constitutional referendum.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Este archipiélago alberga la cueva más larga de la región caribeña, con más de 30 kilómetros de galerías interconectadas.",
+        text_en: "This archipelago is home to the longest cave system in the Caribbean region, featuring over 30 kilometers of interconnected galleries.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es un importante productor de níquel y también se destaca por su producción de un producto agrícola de hoja cuyo procesamiento es culturalmente significativo.",
+        text_en: "It is a significant producer of nickel and is also noted for its production of a leafy agricultural product whose processing is culturally significant.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Esta nación insular caribeña es conocida por su sistema de salud, que ha desplegado misiones médicas internacionales en diversas partes del mundo.",
+        text_en: "This Caribbean island nation is renowned for its healthcare system, which has deployed international medical missions to various parts of the world.",
+      },
     ],
   },
   {
@@ -1330,10 +1666,26 @@ export const countries: Country[] = [
     name: "República Dominicana",
     name_en: "Dominican Republic",
     hints: [
-      { difficulty: "expert", text_es: "Comparte la isla de La Española con Haití y allí se fundó la primera ciudad europea del Nuevo Mundo.", text_en: "It shares the island of Hispaniola with Haiti, and the first European city in the New World was founded there." },
-      { difficulty: "hard", text_es: "Es uno de los principales destinos turísticos del Caribe y un gran exportador de béisbol profesional.", text_en: "It is one of the top tourist destinations in the Caribbean and a major exporter of professional baseball talent." },
-      { difficulty: "medium", text_es: "Famoso por el merengue, la bachata y las playas de Punta Cana.", text_en: "Famous for merengue, bachata, and the beaches of Punta Cana." },
-      { difficulty: "easy", text_es: "Su capital es Santo Domingo y comparte una isla con Haití.", text_en: "Its capital is Santo Domingo and it shares an island with Haiti." },
+      {
+        difficulty: "expert",
+        text_es: "Comparte superficie terrestre con un solo vecino, y se rumorea que el pico más alto de todas las Antillas se encuentra en su territorio, aunque mediciones históricas difieren.",
+        text_en: "It shares landmass with only one neighbor, and the highest peak in all the Antilles is rumored to be within its territory, although historical measurements differ.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es un productor significativo de cacao y uno de los principales exportadores de cigars hechos a mano en el mundo, ubicándose en las Antillas Mayores.",
+        text_en: "It is a significant producer of cocoa and one of the world's leading exporters of handmade cigars, located in the Greater Antilles.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su porción de tierra ocupa aproximadamente dos tercios de una isla caribeña compartida. Su clima es tropical, y es uno de los destinos turísticos más populares del Caribe.",
+        text_en: "Its land portion occupies approximately two-thirds of a shared Caribbean island. Its climate is tropical, and it is one of the most popular tourist destinations in the Caribbean.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en el Caribe, al este de una gran isla con un nombre similar al de un pequeño animal acuático y al oeste de un territorio de ultramar francés.",
+        text_en: "It is located in the Caribbean, east of a large island with a name similar to a small aquatic animal and west of a French overseas territory.",
+      },
     ],
   },
   {
@@ -1341,10 +1693,26 @@ export const countries: Country[] = [
     name: "Jamaica",
     name_en: "Jamaica",
     hints: [
-      { difficulty: "expert", text_es: "Es el país que más medallas olímpicas ha ganado en velocidad por habitante de toda la historia.", text_en: "It is the country with the most Olympic sprint medals per capita in history." },
-      { difficulty: "hard", text_es: "Su movimiento rastafari surgió en la década de 1930 y dio identidad cultural a buena parte de la isla.", text_en: "Its Rastafari movement emerged in the 1930s and gave cultural identity to much of the island." },
-      { difficulty: "medium", text_es: "Cuna del reggae y de Bob Marley, además del sprinter Usain Bolt.", text_en: "Birthplace of reggae and Bob Marley, as well as sprinter Usain Bolt." },
-      { difficulty: "easy", text_es: "Su capital es Kingston y es una isla del Caribe al sur de Cuba.", text_en: "Its capital is Kingston and it is a Caribbean island south of Cuba." },
+      {
+        difficulty: "expert",
+        text_es: "Su Parque Nacional Blue and John Crow Mountains es un sitio Patrimonio de la Humanidad mixto.",
+        text_en: "Its Blue and John Crow Mountains National Park is a mixed World Heritage Site.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Experimenta un clima tropical de sabana, con temperaturas constantes y una temporada de lluvias bien definida.",
+        text_en: "It experiences a tropical savanna climate, with consistent temperatures and a well-defined wet season.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es el tercer país angloparlante más poblado de su región insular.",
+        text_en: "It is the third most populous English-speaking country in its island region.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es un destino turístico insular ubicado en el mar Caribe, conocido por su cultura musical.",
+        text_en: "It is an island tourist destination located in the Caribbean Sea, known for its musical culture.",
+      },
     ],
   },
   {
@@ -1352,10 +1720,26 @@ export const countries: Country[] = [
     name: "Costa Rica",
     name_en: "Costa Rica",
     hints: [
-      { difficulty: "expert", text_es: "Abolió su ejército en 1948 y desde entonces destina ese presupuesto a educación y sanidad.", text_en: "It abolished its army in 1948 and has since redirected that budget to education and healthcare." },
-      { difficulty: "hard", text_es: "Aunque ocupa solo el 0,03% de la superficie terrestre alberga cerca del 6% de la biodiversidad del planeta.", text_en: "Although it covers only 0.03% of Earth's surface, it hosts about 6% of the planet's biodiversity." },
-      { difficulty: "medium", text_es: "Famoso por sus volcanes activos, el ecoturismo y la filosofía de vida 'pura vida'.", text_en: "Famous for its active volcanoes, ecotourism, and its 'pura vida' philosophy of life." },
-      { difficulty: "easy", text_es: "Su capital es San José y se sitúa en Centroamérica, entre Nicaragua y Panamá.", text_en: "Its capital is San José and it lies in Central America, between Nicaragua and Panama." },
+      {
+        difficulty: "expert",
+        text_es: "Su legislación prohíbe la existencia de zoológicos con fines comerciales desde 2013, buscando la reubicación de los animales en santuarios o la liberación en áreas naturales.",
+        text_en: "Its legislation prohibits commercial zoos since 2013, seeking the relocation of animals to sanctuaries or release into natural areas.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los pocos estados soberanos en el mundo que abolió permanentemente su ejército y redirigió esos recursos hacia la educación, la salud y la protección ambiental.",
+        text_en: "It is one of the few sovereign states in the world that permanently abolished its army and redirected those resources towards education, health, and environmental protection.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Tiene un lema nacional asociado a un estilo de vida que promueve la felicidad, la salud y la paz, ampliamente utilizado en el habla coloquial.",
+        text_en: "It has a national motto associated with a lifestyle that promotes happiness, health, and peace, widely used in colloquial speech.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Reconocido por su extraordinaria biodiversidad, alberga aproximadamente el 5% de las especies del planeta, a pesar de ocupar una fracción diminuta de la superficie terrestre mundial.",
+        text_en: "Recognized for its extraordinary biodiversity, it hosts approximately 5% of the planet's species, despite occupying a tiny fraction of the world's land surface.",
+      },
     ],
   },
   {
@@ -1363,10 +1747,26 @@ export const countries: Country[] = [
     name: "Panamá",
     name_en: "Panama",
     hints: [
-      { difficulty: "expert", text_es: "Su canal interoceánico permitió ahorrar más de 13.000 km en la ruta marítima entre los océanos Atlántico y Pacífico.", text_en: "Its inter-oceanic canal saved more than 13,000 km on the maritime route between the Atlantic and Pacific oceans." },
-      { difficulty: "hard", text_es: "Su moneda nacional está vinculada al dólar estadounidense con paridad uno a uno desde 1904.", text_en: "Its national currency has been pegged one-to-one to the US dollar since 1904." },
-      { difficulty: "medium", text_es: "Famoso por los rascacielos de su capital, los sombreros 'panamá' y su rica biodiversidad selvática.", text_en: "Famous for the skyscrapers of its capital, 'Panama' hats, and its rich rainforest biodiversity." },
-      { difficulty: "easy", text_es: "Su capital es Ciudad de Panamá y une América del Norte con América del Sur.", text_en: "Its capital is Panama City and it links North and South America." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los tres lugares del mundo que da nombre a una especie de 'mantis religiosa palo' (mantoida maya), junto con otra en la Amazonía y una más en el sudeste asiático.",
+        text_en: "It is one of only three places in the world that gives its name to a species of 'stick mantis' (mantoida maya), along with another in the Amazon and one more in Southeast Asia.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su territorio fue una vez el sitio de 'Castilla del Oro', una de las primeras jurisdicciones coloniales fundadas en el continente americano.",
+        text_en: "Its territory was once the site of 'Castilla del Oro' (Golden Castile), one of the earliest colonial jurisdictions founded on the American continent.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su punto más estrecho entre cuerpos de agua importantes fue un factor crucial para un proyecto monumental que transformó el comercio global.",
+        text_en: "Its narrowest point between major bodies of water was a crucial factor for a monumental project that transformed global trade.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en el extremo sur de un subcontinente y forma un puente natural, siendo su territorio continental un límite entre dos masas de agua oceánicas.",
+        text_en: "It is located at the southern tip of a subcontinent and forms a natural bridge, with its mainland territory bordering two oceanic bodies of water.",
+      },
     ],
   },
   {
@@ -1374,10 +1774,26 @@ export const countries: Country[] = [
     name: "Uruguay",
     name_en: "Uruguay",
     hints: [
-      { difficulty: "expert", text_es: "Fue el primer país del mundo en legalizar a nivel nacional la producción y venta de marihuana en 2013.", text_en: "It was the first country in the world to legalize the nationwide production and sale of marijuana, in 2013." },
-      { difficulty: "hard", text_es: "Ganó los dos primeros mundiales de fútbol disputados, en 1930 y 1950.", text_en: "It won the first two FIFA World Cups ever played, in 1930 and 1950." },
-      { difficulty: "medium", text_es: "Famoso por el mate, los asados y las playas de Punta del Este.", text_en: "Famous for mate, asados, and the beaches of Punta del Este." },
-      { difficulty: "easy", text_es: "Su capital es Montevideo y se sitúa entre Argentina y Brasil, junto al Río de la Plata.", text_en: "Its capital is Montevideo and it lies between Argentina and Brazil, on the River Plate." },
+      {
+        difficulty: "expert",
+        text_es: "Su topografía se caracteriza por ser predominantemente de planicies onduladas y colinas bajas, con una elevación media de aproximadamente 110 metros sobre el nivel del mar.",
+        text_en: "Its topography is characterized by predominantly rolling plains and low hills, with an average elevation of approximately 110 meters above sea level.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los tres estados soberanos que abarca la Cuenca del Plata, con acceso directo al litoral de dicho estuario.",
+        text_en: "It is one of the three sovereign states that encompass the Río de la Plata Basin, with direct access to the estuary's coastline.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Ha sido un pionero en la legalización de ciertas sustancias recreativas a nivel nacional, siendo un referente en debate y políticas innovadoras.",
+        text_en: "It has been a pioneer in the national legalization of certain recreational substances, serving as a reference in innovative policies and debates.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es el segundo país más pequeño de Sudamérica en extensión territorial.",
+        text_en: "It is the second smallest country in South America by land area.",
+      },
     ],
   },
   {
@@ -1385,10 +1801,26 @@ export const countries: Country[] = [
     name: "Paraguay",
     name_en: "Paraguay",
     hints: [
-      { difficulty: "expert", text_es: "Es uno de los pocos países del mundo con dos lenguas oficiales originarias, una europea y otra indígena.", text_en: "It is one of the few countries in the world with two officially original languages, one European and one indigenous." },
-      { difficulty: "hard", text_es: "Comparte con Brasil una de las mayores presas hidroeléctricas del planeta sobre el río Paraná.", text_en: "It shares with Brazil one of the largest hydroelectric dams on the planet, on the Paraná River." },
-      { difficulty: "medium", text_es: "Famoso por la sopa paraguaya, la música del arpa y las antiguas misiones jesuíticas.", text_en: "Famous for sopa paraguaya, harp music, and the old Jesuit missions." },
-      { difficulty: "easy", text_es: "Su capital es Asunción y es uno de los dos países sin salida al mar de Sudamérica.", text_en: "Its capital is Asunción and it is one of the two landlocked countries in South America." },
+      {
+        difficulty: "expert",
+        text_es: "Su topografía es notablemente asimétrica, con una región occidental que comprende una porción significativa del Chaco, y una región oriental caracterizada por sabanas y elevaciones modestas.",
+        text_en: "Its topography is notably asymmetrical, with a western region comprising a significant portion of the Chaco, and an eastern region characterized by savannas and modest elevations.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los dos únicos países de su continente que no tiene litoral marino y su economía se apoya fuertemente en la agricultura y la hidroelectricidad, exportando una cantidad considerable de energía a sus vecinos.",
+        text_en: "It is one of only two landlocked countries in its continent, and its economy relies heavily on agriculture and hydroelectricity, exporting a considerable amount of power to its neighbors.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "En este territorio se encuentra la mayor parte de un acuífero transfronterizo vital para la región, y sus humedales son hogar de una biodiversidad excepcional.",
+        text_en: "The greater part of a vital cross-border aquifer for the region is located in this territory, and its wetlands are home to exceptional biodiversity.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Comparte una de las mayores represas hidroeléctricas del mundo con una nación vecina, la cual es una fuente principal de su energía eléctrica.",
+        text_en: "It shares one of the world's largest hydroelectric dams with a neighboring nation, which is a primary source of its electrical power.",
+      },
     ],
   },
   {
@@ -1396,10 +1828,26 @@ export const countries: Country[] = [
     name: "Bolivia",
     name_en: "Bolivia",
     hints: [
-      { difficulty: "expert", text_es: "Su salar de Uyuni concentra cerca del 50% de las reservas mundiales conocidas de litio.", text_en: "Its Uyuni Salt Flat concentrates about 50% of the world's known lithium reserves." },
-      { difficulty: "hard", text_es: "Su sede del gobierno se encuentra a más de 3.600 metros, lo que la convierte en una de las más altas del planeta.", text_en: "Its seat of government sits at more than 3,600 meters, making it one of the highest on the planet." },
-      { difficulty: "medium", text_es: "Famoso por el lago Titicaca, el carnaval de Oruro y los trajes tradicionales de las cholitas.", text_en: "Famous for Lake Titicaca, the Oruro Carnival, and the traditional outfits of the cholitas." },
-      { difficulty: "easy", text_es: "Su capital constitucional es Sucre y comparte el lago Titicaca con Perú.", text_en: "Its constitutional capital is Sucre and it shares Lake Titicaca with Peru." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus lunas fue 'descubierta' por un sismógrafo en la estación de Amayapampa, confundida erróneamente con un evento sísmico provocado por pruebas nucleares, antes de determinarse su origen astrofísico en la década de 1970.",
+        text_en: "One of its 'moons' was 'discovered' by a seismograph at the Amayapampa station, mistakenly confused with a seismic event caused by nuclear tests, before its astrophysical origin was determined in the 1970s.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el hogar de una variedad de aves que anidan en acantilados de barro, conocidas localmente como 'Lorito de Cara Roja', una especie endémica que ha sido objeto de intensos esfuerzos de conservación.",
+        text_en: "It is home to a variety of cliff-nesting birds, locally known as the 'Red-fronted Macaw', an endemic species that has been the subject of intense conservation efforts.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Posee la reserva de agua dulce no compartida más extensa del orbe, que se encuentra a gran altitud, y alberga una biodiversidad acuática única.",
+        text_en: "It possesses the most extensive unshared freshwater reserve on the globe, located at high altitude, and harbors unique aquatic biodiversity.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Este país andino no tiene salida al mar y comparte límites con un total de cinco naciones, lo que históricamente ha influido en su geopolítica regional.",
+        text_en: "This Andean country is landlocked and shares borders with a total of five nations, which has historically influenced its regional geopolitics.",
+      },
     ],
   },
   {
@@ -1407,10 +1855,26 @@ export const countries: Country[] = [
     name: "Ecuador",
     name_en: "Ecuador",
     hints: [
-      { difficulty: "expert", text_es: "Fue el primer país del mundo en reconocer constitucionalmente derechos a la naturaleza.", text_en: "It was the first country in the world to constitutionally recognize the rights of nature." },
-      { difficulty: "hard", text_es: "Sus islas Galápagos inspiraron a Charles Darwin para desarrollar su teoría de la evolución.", text_en: "Its Galápagos Islands inspired Charles Darwin to develop his theory of evolution." },
-      { difficulty: "medium", text_es: "Famoso por el cacao fino, el sombrero panamá (que en realidad es ecuatoriano) y los volcanes andinos.", text_en: "Famous for fine cocoa, the Panama hat (which is actually Ecuadorian), and Andean volcanoes." },
-      { difficulty: "easy", text_es: "Su capital es Quito y debe su nombre a la línea imaginaria que lo atraviesa.", text_en: "Its capital is Quito and it owes its name to the imaginary line that crosses it." },
+      {
+        difficulty: "expert",
+        text_es: "Su constitución fue la primera en reconocer los derechos de la naturaleza como entidad con derechos propios.",
+        text_en: "Its constitution was the first to recognize the rights of nature as an entity with its own rights.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los países con mayor diversidad de colibríes en el mundo, albergando aproximadamente el 50% de las especies conocidas.",
+        text_en: "It is one of the countries with the greatest diversity of hummingbirds in the world, hosting approximately 50% of known species.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Su territorio continental es atravesado por la línea ecuatorial, dándole nombre a la república.",
+        text_en: "Its continental territory is crossed by the equator line, giving the republic its name.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es conocido por ser el principal exportador mundial de un tipo específico de banano.",
+        text_en: "It is known for being the world's leading exporter of a specific type of banana.",
+      },
     ],
   },
   {
@@ -1418,10 +1882,26 @@ export const countries: Country[] = [
     name: "Nueva Zelanda",
     name_en: "New Zealand",
     hints: [
-      { difficulty: "expert", text_es: "Fue el primer país del mundo en reconocer el derecho al voto femenino a nivel nacional, en 1893.", text_en: "It was the first country in the world to grant women the right to vote at the national level, in 1893." },
-      { difficulty: "hard", text_es: "Su selección de rugby ejecuta antes de cada partido una danza tradicional maorí llamada haka.", text_en: "Its rugby team performs a traditional Maori dance called the haka before every match." },
-      { difficulty: "medium", text_es: "Famoso por sus paisajes utilizados en las películas de El Señor de los Anillos.", text_en: "Famous for its landscapes used in The Lord of the Rings films." },
-      { difficulty: "easy", text_es: "Su capital es Wellington y está formado por dos islas principales en el Pacífico Sur.", text_en: "Its capital is Wellington and it is made up of two main islands in the South Pacific." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus lunas es conocida como 'The Forgotten Continent' debido a su historia geológica ligada a un continente sumergido.",
+        text_en: "One of its landmasses is known as 'The Forgotten Continent' due to its geological history linked to a submerged continent.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los tres estados soberanos que tienen el nombre de su capital con la misma ortografía que el sustantivo que describe a sus habitantes en su idioma oficial.",
+        text_en: "It is one of only three sovereign states whose capital city shares the same spelling as the noun describing its inhabitants in its official language.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Ubicado en el Anillo de Fuego del Pacífico, presenta una notable actividad geotérmica y volcánica.",
+        text_en: "Located on the Pacific Ring of Fire, it exhibits significant geothermal and volcanic activity.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Está compuesto por dos islas principales y varias islas más pequeñas en el suroeste del Océano Pacífico.",
+        text_en: "It is comprised of two main islands and numerous smaller islands in the southwestern Pacific Ocean.",
+      },
     ],
   },
   {
@@ -1429,10 +1909,26 @@ export const countries: Country[] = [
     name: "Finlandia",
     name_en: "Finland",
     hints: [
-      { difficulty: "expert", text_es: "Es el país con mayor densidad de saunas per cápita del mundo: hay aproximadamente una por cada dos habitantes.", text_en: "It is the country with the highest density of saunas per capita in the world: roughly one for every two inhabitants." },
-      { difficulty: "hard", text_es: "Lleva varios años seguidos siendo declarado el país más feliz del mundo según el Informe Mundial de la Felicidad.", text_en: "It has been ranked the happiest country in the world for several consecutive years according to the World Happiness Report." },
-      { difficulty: "medium", text_es: "Cuna de Nokia, la marca Marimekko y los baños de sauna seguidos de zambullidas en lagos helados.", text_en: "Birthplace of Nokia, the Marimekko brand, and saunas followed by dips in icy lakes." },
-      { difficulty: "easy", text_es: "Su capital es Helsinki y limita con Rusia, Suecia y Noruega.", text_en: "Its capital is Helsinki and it borders Russia, Sweden, and Norway." },
+      {
+        difficulty: "expert",
+        text_es: "Es el único país de la Unión Europea cuya especie de mariposa nacional se encuentra en grave peligro de extinción, el Parnassius apollo butleri.",
+        text_en: "It is the only European Union country whose national butterfly species, the Parnassius apollo butleri, is critically endangered.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su sistema de educación superior ha sido pionero en la implementación de un modelo de 'universidad de aplicación', enfocado en la investigación aplicada y el desarrollo regional.",
+        text_en: "Its higher education system has pioneered the implementation of an 'applied sciences university' model, focused on applied research and regional development.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Una gran parte de su territorio se extiende por encima del Círculo Polar Ártico, lo que le otorga el fenómeno del sol de medianoche en verano y noches polares en invierno.",
+        text_en: "A significant portion of its territory extends above the Arctic Circle, granting it the phenomenon of the midnight sun in summer and polar nights in winter.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Limita al este con un estado post-soviético de gran tamaño y al oeste con una nación escandinava conocida por sus fiordos.",
+        text_en: "It is bordered to the east by a large post-Soviet state and to the west by a Scandinavian nation renowned for its fjords.",
+      },
     ],
   },
   {
@@ -1440,10 +1936,26 @@ export const countries: Country[] = [
     name: "Dinamarca",
     name_en: "Denmark",
     hints: [
-      { difficulty: "expert", text_es: "Su monarquía es una de las más antiguas continuadas del mundo, con más de mil años de historia.", text_en: "Its monarchy is one of the oldest continuous monarchies in the world, with more than a thousand years of history." },
-      { difficulty: "hard", text_es: "Cuna de los cuentos de Hans Christian Andersen y del filósofo Søren Kierkegaard.", text_en: "Birthplace of Hans Christian Andersen's fairy tales and the philosopher Søren Kierkegaard." },
-      { difficulty: "medium", text_es: "Famoso por LEGO, el concepto de 'hygge' y el diseño escandinavo.", text_en: "Famous for LEGO, the concept of 'hygge', and Scandinavian design." },
-      { difficulty: "easy", text_es: "Su capital es Copenhague, donde se encuentra la estatua de la Sirenita.", text_en: "Its capital is Copenhagen, home to the Little Mermaid statue." },
+      {
+        difficulty: "expert",
+        text_es: "Su territorio continental fue el primero en abolir legalmente el comercio de esclavos transatlántico en 1792, aunque la prohibición no entró en vigor hasta 1803 en sus colonias.",
+        text_en: "Its continental territory was the first to legally abolish the transatlantic slave trade in 1792, though the ban didn't come into effect until 1803 in its colonies.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "La nación cuenta con una de las flotas de buques mercantes más grandes del mundo en relación con su PIB, facilitando un comercio marítimo extenso.",
+        text_en: "The nation possesses one of the world's largest merchant fleets relative to its GDP, facilitating extensive maritime trade.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Históricamente, es reconocido por haber mantenido la línea de sucesión monárquica más antigua de Europa de forma ininterrumpida.",
+        text_en: "Historically, it is recognized for maintaining Europe's oldest continuous monarchical line of succession.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es un país nórdico cuyas principales formaciones terrestres se encuentran en una península que se extiende hacia el norte desde el continente europeo.",
+        text_en: "It is a Nordic country whose primary landforms are situated on a peninsula extending northward from mainland Europe.",
+      },
     ],
   },
   {
@@ -1451,10 +1963,26 @@ export const countries: Country[] = [
     name: "Irlanda",
     name_en: "Ireland",
     hints: [
-      { difficulty: "expert", text_es: "Es el único país de la Unión Europea cuyo símbolo nacional es un instrumento musical.", text_en: "It is the only country in the European Union whose national symbol is a musical instrument." },
-      { difficulty: "hard", text_es: "Cuna de premios Nobel de Literatura como W. B. Yeats, George Bernard Shaw y Samuel Beckett.", text_en: "Birthplace of Nobel literature laureates such as W. B. Yeats, George Bernard Shaw, and Samuel Beckett." },
-      { difficulty: "medium", text_es: "Famoso por la cerveza Guinness, la fiesta de San Patricio y los tréboles verdes.", text_en: "Famous for Guinness beer, St. Patrick's Day, and green shamrocks." },
-      { difficulty: "easy", text_es: "Su capital es Dublín y comparte isla con Irlanda del Norte.", text_en: "Its capital is Dublin and it shares an island with Northern Ireland." },
+      {
+        difficulty: "expert",
+        text_es: "Su topografía influyó significativamente en el desarrollo de la investigación de turberas y la industria asociada, siendo un líder en la extracción de este recurso.",
+        text_en: "Its topography significantly influenced the development of peatland research and the associated industry, being a leader in the extraction of this resource.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es reconocido por su contribución a la literatura mundial, y un autor laureado de allí rechazó el nombramiento como Senador, argumentando que no podría cumplir con sus deberes debido a su creciente ceguera, aunque algunos especulan que fue por su dedicación a la escritura.",
+        text_en: "It is recognized for its contribution to world literature, and a laureate author from there declined appointment as a Senator, arguing he could not fulfill his duties due to his increasing blindness, though some speculate it was due to his dedication to writing.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "La mayor parte de la masa terrestre de esta nación se encuentra en una isla occidental de Europa.",
+        text_en: "The majority of this nation's landmass is located on a western European island.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es conocida por sus paisajes verdes exuberantes y la leyenda de pequeños seres mitológicos que esconden oro al final del arcoíris.",
+        text_en: "It is known for its lush green landscapes and the legend of small mythological beings who hide gold at the end of the rainbow.",
+      },
     ],
   },
   {
@@ -1462,10 +1990,26 @@ export const countries: Country[] = [
     name: "Croacia",
     name_en: "Croatia",
     hints: [
-      { difficulty: "expert", text_es: "La corbata moderna proviene de los pañuelos al cuello de sus mercenarios del siglo XVII y de ahí derivó la palabra 'cravate'.", text_en: "The modern necktie originates from the neck scarves of its 17th-century mercenaries, from which the word 'cravat' is derived." },
-      { difficulty: "hard", text_es: "Su costa adriática cuenta con más de mil islas e islotes.", text_en: "Its Adriatic coast features more than a thousand islands and islets." },
-      { difficulty: "medium", text_es: "Famoso por el casco antiguo de Dubrovnik, escenario de Juego de Tronos, y los lagos de Plitvice.", text_en: "Famous for the old town of Dubrovnik, a Game of Thrones filming location, and the Plitvice Lakes." },
-      { difficulty: "easy", text_es: "Su capital es Zagreb y limita con el mar Adriático.", text_en: "Its capital is Zagreb and it borders the Adriatic Sea." },
+      {
+        difficulty: "expert",
+        text_es: "Una de sus formaciones geológicas subterráneas alberga un escarabajo endémico llamado 'Anophthalmus hitleri'.",
+        text_en: "One of its subterranean geological formations is home to an endemic beetle named 'Anophthalmus hitleri'.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es conocido por su diversidad de karst, incluyendo más de 1.200 islas, islotes y rocas costeras a lo largo de su costa adriática.",
+        text_en: "It is known for its karst diversity, including over 1,200 islands, islets, and coastal rocks along its Adriatic coast.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Ha contribuido significativamente al desarrollo de la corbata como accesorio de moda global.",
+        text_en: "It has significantly contributed to the development of the necktie as a global fashion accessory.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Este país de Europa del Sudeste tiene una costa extensa y compleja en el mar Adriático, frente a la Península Itálica.",
+        text_en: "This Southeast European country features an extensive and complex coastline on the Adriatic Sea, opposite the Italian Peninsula.",
+      },
     ],
   },
   {
@@ -1473,10 +2017,26 @@ export const countries: Country[] = [
     name: "Serbia",
     name_en: "Serbia",
     hints: [
-      { difficulty: "expert", text_es: "Es el principal productor mundial de frambuesas y exporta cerca de un tercio de la producción global.", text_en: "It is the world's leading raspberry producer and exports about a third of global output." },
-      { difficulty: "hard", text_es: "Cuna del inventor Nikola Tesla y de varios emperadores romanos como Constantino el Grande.", text_en: "Birthplace of inventor Nikola Tesla and of several Roman emperors such as Constantine the Great." },
-      { difficulty: "medium", text_es: "Famoso por su música de bandas de metales en festivales como el de Guča y por sus monasterios ortodoxos.", text_en: "Famous for its brass band music at festivals like Guča and for its Orthodox monasteries." },
-      { difficulty: "easy", text_es: "Su capital es Belgrado, situada en la confluencia de los ríos Sava y Danubio.", text_en: "Its capital is Belgrade, located at the confluence of the Sava and Danube rivers." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los dos países sin salida al mar con 'B' en su código ISO 3166-1 alpha-2, si se considera el estatus disputado de su antigua provincia del sur.",
+        text_en: "It is one of only two landlocked countries with 'B' in its ISO 3166-1 alpha-2 code, considering the disputed status of its former southern province.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Una parte significativa de su territorio se encuentra en la región geográfica de los Balcanes, y tiene una tradición de fuerte producción de ciruelas, siendo un exportador considerable de estas.",
+        text_en: "A significant portion of its territory lies within the Balkan geographical region, and it has a strong tradition of plum production, being a considerable exporter of them.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Este país ha sido históricamente un puente entre Oriente y Occidente, con influencias culturales significativas de ambos, y su lengua oficial utiliza dos alfabetos.",
+        text_en: "This country has historically been a bridge between East and West, with significant cultural influences from both, and its official language uses two alphabets.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Ubicado en Europa Sudoriental, este país no tiene acceso al mar y ha experimentado cambios territoriales significativos a lo largo de la historia reciente de los Balcanes.",
+        text_en: "Located in Southeast Europe, this country is landlocked and has undergone significant territorial changes throughout the recent history of the Balkans.",
+      },
     ],
   },
   {
@@ -1484,10 +2044,26 @@ export const countries: Country[] = [
     name: "Mongolia",
     name_en: "Mongolia",
     hints: [
-      { difficulty: "expert", text_es: "Es el país soberano con menor densidad de población del mundo, con menos de dos habitantes por kilómetro cuadrado.", text_en: "It is the least densely populated sovereign country in the world, with fewer than two inhabitants per square kilometer." },
-      { difficulty: "hard", text_es: "En el siglo XIII Gengis Kan fundó allí el mayor imperio terrestre contiguo de la historia.", text_en: "In the 13th century Genghis Khan founded there the largest contiguous land empire in history." },
-      { difficulty: "medium", text_es: "Famoso por las yurtas, los caballos esteparios y el desierto de Gobi.", text_en: "Famous for yurts, steppe horses, and the Gobi Desert." },
-      { difficulty: "easy", text_es: "Su capital es Ulán Bator y se sitúa entre Rusia y China.", text_en: "Its capital is Ulaanbaatar and it lies between Russia and China." },
+      {
+        difficulty: "expert",
+        text_es: "Una especie de rata campañola, la Myospalax aspalax, es endémica de este país.",
+        text_en: "A species of zokor, Myospalax aspalax, is endemic to this country.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los dos países sin salida al mar en el mundo que limita con dos grandes potencias nucleares.",
+        text_en: "It is one of only two landlocked countries in the world that borders two major nuclear powers.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es el país soberano con la densidad de población más baja del mundo.",
+        text_en: "It is the world's most sparsely populated sovereign country.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Gran parte de su territorio está cubierta por estepas y la parte sur por un gran desierto.",
+        text_en: "Much of its territory is covered by steppes, and the southern part by a large desert.",
+      },
     ],
   },
   {
@@ -1495,10 +2071,26 @@ export const countries: Country[] = [
     name: "Camboya",
     name_en: "Cambodia",
     hints: [
-      { difficulty: "expert", text_es: "Su bandera es la única del mundo en mostrar un edificio reconocible: el templo principal de Angkor.", text_en: "Its flag is the only one in the world to depict a recognizable building: the main temple of Angkor." },
-      { difficulty: "hard", text_es: "Sus templos de Angkor formaron la mayor ciudad preindustrial conocida, con más de un millón de habitantes en su apogeo.", text_en: "Its Angkor temples formed the largest known pre-industrial city, with more than a million inhabitants at its peak." },
-      { difficulty: "medium", text_es: "Famoso por el complejo de Angkor Wat y por los danzantes apsara de la tradición jemer.", text_en: "Famous for the Angkor Wat complex and the apsara dancers of the Khmer tradition." },
-      { difficulty: "easy", text_es: "Su capital es Nom Pen y se sitúa en el sudeste asiático, junto a Vietnam y Tailandia.", text_en: "Its capital is Phnom Penh and it lies in Southeast Asia, next to Vietnam and Thailand." },
+      {
+        difficulty: "expert",
+        text_es: "Es uno de los países con el mayor porcentaje de población que sigue el theravada, una rama antigua de una filosofía específica, con un número de seguidores solo comparable en unos pocos territorios del sudeste asiático y Sri Lanka.",
+        text_en: "It is one of the countries with the highest percentage of its population adhering to Theravada, an ancient branch of a specific philosophy, with a number of followers only comparable in a few Southeast Asian territories and Sri Lanka.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Su sistema de escritura deriva del granas, una variante meridional de sistemas de escritura brahmicos, utilizando un alfabeto de abugida que influyó en otras escrituras de la región.",
+        text_en: "Its writing system derives from Grantha, a southern variant of Brahmi scripts, using an abugida alphabet that influenced other scripts in the region.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Un importante curso de agua asiático atraviesa la parte oriental del territorio antes de desembocar en un gran cuerpo de agua en el sur.",
+        text_en: "A major Asian waterway flows through the eastern part of the territory before emptying into a large body of water to the south.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Limita con tres naciones del sudeste asiático continental y posee una costa en un golfo que es una entrada del Mar de China Meridional.",
+        text_en: "It borders three mainland Southeast Asian nations and has a coastline on a gulf that is an inlet of the South China Sea.",
+      },
     ],
   },
   {
@@ -1506,10 +2098,26 @@ export const countries: Country[] = [
     name: "Bután",
     name_en: "Bhutan",
     hints: [
-      { difficulty: "expert", text_es: "Es el único país del mundo que mide su progreso a través del índice de Felicidad Nacional Bruta en lugar del PIB.", text_en: "It is the only country in the world that measures its progress through a Gross National Happiness index rather than GDP." },
-      { difficulty: "hard", text_es: "Es el primer país del planeta con balance de carbono negativo: absorbe más CO₂ del que emite.", text_en: "It is the first country on the planet to be carbon negative: it absorbs more CO₂ than it emits." },
-      { difficulty: "medium", text_es: "Famoso por sus monasterios budistas colgados de acantilados, como el Nido del Tigre.", text_en: "Famous for its Buddhist monasteries clinging to cliffs, such as the Tiger's Nest." },
-      { difficulty: "easy", text_es: "Su capital es Timbu y se sitúa en el Himalaya, entre la India y China.", text_en: "Its capital is Thimphu and it lies in the Himalayas, between India and China." },
+      {
+        difficulty: "expert",
+        text_es: "Su constitución establece que debe mantener al menos el 60% de su superficie terrestre cubierta por bosques.",
+        text_en: "Its constitution mandates that it must maintain at least 60% of its land area under forest cover.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es el único país del mundo donde la medida del éxito de desarrollo se conceptualiza como 'Felicidad Nacional Bruta'.",
+        text_en: "It is the only country in the world where the measure of development success is conceptualized as 'Gross National Happiness'.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Este reino en el Himalaya es conocido por su terreno montañoso, con densos bosques que cubren gran parte de su geografía.",
+        text_en: "This Himalayan kingdom is known for its mountainous terrain, with dense forests covering much of its geography.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Tradicionalmente aislado del mundo exterior, este pequeño país experimentó la introducción de la televisión e internet apenas en el año 1999.",
+        text_en: "Traditionally isolated from the outside world, this small country experienced the introduction of television and the internet only in 1999.",
+      },
     ],
   },
   {
@@ -1517,10 +2125,26 @@ export const countries: Country[] = [
     name: "Luxemburgo",
     name_en: "Luxembourg",
     hints: [
-      { difficulty: "expert", text_es: "Es el único Gran Ducado soberano que queda en el mundo y a menudo encabeza el ranking de PIB per cápita.", text_en: "It is the only remaining sovereign Grand Duchy in the world and often tops global rankings of GDP per capita." },
-      { difficulty: "hard", text_es: "En 2020 se convirtió en el primer país del mundo en hacer gratuito todo su transporte público.", text_en: "In 2020 it became the first country in the world to make all its public transport free." },
-      { difficulty: "medium", text_es: "Es uno de los seis países fundadores de la actual Unión Europea.", text_en: "It is one of the six founding countries of today's European Union." },
-      { difficulty: "easy", text_es: "Su capital lleva el mismo nombre que el país y limita con Bélgica, Francia y Alemania.", text_en: "Its capital shares its name with the country and it borders Belgium, France, and Germany." },
+      {
+        difficulty: "expert",
+        text_es: "Su sistema de banca privada, establecido bajo estrictas leyes de secreto bancario, fue un factor clave en su desarrollo económico en el siglo XX.",
+        text_en: "Its private banking system, established under strict banking secrecy laws, was a key factor in its economic development in the 20th century.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Es uno de los pocos estados soberanos en el mundo que es un gran ducado.",
+        text_en: "It is one of the few sovereign states in the world that is a grand duchy.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "A pesar de su tamaño, desempeñó un papel significativo en la fundación de varias instituciones europeas importantes.",
+        text_en: "Despite its size, it played a significant role in the founding of several important European institutions.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Se encuentra en Europa occidental y es uno de los países más pequeños del continente.",
+        text_en: "It is located in Western Europe and is one of the continent's smallest countries.",
+      },
     ],
   },
   {
@@ -1528,10 +2152,26 @@ export const countries: Country[] = [
     name: "Mónaco",
     name_en: "Monaco",
     hints: [
-      { difficulty: "expert", text_es: "Es, después del Vaticano, el país soberano más pequeño del mundo y posee la mayor densidad de millonarios per cápita del planeta.", text_en: "After the Vatican, it is the smallest sovereign country in the world and has the highest density of millionaires per capita on the planet." },
-      { difficulty: "hard", text_es: "Su familia gobernante, los Grimaldi, lleva al frente del principado desde finales del siglo XIII.", text_en: "Its ruling family, the Grimaldis, has led the principality since the end of the 13th century." },
-      { difficulty: "medium", text_es: "Famoso por el casino de Montecarlo y por su Gran Premio de Fórmula 1 por las calles de la ciudad.", text_en: "Famous for the Monte Carlo Casino and its Formula 1 Grand Prix run through the city streets." },
-      { difficulty: "easy", text_es: "Es un pequeño principado en la Costa Azul, rodeado por Francia y junto al Mediterráneo.", text_en: "It is a small principality on the French Riviera, surrounded by France and bordering the Mediterranean." },
+      {
+        difficulty: "expert",
+        text_es: "Su área original fue el doble de la actual, antes de que Francia anexara Menton y Roquebrune en 1861.",
+        text_en: "Its original area was twice its current size, before France annexed Menton and Roquebrune in 1861.",
+      },
+      {
+        difficulty: "hard",
+        text_es: "Posee una de las dos únicas colonias de focas monje del Mediterráneo, aunque esta población es muy pequeña y está en peligro crítico.",
+        text_en: "It hosts one of only two Mediterranean monk seal colonies in the Mediterranean, although this population is very small and critically endangered.",
+      },
+      {
+        difficulty: "medium",
+        text_es: "Es uno de los tres estados soberanos que forman la costa Azul o Riviera Francesa.",
+        text_en: "It is one of three sovereign states that form the French Riviera or Côte d'Azur.",
+      },
+      {
+        difficulty: "easy",
+        text_es: "Es el segundo estado soberano más pequeño del mundo.",
+        text_en: "It is the second smallest sovereign state in the world.",
+      },
     ],
   },
 ];
