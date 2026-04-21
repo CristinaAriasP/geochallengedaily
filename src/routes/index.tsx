@@ -16,11 +16,27 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 
-const SEO_TITLE = "GeoChallenge - Adivina Países Diarios";
-const SEO_DESCRIPTION =
-  "Juego diario de geografía. Adivina un país diferente cada día con 4 pistas de experto a fácil. Bilingüe ES/EN. 🌍";
-const SEO_KEYWORDS =
-  "adivinar paises, geochallenge, geografía, juego diario, quiz países, desafío geográfico, wordle de paises, country guessing game";
+const SEO_BY_LANG = {
+  es: {
+    title: "GeoChallenge - Adivina Países Diarios",
+    description:
+      "Juego diario de geografía. Adivina un país diferente cada día con 4 pistas de experto a fácil. Bilingüe ES/EN. 🌍",
+    keywords:
+      "adivinar paises, geochallenge, geografía, juego diario, quiz países, desafío geográfico, wordle de paises, country guessing game",
+    locale: "es_ES",
+    localeAlternate: "en_US",
+  },
+  en: {
+    title: "GeoChallenge - Guess Daily Countries",
+    description:
+      "Daily geography game. Guess a different country every day with 4 hints from expert to easy. Bilingual ES/EN. 🌍",
+    keywords:
+      "guess countries, geochallenge, geography, daily game, country quiz, geography challenge, country wordle, country guessing game",
+    locale: "en_US",
+    localeAlternate: "es_ES",
+  },
+} as const;
+
 const SEO_AUTHOR = "Cristina Arias";
 const SEO_URL = "https://geochallengedaily.lovable.app";
 const SEO_IMAGE =
