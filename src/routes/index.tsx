@@ -14,16 +14,7 @@ import {
   type Lang,
 } from "@/lib/geo";
 import { t } from "@/lib/i18n";
-import { AnimatedBackground, type BgVariant } from "@/components/AnimatedBackground";
-
-const BG_STORAGE_KEY = "geoChallenge:bgVariant";
-const BG_VARIANTS: { value: BgVariant; label: string }[] = [
-  { value: "none", label: "Ninguno" },
-  { value: "aurora", label: "Aurora" },
-  { value: "meridians", label: "Meridianos" },
-  { value: "constellation", label: "Constelación" },
-  { value: "pattern", label: "Patrón" },
-];
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
