@@ -16,41 +16,60 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 
-const SEO_TITLE = "GeoChallenge - Adivina Países Diarios";
-const SEO_DESCRIPTION =
-  "Juego diario de geografía. Adivina un país diferente cada día con 4 pistas de experto a fácil. Bilingüe ES/EN. 🌍";
-const SEO_KEYWORDS =
-  "adivinar paises, geochallenge, geografía, juego diario, quiz países, desafío geográfico, wordle de paises, country guessing game";
+const SEO_BY_LANG = {
+  es: {
+    title: "GeoChallenge - Adivina Países Diarios",
+    description:
+      "Juego diario de geografía. Adivina un país diferente cada día con 4 pistas de experto a fácil. Bilingüe ES/EN. 🌍",
+    keywords:
+      "adivinar paises, geochallenge, geografía, juego diario, quiz países, desafío geográfico, wordle de paises, country guessing game",
+    locale: "es_ES",
+    localeAlternate: "en_US",
+  },
+  en: {
+    title: "GeoChallenge - Guess Daily Countries",
+    description:
+      "Daily geography game. Guess a different country every day with 4 hints from expert to easy. Bilingual ES/EN. 🌍",
+    keywords:
+      "guess countries, geochallenge, geography, daily game, country quiz, geography challenge, country wordle, country guessing game",
+    locale: "en_US",
+    localeAlternate: "es_ES",
+  },
+} as const;
+
 const SEO_AUTHOR = "Cristina Arias";
 const SEO_URL = "https://geochallengedaily.lovable.app";
 const SEO_IMAGE =
   "https://storage.googleapis.com/gpt-engineer-file-uploads/xfKOVxapo0g2NYbdU2k2SRsObV32/social-images/social-1776688009543-Social_image_geochallenge-1.webp";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: SEO_TITLE },
-      { name: "description", content: SEO_DESCRIPTION },
-      { name: "keywords", content: SEO_KEYWORDS },
-      { name: "author", content: SEO_AUTHOR },
-      // Open Graph
-      { property: "og:title", content: SEO_TITLE },
-      { property: "og:description", content: SEO_DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: SEO_URL },
-      { property: "og:image", content: SEO_IMAGE },
-      { property: "og:locale", content: "es_ES" },
-      { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:site_name", content: "GeoChallenge" },
-      // Twitter
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: SEO_TITLE },
-      { name: "twitter:description", content: SEO_DESCRIPTION },
-      { name: "twitter:image", content: SEO_IMAGE },
-      { name: "twitter:creator", content: "@CristinaAriasP" },
-    ],
-    links: [{ rel: "canonical", href: SEO_URL }],
-  }),
+  head: () => {
+    const seo = SEO_BY_LANG.es;
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.description },
+        { name: "keywords", content: seo.keywords },
+        { name: "author", content: SEO_AUTHOR },
+        // Open Graph
+        { property: "og:title", content: seo.title },
+        { property: "og:description", content: seo.description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: SEO_URL },
+        { property: "og:image", content: SEO_IMAGE },
+        { property: "og:locale", content: seo.locale },
+        { property: "og:locale:alternate", content: seo.localeAlternate },
+        { property: "og:site_name", content: "GeoChallenge" },
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: seo.title },
+        { name: "twitter:description", content: seo.description },
+        { name: "twitter:image", content: SEO_IMAGE },
+        { name: "twitter:creator", content: "@CristinaAriasP" },
+      ],
+      links: [{ rel: "canonical", href: SEO_URL }],
+    };
+  },
   component: Index,
 });
 
@@ -110,6 +129,40 @@ function Index() {
     }
     hydrated.current = true;
   }, [todayKey]);
+
+  // Keep meta tags in sync with current language (client-side)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const seo = SEO_BY_LANG[lang];
+
+    document.title = seo.title;
+    document.documentElement.lang = lang;
+
+    const setMeta = (
+      attr: "name" | "property",
+      key: string,
+      content: string,
+    ) => {
+      let el = document.head.querySelector<HTMLMetaElement>(
+        `meta[${attr}="${key}"]`,
+      );
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    setMeta("name", "description", seo.description);
+    setMeta("name", "keywords", seo.keywords);
+    setMeta("property", "og:title", seo.title);
+    setMeta("property", "og:description", seo.description);
+    setMeta("property", "og:locale", seo.locale);
+    setMeta("property", "og:locale:alternate", seo.localeAlternate);
+    setMeta("name", "twitter:title", seo.title);
+    setMeta("name", "twitter:description", seo.description);
+  }, [lang]);
 
   // Persist on every change (after hydration)
   useEffect(() => {
