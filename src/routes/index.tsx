@@ -14,16 +14,7 @@ import {
   type Lang,
 } from "@/lib/geo";
 import { t } from "@/lib/i18n";
-import { AnimatedBackground, type BgVariant } from "@/components/AnimatedBackground";
-
-const BG_STORAGE_KEY = "geoChallenge:bgVariant";
-const BG_VARIANTS: { value: BgVariant; label: string }[] = [
-  { value: "none", label: "Ninguno" },
-  { value: "aurora", label: "Aurora" },
-  { value: "meridians", label: "Meridianos" },
-  { value: "constellation", label: "Constelación" },
-  { value: "pattern", label: "Patrón" },
-];
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,22 +77,7 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [showInvalid, setShowInvalid] = useState(false);
-  const [bgVariant, setBgVariant] = useState<BgVariant>("aurora");
   const hydrated = useRef(false);
-
-  // Load background preference
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const saved = window.localStorage.getItem(BG_STORAGE_KEY) as BgVariant | null;
-    if (saved && ["none", "aurora", "meridians", "constellation", "pattern"].includes(saved)) {
-      setBgVariant(saved);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.localStorage.setItem(BG_STORAGE_KEY, bgVariant);
-  }, [bgVariant]);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
@@ -175,7 +151,7 @@ function Index() {
 
   return (
     <div className="relative min-h-screen text-foreground">
-      <AnimatedBackground variant={bgVariant} />
+      <AnimatedBackground />
       <div className="relative z-10 mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
         {/* HEADER */}
         <header className="gc-fade-in flex items-center justify-between">
@@ -333,26 +309,7 @@ function Index() {
         </footer>
       </div>
 
-      {/* BACKGROUND SELECTOR (temporary) */}
-      <div className="fixed bottom-3 left-3 z-40 flex max-w-[calc(100vw-1.5rem)] flex-wrap gap-1 rounded-full border border-border bg-card/90 p-1.5 shadow-[var(--shadow-soft)] backdrop-blur">
-        {BG_VARIANTS.map((v) => {
-          const active = bgVariant === v.value;
-          return (
-            <button
-              key={v.value}
-              type="button"
-              onClick={() => setBgVariant(v.value)}
-              className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors ${
-                active
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-secondary hover:text-foreground"
-              }`}
-            >
-              {v.label}
-            </button>
-          );
-        })}
-      </div>
+
 
       {/* INVALID POPUP */}
       {showInvalid && (
