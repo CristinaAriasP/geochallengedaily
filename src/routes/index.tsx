@@ -305,7 +305,29 @@ function Index() {
           className="gc-fade-in mt-10 text-center text-xs text-muted-foreground"
           style={{ animationDelay: "300ms" }}
         >
-          {tx.footer}
+          <p>{tx.footer}</p>
+          <div className="mx-auto mt-4 h-px w-16 bg-border/70" />
+          <p className="mt-3 text-[11px] text-[#999]">
+            Made by Cristina Arias
+            <span className="mx-1.5 opacity-60">•</span>
+            <a
+              href="https://github.com/CristinaAriasP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+            >
+              GitHub
+            </a>
+            <span className="mx-1.5 opacity-60">|</span>
+            <a
+              href="https://www.linkedin.com/in/cristina-arias-parrilla/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 transition-colors hover:text-foreground hover:underline"
+            >
+              LinkedIn
+            </a>
+          </p>
         </footer>
       </div>
 
