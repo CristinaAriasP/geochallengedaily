@@ -151,7 +151,7 @@ function Index() {
 
   return (
     <div className="relative min-h-screen text-foreground">
-      <AnimatedBackground variant={bgVariant} />
+      <AnimatedBackground />
       <div className="relative z-10 mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
         {/* HEADER */}
         <header className="gc-fade-in flex items-center justify-between">
