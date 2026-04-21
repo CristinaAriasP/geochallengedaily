@@ -16,21 +16,40 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 
+const SEO_TITLE = "GeoChallenge - Adivina Países Diarios";
+const SEO_DESCRIPTION =
+  "Juego diario de geografía. Adivina un país diferente cada día con 4 pistas de experto a fácil. Bilingüe ES/EN. 🌍";
+const SEO_KEYWORDS =
+  "adivinar paises, geochallenge, geografía, juego diario, quiz países, desafío geográfico, wordle de paises, country guessing game";
+const SEO_AUTHOR = "Cristina Arias";
+const SEO_URL = "https://geochallengedaily.lovable.app";
+const SEO_IMAGE =
+  "https://storage.googleapis.com/gpt-engineer-file-uploads/xfKOVxapo0g2NYbdU2k2SRsObV32/social-images/social-1776688009543-Social_image_geochallenge-1.webp";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GeoChallenge — Daily Geography Game" },
-      {
-        name: "description",
-        content:
-          "GeoChallenge is a daily geography guessing game inspired by Wordle. A new country every day.",
-      },
-      { property: "og:title", content: "GeoChallenge — Daily Geography Game" },
-      {
-        property: "og:description",
-        content: "Guess the country of the day with progressively easier hints.",
-      },
+      { title: SEO_TITLE },
+      { name: "description", content: SEO_DESCRIPTION },
+      { name: "keywords", content: SEO_KEYWORDS },
+      { name: "author", content: SEO_AUTHOR },
+      // Open Graph
+      { property: "og:title", content: SEO_TITLE },
+      { property: "og:description", content: SEO_DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: SEO_URL },
+      { property: "og:image", content: SEO_IMAGE },
+      { property: "og:locale", content: "es_ES" },
+      { property: "og:locale:alternate", content: "en_US" },
+      { property: "og:site_name", content: "GeoChallenge" },
+      // Twitter
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: SEO_TITLE },
+      { name: "twitter:description", content: SEO_DESCRIPTION },
+      { name: "twitter:image", content: SEO_IMAGE },
+      { name: "twitter:creator", content: "@CristinaAriasP" },
     ],
+    links: [{ rel: "canonical", href: SEO_URL }],
   }),
   component: Index,
 });
