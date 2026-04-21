@@ -309,26 +309,7 @@ function Index() {
         </footer>
       </div>
 
-      {/* BACKGROUND SELECTOR (temporary) */}
-      <div className="fixed bottom-3 left-3 z-40 flex max-w-[calc(100vw-1.5rem)] flex-wrap gap-1 rounded-full border border-border bg-card/90 p-1.5 shadow-[var(--shadow-soft)] backdrop-blur">
-        {BG_VARIANTS.map((v) => {
-          const active = bgVariant === v.value;
-          return (
-            <button
-              key={v.value}
-              type="button"
-              onClick={() => setBgVariant(v.value)}
-              className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors ${
-                active
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-secondary hover:text-foreground"
-              }`}
-            >
-              {v.label}
-            </button>
-          );
-        })}
-      </div>
+
 
       {/* INVALID POPUP */}
       {showInvalid && (
