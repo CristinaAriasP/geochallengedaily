@@ -43,30 +43,33 @@ const SEO_IMAGE =
   "https://storage.googleapis.com/gpt-engineer-file-uploads/xfKOVxapo0g2NYbdU2k2SRsObV32/social-images/social-1776688009543-Social_image_geochallenge-1.webp";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: SEO_TITLE },
-      { name: "description", content: SEO_DESCRIPTION },
-      { name: "keywords", content: SEO_KEYWORDS },
-      { name: "author", content: SEO_AUTHOR },
-      // Open Graph
-      { property: "og:title", content: SEO_TITLE },
-      { property: "og:description", content: SEO_DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: SEO_URL },
-      { property: "og:image", content: SEO_IMAGE },
-      { property: "og:locale", content: "es_ES" },
-      { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:site_name", content: "GeoChallenge" },
-      // Twitter
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: SEO_TITLE },
-      { name: "twitter:description", content: SEO_DESCRIPTION },
-      { name: "twitter:image", content: SEO_IMAGE },
-      { name: "twitter:creator", content: "@CristinaAriasP" },
-    ],
-    links: [{ rel: "canonical", href: SEO_URL }],
-  }),
+  head: () => {
+    const seo = SEO_BY_LANG.es;
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.description },
+        { name: "keywords", content: seo.keywords },
+        { name: "author", content: SEO_AUTHOR },
+        // Open Graph
+        { property: "og:title", content: seo.title },
+        { property: "og:description", content: seo.description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: SEO_URL },
+        { property: "og:image", content: SEO_IMAGE },
+        { property: "og:locale", content: seo.locale },
+        { property: "og:locale:alternate", content: seo.localeAlternate },
+        { property: "og:site_name", content: "GeoChallenge" },
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: seo.title },
+        { name: "twitter:description", content: seo.description },
+        { name: "twitter:image", content: SEO_IMAGE },
+        { name: "twitter:creator", content: "@CristinaAriasP" },
+      ],
+      links: [{ rel: "canonical", href: SEO_URL }],
+    };
+  },
   component: Index,
 });
 
