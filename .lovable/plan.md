@@ -1,43 +1,35 @@
 
-## Añadir fondo visual al juego
 
-Quieres que el fondo se sienta menos vacío y más divertido, pero sin entorpecer la lectura ni dar pistas. Antes de aplicar nada quieres verlo, así que el plan es **implementar varias opciones de fondo y un selector temporal** para que puedas probarlas en vivo y decidir cuál te gusta más (o ninguna).
+## Por qué no se ven los fondos
 
-## Opciones que se implementarán
+Dos problemas combinados:
 
-Las 4 son puramente decorativas — no contienen nombres, banderas ni siluetas de países, así que no dan pistas.
+1. **El contenedor raíz tiene `bg-background`**: el `<div className="relative min-h-screen bg-background ...">` en `src/routes/index.tsx` pinta un fondo opaco que cubre toda la pantalla. Como `AnimatedBackground` está dentro de ese contenedor con `-z-10`, queda tapado por el propio fondo del contenedor.
+2. **El `body` también tiene fondo opaco**: aunque sacáramos el fondo del contenedor, `body { background-color: var(--color-background) }` en `styles.css` también lo cubriría si el `AnimatedBackground` queda debajo del body por el `-z-10`.
 
-**1. Aurora animada (degradado en movimiento)**
-Manchas grandes y suaves de color (verde primario + amarillo accent) flotando lentamente. CSS puro, animación de 20-30s, muy sutil. Tipo "northern lights" minimalista.
+## Solución
 
-**2. Meridianos flotantes**
-Líneas curvas (paralelos/meridianos) muy finas y semi-transparentes que se desplazan despacio. Evoca un globo terráqueo abstracto sin mostrar un mapa real. SVG animado.
+**1. `src/routes/index.tsx`**
+- Quitar `bg-background` del contenedor raíz (`<div className="relative min-h-screen bg-background ...">` → `<div className="relative min-h-screen ...">`).
+- Mover `<AnimatedBackground>` para que sea hermano del contenido pero dentro del mismo contenedor `relative`, ya está bien posicionado — solo hace falta que nada opaco lo tape.
+- Cambiar `-z-10` por `z-0` en el wrapper del fondo, y poner el contenido con `relative z-10` para asegurar el orden de apilamiento sin depender de z negativos.
 
-**3. Constelación de puntos**
-Pequeños puntos conectados por líneas finas que derivan suavemente (estilo "particles network"). Sugiere conexiones globales sin geografía. Canvas ligero o SVG.
+**2. `src/components/AnimatedBackground.tsx`**
+- Cambiar `className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"` por `className="pointer-events-none fixed inset-0 z-0 overflow-hidden"`.
+- Subir las opacidades de las blobs aurora de `0.40 / 0.35 / 0.30` a `0.55 / 0.50 / 0.45` y aumentar las opacidades del gradiente de meridianos / constelación / patrón un ~50% para que sean claramente visibles sobre el fondo claro `#fafafa`.
 
-**4. Patrón estático sutil**
-Iconografía geográfica genérica muy difuminada y repetida (brújula, rosa de los vientos, líneas de latitud) en opacidad 4-6%. Sin movimiento, máxima legibilidad.
+**3. `src/styles.css`**
+- Quitar `background-color: var(--color-background)` del selector `body` (o moverlo a `html` solo) para que el fondo animado quede visible. El `<div>` raíz ya no tendrá `bg-background`, así que el color base lo aplica `html`.
 
-## Cómo lo verás antes de decidir
+## Verificación rápida tras el cambio
 
-Se añadirá un **pequeño selector flotante en la esquina inferior izquierda** con 5 opciones: `Ninguno · Aurora · Meridianos · Constelación · Patrón`. Click para cambiar al instante. La preferencia se guarda en `localStorage` para no perderla al recargar.
+- Recarga la página y abre el selector inferior izquierdo.
+- Cambia entre **Aurora**, **Meridianos**, **Constelación** y **Patrón**: cada uno debe verse claramente detrás de las cards blancas.
+- Las cards del juego siguen siendo `bg-card` sólido → la legibilidad se mantiene.
 
-Cuando elijas tu favorito, en una segunda iteración:
-- Quitamos el selector
-- Dejamos solo el fondo elegido como definitivo
-- (O lo eliminamos todo si ninguno convence)
+## Lo que NO cambia
 
-## Detalles técnicos
+- Lógica del juego, traducciones, datos de países.
+- Animaciones del CSS (ya están bien definidas, solo no eran visibles).
+- Selector temporal (sigue ahí para que decidas cuál te gusta).
 
-- **Nuevo archivo** `src/components/AnimatedBackground.tsx` con un componente que recibe `variant: "none" | "aurora" | "meridians" | "constellation" | "pattern"` y renderiza el fondo correspondiente como `<div class="fixed inset-0 -z-10 pointer-events-none">`.
-- **Animaciones** añadidas a `src/styles.css` como keyframes `gc-aurora-drift`, `gc-meridian-flow` (transformaciones lentas, `prefers-reduced-motion` respetado → estado estático).
-- **Selector** en `src/routes/index.tsx`: pequeño `<div>` flotante con 5 botones tipo chip. Estado local + persistencia en `localStorage` bajo la clave `geoChallenge:bgVariant`.
-- **Legibilidad**: las cards del juego ya tienen `bg-card` sólido, así que el fondo no afecta la lectura. Las opacidades del fondo se mantienen ≤15%.
-- **Rendimiento**: solo CSS/SVG, sin librerías extra. Las animaciones usan `transform` y `opacity` (GPU-friendly).
-
-## Lo que NO se hace en este paso
-
-- No se elige aún el fondo definitivo — esa es tu decisión tras probarlos.
-- No se toca la lógica del juego, traducciones, ni datos de países.
-- No se añaden imágenes pesadas ni dependencias nuevas.
