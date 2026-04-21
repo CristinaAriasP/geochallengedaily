@@ -77,22 +77,7 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [showInvalid, setShowInvalid] = useState(false);
-  const [bgVariant, setBgVariant] = useState<BgVariant>("aurora");
   const hydrated = useRef(false);
-
-  // Load background preference
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const saved = window.localStorage.getItem(BG_STORAGE_KEY) as BgVariant | null;
-    if (saved && ["none", "aurora", "meridians", "constellation", "pattern"].includes(saved)) {
-      setBgVariant(saved);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.localStorage.setItem(BG_STORAGE_KEY, bgVariant);
-  }, [bgVariant]);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
