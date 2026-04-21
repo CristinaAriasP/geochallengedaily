@@ -130,6 +130,40 @@ function Index() {
     hydrated.current = true;
   }, [todayKey]);
 
+  // Keep meta tags in sync with current language (client-side)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const seo = SEO_BY_LANG[lang];
+
+    document.title = seo.title;
+    document.documentElement.lang = lang;
+
+    const setMeta = (
+      attr: "name" | "property",
+      key: string,
+      content: string,
+    ) => {
+      let el = document.head.querySelector<HTMLMetaElement>(
+        `meta[${attr}="${key}"]`,
+      );
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    setMeta("name", "description", seo.description);
+    setMeta("name", "keywords", seo.keywords);
+    setMeta("property", "og:title", seo.title);
+    setMeta("property", "og:description", seo.description);
+    setMeta("property", "og:locale", seo.locale);
+    setMeta("property", "og:locale:alternate", seo.localeAlternate);
+    setMeta("name", "twitter:title", seo.title);
+    setMeta("name", "twitter:description", seo.description);
+  }, [lang]);
+
   // Persist on every change (after hydration)
   useEffect(() => {
     if (!hydrated.current || typeof window === "undefined") return;
