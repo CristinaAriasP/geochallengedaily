@@ -409,7 +409,7 @@ function Index() {
             {displayStreak > 0 && (
               <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
                 <Flame className="h-4 w-4 fill-orange-400 text-orange-500" />
-                🔥 {tx.streakDays(displayStreak)}
+                {tx.streakDays(displayStreak)}
               </p>
             )}
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
