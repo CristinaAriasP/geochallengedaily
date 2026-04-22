@@ -321,6 +321,7 @@ function Index() {
     }
 
     if (matchesCountry(value, todaysCountry)) {
+      freshWinRef.current = true;
       setGameState("won");
       setGuess("");
       return;
