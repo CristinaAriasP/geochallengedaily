@@ -406,7 +406,13 @@ function Index() {
             <p className="mt-3 text-sm text-muted-foreground">
               {tx.winSubtitle(attempts + 1)}
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">{tx.comeBack}</p>
+            {displayStreak > 0 && (
+              <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
+                <Flame className="h-4 w-4 fill-orange-400 text-orange-500" />
+                🔥 {tx.streakDays(displayStreak)}
+              </p>
+            )}
+            <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
 
             <div className="mt-6 border-t border-border pt-5 text-left">
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
