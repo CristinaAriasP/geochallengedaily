@@ -292,18 +292,36 @@ function Index() {
       <AnimatedBackground />
       <div className="relative z-10 mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
         {/* HEADER */}
-        <header className="gc-fade-in flex items-center justify-between">
+        <header className="gc-fade-in flex items-center justify-between gap-2">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
             🌍 {tx.title}
           </h1>
-          <button
-            type="button"
-            onClick={() => setLang((l) => (l === "es" ? "en" : "es"))}
-            className="rounded-lg border border-border bg-card px-3 py-2 text-lg shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            aria-label="Toggle language"
-          >
-            {lang === "es" ? "🇪🇸" : "🇬🇧"}
-          </button>
+          <div className="flex items-center gap-2">
+            <div
+              className={`flex items-center gap-1.5 rounded-lg border border-border bg-card px-2.5 py-2 text-sm font-semibold shadow-[var(--shadow-soft)] transition-all duration-200 ${
+                displayStreak > 0 ? "text-foreground" : "text-muted-foreground"
+              }`}
+              aria-label={`${tx.streak}: ${tx.streakDays(displayStreak)}`}
+              title={tx.streakDays(displayStreak)}
+            >
+              <Flame
+                className={`h-4 w-4 ${
+                  displayStreak > 0
+                    ? "fill-orange-400 text-orange-500"
+                    : "text-muted-foreground"
+                }`}
+              />
+              <span className="tabular-nums">{displayStreak}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setLang((l) => (l === "es" ? "en" : "es"))}
+              className="rounded-lg border border-border bg-card px-3 py-2 text-lg shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Toggle language"
+            >
+              {lang === "es" ? "🇪🇸" : "🇬🇧"}
+            </button>
+          </div>
         </header>
 
         {/* PROGRESS */}
