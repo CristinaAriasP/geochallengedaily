@@ -16,6 +16,7 @@ import {
 } from "@/lib/geo";
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { NextCountryCountdown } from "@/components/NextCountryCountdown";
 
 const SEO_BY_LANG = {
   es: {
@@ -468,6 +469,9 @@ function Index() {
               </p>
             )}
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
+            <div className="mt-3 flex justify-center">
+              <NextCountryCountdown label={tx.nextCountryIn} />
+            </div>
 
             <div className="mt-6 border-t border-border pt-5 text-left">
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -501,6 +505,9 @@ function Index() {
             <p className="text-sm font-medium text-muted-foreground">{tx.lose}</p>
             <p className="mt-2 text-3xl font-bold">{correctName}</p>
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
+            <div className="mt-3 flex justify-center">
+              <NextCountryCountdown label={tx.nextCountryIn} />
+            </div>
           </section>
         )}
 
