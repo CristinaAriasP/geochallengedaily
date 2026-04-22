@@ -18,6 +18,8 @@ export const TRANSLATIONS = {
     gotIt: "Entendido",
     close: "Cerrar",
     footer: "Un país diferente cada día 🌎",
+    streak: "Racha",
+    streakDays: (n: number) => `${n} día${n === 1 ? "" : "s"} seguido${n === 1 ? "" : "s"}`,
     difficulty: {
       expert: "Experto",
       hard: "Difícil",
@@ -41,6 +43,8 @@ export const TRANSLATIONS = {
     gotIt: "Got it",
     close: "Close",
     footer: "A different country every day 🌎",
+    streak: "Streak",
+    streakDays: (n: number) => `${n} day${n === 1 ? "" : "s"} in a row`,
     difficulty: {
       expert: "Expert",
       hard: "Hard",

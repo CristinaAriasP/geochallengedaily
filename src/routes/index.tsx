@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, Flame, X } from "lucide-react";
 import type { Difficulty } from "@/data/countries";
 import {
   DIFFICULTY_ORDER,
@@ -92,6 +92,13 @@ interface SavedState {
 }
 
 const STORAGE_KEY = "geoChallenge";
+const STREAK_KEY = "geoChallengeStreak";
+
+interface StreakState {
+  currentStreak: number;
+  bestStreak: number;
+  lastWonDate: string | null;
+}
 
 function loadSaved(): SavedState | null {
   if (typeof window === "undefined") return null;
@@ -102,6 +109,33 @@ function loadSaved(): SavedState | null {
   } catch {
     return null;
   }
+}
+
+function loadStreak(): StreakState {
+  if (typeof window === "undefined")
+    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  try {
+    const raw = window.localStorage.getItem(STREAK_KEY);
+    if (!raw) return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+    return JSON.parse(raw) as StreakState;
+  } catch {
+    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  }
+}
+
+function yesterdayKey(todayKey: string): string {
+  // todayKey format: YYYY-MM-DD (UTC-based from getTodayKey)
+  const d = new Date(`${todayKey}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function computeDisplayStreak(streak: StreakState, todayKey: string): number {
+  if (!streak.lastWonDate) return 0;
+  if (streak.lastWonDate === todayKey) return streak.currentStreak;
+  if (streak.lastWonDate === yesterdayKey(todayKey)) return streak.currentStreak;
+  // Older than yesterday → streak is broken visually
+  return 0;
 }
 
 function Index() {
@@ -115,7 +149,13 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [showInvalid, setShowInvalid] = useState(false);
+  const [streak, setStreak] = useState<StreakState>({
+    currentStreak: 0,
+    bestStreak: 0,
+    lastWonDate: null,
+  });
   const hydrated = useRef(false);
+  const streakAwardedRef = useRef(false);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
@@ -126,9 +166,34 @@ function Index() {
       setAttempts(saved.attempts);
       setGameState(saved.gameState);
       setGuesses(saved.guesses);
+      // If already won today, don't award the streak again later
+      if (saved.gameState === "won") streakAwardedRef.current = true;
     }
+    setStreak(loadStreak());
     hydrated.current = true;
   }, [todayKey]);
+
+  // Award / update streak when the user wins today (once per day)
+  useEffect(() => {
+    if (!hydrated.current || typeof window === "undefined") return;
+    if (gameState !== "won" || streakAwardedRef.current) return;
+
+    setStreak((prev) => {
+      if (prev.lastWonDate === todayKey) return prev; // already counted
+      const yesterday = yesterdayKey(todayKey);
+      const next =
+        prev.lastWonDate === yesterday ? prev.currentStreak + 1 : 1;
+      const updated: StreakState = {
+        currentStreak: next,
+        bestStreak: Math.max(prev.bestStreak, next),
+        lastWonDate: todayKey,
+      };
+      window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
+      return updated;
+    });
+    streakAwardedRef.current = true;
+  }, [gameState, todayKey]);
+
 
   // Keep meta tags in sync with current language (client-side)
   useEffect(() => {
@@ -189,6 +254,7 @@ function Index() {
   const progress = Math.min(100, (hintIndex / (MAX_ATTEMPTS - 1)) * 100);
   const correctName = getCountryName(todaysCountry, lang);
   const isOver = gameState !== "playing";
+  const displayStreak = computeDisplayStreak(streak, todayKey);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -226,18 +292,36 @@ function Index() {
       <AnimatedBackground />
       <div className="relative z-10 mx-auto w-full max-w-[600px] px-4 py-6 sm:py-10">
         {/* HEADER */}
-        <header className="gc-fade-in flex items-center justify-between">
+        <header className="gc-fade-in flex items-center justify-between gap-2">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
             🌍 {tx.title}
           </h1>
-          <button
-            type="button"
-            onClick={() => setLang((l) => (l === "es" ? "en" : "es"))}
-            className="rounded-lg border border-border bg-card px-3 py-2 text-lg shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            aria-label="Toggle language"
-          >
-            {lang === "es" ? "🇪🇸" : "🇬🇧"}
-          </button>
+          <div className="flex items-center gap-2">
+            <div
+              className={`flex items-center gap-1.5 rounded-lg border border-border bg-card px-2.5 py-2 text-sm font-semibold shadow-[var(--shadow-soft)] transition-all duration-200 ${
+                displayStreak > 0 ? "text-foreground" : "text-muted-foreground"
+              }`}
+              aria-label={`${tx.streak}: ${tx.streakDays(displayStreak)}`}
+              title={tx.streakDays(displayStreak)}
+            >
+              <Flame
+                className={`h-4 w-4 ${
+                  displayStreak > 0
+                    ? "fill-orange-400 text-orange-500"
+                    : "text-muted-foreground"
+                }`}
+              />
+              <span className="tabular-nums">{displayStreak}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setLang((l) => (l === "es" ? "en" : "es"))}
+              className="rounded-lg border border-border bg-card px-3 py-2 text-lg shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Toggle language"
+            >
+              {lang === "es" ? "🇪🇸" : "🇬🇧"}
+            </button>
+          </div>
         </header>
 
         {/* PROGRESS */}
@@ -322,7 +406,13 @@ function Index() {
             <p className="mt-3 text-sm text-muted-foreground">
               {tx.winSubtitle(attempts + 1)}
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">{tx.comeBack}</p>
+            {displayStreak > 0 && (
+              <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
+                <Flame className="h-4 w-4 fill-orange-400 text-orange-500" />
+                🔥 {tx.streakDays(displayStreak)}
+              </p>
+            )}
+            <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
 
             <div className="mt-6 border-t border-border pt-5 text-left">
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
