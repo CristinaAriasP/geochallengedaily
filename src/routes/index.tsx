@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Flame, X } from "lucide-react";
+import confetti from "canvas-confetti";
 import type { Difficulty } from "@/data/countries";
 import {
   DIFFICULTY_ORDER,
@@ -156,6 +157,8 @@ function Index() {
   });
   const hydrated = useRef(false);
   const streakAwardedRef = useRef(false);
+  const confettiFiredRef = useRef(false);
+  const freshWinRef = useRef(false);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
