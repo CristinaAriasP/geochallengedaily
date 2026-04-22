@@ -282,3 +282,8 @@
   }
 }
 
+/* Hide Lovable badge */
+#lovable-badge-cta {
+  display: none !important;
+}
+
