@@ -200,6 +200,54 @@ function Index() {
     streakAwardedRef.current = true;
   }, [gameState, todayKey]);
 
+  // Confetti burst on a fresh win (not on reload of an already-won game)
+  useEffect(() => {
+    if (!hydrated.current || typeof window === "undefined") return;
+    if (gameState !== "won") return;
+    if (confettiFiredRef.current || !freshWinRef.current) return;
+
+    confettiFiredRef.current = true;
+
+    // Respect reduced-motion preference
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (reduce) return;
+
+    const colors = ["#22c55e", "#facc15", "#fb923c", "#ec4899", "#a78bfa"];
+
+    // Center burst
+    confetti({
+      particleCount: 90,
+      spread: 75,
+      startVelocity: 45,
+      origin: { x: 0.5, y: 0.55 },
+      colors,
+      scalar: 0.9,
+      zIndex: 9999,
+    });
+
+    // Side cannons for a fuller effect
+    setTimeout(() => {
+      confetti({
+        particleCount: 50,
+        angle: 60,
+        spread: 65,
+        origin: { x: 0, y: 0.7 },
+        colors,
+        zIndex: 9999,
+      });
+      confetti({
+        particleCount: 50,
+        angle: 120,
+        spread: 65,
+        origin: { x: 1, y: 0.7 },
+        colors,
+        zIndex: 9999,
+      });
+    }, 220);
+  }, [gameState]);
+
 
   // Keep meta tags in sync with current language (client-side)
   useEffect(() => {
