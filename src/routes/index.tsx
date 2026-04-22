@@ -169,8 +169,11 @@ function Index() {
       setAttempts(saved.attempts);
       setGameState(saved.gameState);
       setGuesses(saved.guesses);
-      // If already won today, don't award the streak again later
-      if (saved.gameState === "won") streakAwardedRef.current = true;
+      // If already won today, don't award the streak again later or refire confetti
+      if (saved.gameState === "won") {
+        streakAwardedRef.current = true;
+        confettiFiredRef.current = true;
+      }
     }
     setStreak(loadStreak());
     hydrated.current = true;
