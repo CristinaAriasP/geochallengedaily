@@ -166,9 +166,34 @@ function Index() {
       setAttempts(saved.attempts);
       setGameState(saved.gameState);
       setGuesses(saved.guesses);
+      // If already won today, don't award the streak again later
+      if (saved.gameState === "won") streakAwardedRef.current = true;
     }
+    setStreak(loadStreak());
     hydrated.current = true;
   }, [todayKey]);
+
+  // Award / update streak when the user wins today (once per day)
+  useEffect(() => {
+    if (!hydrated.current || typeof window === "undefined") return;
+    if (gameState !== "won" || streakAwardedRef.current) return;
+
+    setStreak((prev) => {
+      if (prev.lastWonDate === todayKey) return prev; // already counted
+      const yesterday = yesterdayKey(todayKey);
+      const next =
+        prev.lastWonDate === yesterday ? prev.currentStreak + 1 : 1;
+      const updated: StreakState = {
+        currentStreak: next,
+        bestStreak: Math.max(prev.bestStreak, next),
+        lastWonDate: todayKey,
+      };
+      window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
+      return updated;
+    });
+    streakAwardedRef.current = true;
+  }, [gameState, todayKey]);
+
 
   // Keep meta tags in sync with current language (client-side)
   useEffect(() => {
