@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, Flame, X } from "lucide-react";
 import type { Difficulty } from "@/data/countries";
 import {
   DIFFICULTY_ORDER,
@@ -92,6 +92,13 @@ interface SavedState {
 }
 
 const STORAGE_KEY = "geoChallenge";
+const STREAK_KEY = "geoChallengeStreak";
+
+interface StreakState {
+  currentStreak: number;
+  bestStreak: number;
+  lastWonDate: string | null;
+}
 
 function loadSaved(): SavedState | null {
   if (typeof window === "undefined") return null;
@@ -102,6 +109,33 @@ function loadSaved(): SavedState | null {
   } catch {
     return null;
   }
+}
+
+function loadStreak(): StreakState {
+  if (typeof window === "undefined")
+    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  try {
+    const raw = window.localStorage.getItem(STREAK_KEY);
+    if (!raw) return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+    return JSON.parse(raw) as StreakState;
+  } catch {
+    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  }
+}
+
+function yesterdayKey(todayKey: string): string {
+  // todayKey format: YYYY-MM-DD (UTC-based from getTodayKey)
+  const d = new Date(`${todayKey}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function computeDisplayStreak(streak: StreakState, todayKey: string): number {
+  if (!streak.lastWonDate) return 0;
+  if (streak.lastWonDate === todayKey) return streak.currentStreak;
+  if (streak.lastWonDate === yesterdayKey(todayKey)) return streak.currentStreak;
+  // Older than yesterday → streak is broken visually
+  return 0;
 }
 
 function Index() {
