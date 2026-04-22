@@ -149,7 +149,13 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [showInvalid, setShowInvalid] = useState(false);
+  const [streak, setStreak] = useState<StreakState>({
+    currentStreak: 0,
+    bestStreak: 0,
+    lastWonDate: null,
+  });
   const hydrated = useRef(false);
+  const streakAwardedRef = useRef(false);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
