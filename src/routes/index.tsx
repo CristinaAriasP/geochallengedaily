@@ -254,6 +254,7 @@ function Index() {
   const progress = Math.min(100, (hintIndex / (MAX_ATTEMPTS - 1)) * 100);
   const correctName = getCountryName(todaysCountry, lang);
   const isOver = gameState !== "playing";
+  const displayStreak = computeDisplayStreak(streak, todayKey);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
