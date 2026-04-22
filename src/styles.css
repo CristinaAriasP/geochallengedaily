@@ -283,7 +283,8 @@
 }
 
 /* Hide Lovable badge */
-#lovable-badge-cta {
+aside[id="lovable-badge"] {
   display: none !important;
 }
+
 
