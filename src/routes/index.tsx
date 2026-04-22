@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Flame, X } from "lucide-react";
+import confetti from "canvas-confetti";
 import type { Difficulty } from "@/data/countries";
 import {
   DIFFICULTY_ORDER,
@@ -156,6 +157,8 @@ function Index() {
   });
   const hydrated = useRef(false);
   const streakAwardedRef = useRef(false);
+  const confettiFiredRef = useRef(false);
+  const freshWinRef = useRef(false);
 
   // Load saved progress on mount (only if same day)
   useEffect(() => {
@@ -166,8 +169,11 @@ function Index() {
       setAttempts(saved.attempts);
       setGameState(saved.gameState);
       setGuesses(saved.guesses);
-      // If already won today, don't award the streak again later
-      if (saved.gameState === "won") streakAwardedRef.current = true;
+      // If already won today, don't award the streak again later or refire confetti
+      if (saved.gameState === "won") {
+        streakAwardedRef.current = true;
+        confettiFiredRef.current = true;
+      }
     }
     setStreak(loadStreak());
     hydrated.current = true;
@@ -193,6 +199,54 @@ function Index() {
     });
     streakAwardedRef.current = true;
   }, [gameState, todayKey]);
+
+  // Confetti burst on a fresh win (not on reload of an already-won game)
+  useEffect(() => {
+    if (!hydrated.current || typeof window === "undefined") return;
+    if (gameState !== "won") return;
+    if (confettiFiredRef.current || !freshWinRef.current) return;
+
+    confettiFiredRef.current = true;
+
+    // Respect reduced-motion preference
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (reduce) return;
+
+    const colors = ["#22c55e", "#facc15", "#fb923c", "#ec4899", "#a78bfa"];
+
+    // Center burst
+    confetti({
+      particleCount: 90,
+      spread: 75,
+      startVelocity: 45,
+      origin: { x: 0.5, y: 0.55 },
+      colors,
+      scalar: 0.9,
+      zIndex: 9999,
+    });
+
+    // Side cannons for a fuller effect
+    setTimeout(() => {
+      confetti({
+        particleCount: 50,
+        angle: 60,
+        spread: 65,
+        origin: { x: 0, y: 0.7 },
+        colors,
+        zIndex: 9999,
+      });
+      confetti({
+        particleCount: 50,
+        angle: 120,
+        spread: 65,
+        origin: { x: 1, y: 0.7 },
+        colors,
+        zIndex: 9999,
+      });
+    }, 220);
+  }, [gameState]);
 
 
   // Keep meta tags in sync with current language (client-side)
@@ -267,6 +321,7 @@ function Index() {
     }
 
     if (matchesCountry(value, todaysCountry)) {
+      freshWinRef.current = true;
       setGameState("won");
       setGuess("");
       return;
