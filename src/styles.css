@@ -207,42 +207,42 @@
  * root cross-fades the whole scene over 8s.
  */
 .gc-aurora-root {
-  --gc-aurora-c1: oklch(0.92 0.06 145);
-  --gc-aurora-c2: oklch(0.93 0.07 90);
-  --gc-aurora-c3: oklch(0.92 0.06 230);
-  --gc-aurora-opacity: 0.55;
+  --gc-aurora-c1: oklch(0.88 0.11 145);
+  --gc-aurora-c2: oklch(0.88 0.12 90);
+  --gc-aurora-c3: oklch(0.88 0.11 230);
+  --gc-aurora-opacity: 0.6;
 }
 
 /* Morning 6–11: hopeful sunrise — soft purple, coral, golden */
 .gc-aurora-root[data-period="morning"] {
-  --gc-aurora-c1: oklch(0.92 0.06 320);
-  --gc-aurora-c2: oklch(0.92 0.07 30);
-  --gc-aurora-c3: oklch(0.94 0.08 85);
-  --gc-aurora-opacity: 0.5;
+  --gc-aurora-c1: oklch(0.86 0.12 320);
+  --gc-aurora-c2: oklch(0.86 0.13 30);
+  --gc-aurora-c3: oklch(0.89 0.13 85);
+  --gc-aurora-opacity: 0.6;
 }
 
 /* Afternoon 12–16: peak sun — orange, gold, cream */
 .gc-aurora-root[data-period="afternoon"] {
-  --gc-aurora-c1: oklch(0.94 0.07 65);
-  --gc-aurora-c2: oklch(0.95 0.07 90);
-  --gc-aurora-c3: oklch(0.96 0.03 85);
-  --gc-aurora-opacity: 0.45;
+  --gc-aurora-c1: oklch(0.88 0.12 65);
+  --gc-aurora-c2: oklch(0.90 0.12 90);
+  --gc-aurora-c3: oklch(0.92 0.08 85);
+  --gc-aurora-opacity: 0.55;
 }
 
 /* Evening 17–19: sunset — gold, orange, deep pink */
 .gc-aurora-root[data-period="evening"] {
-  --gc-aurora-c1: oklch(0.92 0.08 85);
-  --gc-aurora-c2: oklch(0.90 0.09 50);
-  --gc-aurora-c3: oklch(0.88 0.08 0);
-  --gc-aurora-opacity: 0.55;
+  --gc-aurora-c1: oklch(0.87 0.13 85);
+  --gc-aurora-c2: oklch(0.84 0.14 50);
+  --gc-aurora-c3: oklch(0.82 0.13 0);
+  --gc-aurora-opacity: 0.65;
 }
 
 /* Night 20–5: calm — navy, purple, soft blue */
 .gc-aurora-root[data-period="night"] {
-  --gc-aurora-c1: oklch(0.86 0.06 260);
-  --gc-aurora-c2: oklch(0.85 0.07 300);
-  --gc-aurora-c3: oklch(0.90 0.05 230);
-  --gc-aurora-opacity: 0.5;
+  --gc-aurora-c1: oklch(0.80 0.10 260);
+  --gc-aurora-c2: oklch(0.80 0.11 300);
+  --gc-aurora-c3: oklch(0.85 0.09 230);
+  --gc-aurora-opacity: 0.6;
 }
 
 .gc-aurora-blob,
@@ -257,9 +257,22 @@
 .gc-aurora-blob-2 { animation: gc-aurora-drift-2 32s ease-in-out infinite; }
 .gc-aurora-blob-3 { animation: gc-aurora-drift-3 36s ease-in-out infinite; }
 
-.gc-aurora-hue-1 { background: radial-gradient(circle, var(--gc-aurora-c1) 0%, transparent 70%); }
-.gc-aurora-hue-2 { background: radial-gradient(circle, var(--gc-aurora-c2) 0%, transparent 70%); }
-.gc-aurora-hue-3 { background: radial-gradient(circle, var(--gc-aurora-c3) 0%, transparent 70%); }
+.gc-aurora-hue-1 { background: radial-gradient(circle, var(--gc-aurora-c1) 0%, transparent 65%); }
+.gc-aurora-hue-2 { background: radial-gradient(circle, var(--gc-aurora-c2) 0%, transparent 65%); }
+.gc-aurora-hue-3 { background: radial-gradient(circle, var(--gc-aurora-c3) 0%, transparent 65%); }
+
+/* Mobile: more vibrant + bigger blobs to compensate for smaller viewport */
+@media (max-width: 640px) {
+  .gc-aurora-root {
+    --gc-aurora-opacity: 0.82;
+  }
+  .gc-aurora-blob,
+  .gc-aurora-blob-2,
+  .gc-aurora-blob-3 {
+    width: 95vw;
+    height: 95vw;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .gc-aurora-blob,
