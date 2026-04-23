@@ -129,8 +129,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la cuna del papiro, donde se inventó esta superficie para escribir hace miles de años.",
-        text_en: "It is the cradle of papyrus, where this writing surface was invented thousands of years ago.",
+        text_es: "Su moneda tiene una característica única: es la única en el mundo árabe que presenta a una mujer histórica prominentemente en los billetes actuales de circulación.",
+        text_en: "Its currency has a unique feature: it is the only one in the Arab world that prominently features a historical woman on the current circulating banknotes.",
       },
       {
         difficulty: "hard",
@@ -183,8 +183,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el hogar de la república más antigua del mundo en funcionamiento continuo, que es un enclavado dentro de su territorio.",
-        text_en: "It is home to the world's oldest continuously functioning republic, which is an enclave within its territory.",
+        text_es: 'En las regiones rurales del sur, existe una antigua tradición no religiosa en la que las mujeres, al enviudar, visten de negro de por vida y realizan "lamentos" mediante cantos rítmicos que inducen al trance, heredados de ritos funerarios precristianos.',
+        text_en: 'In rural southern regions, there is an ancient, non-religious tradition where women, upon losing their husbands, would wear black for the rest of their lives and "lament" through rhythmic, trance-like chants that date back to pre-Christian funeral rites.',
       },
       {
         difficulty: "hard",
