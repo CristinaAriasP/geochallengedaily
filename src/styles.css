@@ -181,10 +181,24 @@
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+@keyframes gc-shake {
+  0%, 100% { transform: translateX(0); }
+  15%      { transform: translateX(-10px); }
+  30%      { transform: translateX(9px); }
+  45%      { transform: translateX(-7px); }
+  60%      { transform: translateX(5px); }
+  75%      { transform: translateX(-3px); }
+  90%      { transform: translateX(2px); }
+}
 
 .gc-fade-in    { animation: gc-fade-in 200ms ease-out both; }
 .gc-pop-in     { animation: gc-pop-in 320ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
 .gc-overlay-in { animation: gc-overlay-in 180ms ease-out both; }
+.gc-shake      { animation: gc-shake 600ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gc-shake { animation: none; }
+}
 
 /* ── Aurora background (time-of-day adaptive) ──────────── */
 @keyframes gc-aurora-drift-1 {
