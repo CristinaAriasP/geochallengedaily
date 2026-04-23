@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Flame, X } from "lucide-react";
+import { ArrowRight, Flame, Moon, Sun, X } from "lucide-react";
 import confetti from "canvas-confetti";
 import type { Difficulty } from "@/data/countries";
 import {
@@ -17,6 +17,7 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { NextCountryCountdown } from "@/components/NextCountryCountdown";
+import { useTheme } from "@/hooks/use-theme";
 
 const SEO_BY_LANG = {
   es: {
@@ -145,6 +146,7 @@ function Index() {
   const todayKey = useMemo(() => getTodayKey(), []);
 
   const [lang, setLang] = useState<Lang>("es");
+  const { theme, toggle: toggleTheme } = useTheme();
   const [hintIndex, setHintIndex] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [guess, setGuess] = useState("");
@@ -399,6 +401,19 @@ function Index() {
               />
               <span className="tabular-nums">{displayStreak}</span>
             </div>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="rounded-lg border border-border bg-card px-3 py-2 text-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label={tx.toggleTheme}
+              title={tx.toggleTheme}
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
             <button
               type="button"
               onClick={() => setLang((l) => (l === "es" ? "en" : "es"))}

@@ -21,6 +21,7 @@ export const TRANSLATIONS = {
     streak: "Racha",
     streakDays: (n: number) => `${n} día${n === 1 ? "" : "s"} seguido${n === 1 ? "" : "s"}`,
     nextCountryIn: "Próximo país en:",
+    toggleTheme: "Cambiar tema",
     difficulty: {
       expert: "Experto",
       hard: "Difícil",
@@ -47,6 +48,7 @@ export const TRANSLATIONS = {
     streak: "Streak",
     streakDays: (n: number) => `${n} day${n === 1 ? "" : "s"} in a row`,
     nextCountryIn: "Next country in:",
+    toggleTheme: "Toggle theme",
     difficulty: {
       expert: "Expert",
       hard: "Hard",
