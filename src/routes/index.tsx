@@ -531,12 +531,45 @@ function Index() {
 
         {/* RESULT — LOSE */}
         {gameState === "lost" && (
-          <section className="gc-fade-in mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-soft)] ring-2 ring-destructive/40">
-            <p className="text-sm font-medium text-muted-foreground">{tx.lose}</p>
-            <p className="mt-2 text-3xl font-bold">{correctName}</p>
+          <section className="gc-shake mt-6 rounded-[10px] bg-card p-6 text-center shadow-[var(--shadow-pop)] ring-2 ring-destructive/40">
+            <div className="text-5xl">😔</div>
+            <p className="mt-2 text-sm font-medium uppercase tracking-wider text-destructive">
+              {tx.lose}
+            </p>
+            <p className="mt-1 text-3xl font-bold sm:text-4xl">{correctName}</p>
+            {displayStreak > 0 && (
+              <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
+                <Flame className="h-4 w-4 fill-orange-400 text-orange-500" />
+                {tx.streakDays(displayStreak)}
+              </p>
+            )}
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
             <div className="mt-3 flex justify-center">
               <NextCountryCountdown label={tx.nextCountryIn} />
+            </div>
+
+            <div className="mt-6 border-t border-border pt-5 text-left">
+              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {tx.allHintsTitle}
+              </p>
+              <ul className="space-y-3">
+                {todaysCountry.hints.map((h, i) => (
+                  <li
+                    key={h.difficulty}
+                    className="gc-fade-in rounded-[10px] bg-secondary/40 p-3"
+                    style={{ animationDelay: `${120 + i * 80}ms` }}
+                  >
+                    <span
+                      className={`inline-block rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${difficultyStyles[h.difficulty]}`}
+                    >
+                      {tx.difficulty[h.difficulty]}
+                    </span>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground">
+                      {lang === "es" ? h.text_es : h.text_en}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
         )}
