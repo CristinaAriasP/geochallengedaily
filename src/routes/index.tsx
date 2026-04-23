@@ -170,9 +170,11 @@ function Index() {
       setAttempts(saved.attempts);
       setGameState(saved.gameState);
       setGuesses(saved.guesses);
-      // If already won today, don't award the streak again later or refire confetti
-      if (saved.gameState === "won") {
+      // If today's game is already finished, don't re-award the streak or refire confetti
+      if (saved.gameState === "won" || saved.gameState === "lost") {
         streakAwardedRef.current = true;
+      }
+      if (saved.gameState === "won") {
         confettiFiredRef.current = true;
       }
     }
@@ -180,13 +182,14 @@ function Index() {
     hydrated.current = true;
   }, [todayKey]);
 
-  // Award / update streak when the user wins today (once per day)
+  // Award / update streak when today's game finishes (won OR lost).
+  // The streak rewards playing daily, not only winning.
   useEffect(() => {
     if (!hydrated.current || typeof window === "undefined") return;
-    if (gameState !== "won" || streakAwardedRef.current) return;
+    if (gameState === "playing" || streakAwardedRef.current) return;
 
     setStreak((prev) => {
-      if (prev.lastWonDate === todayKey) return prev; // already counted
+      if (prev.lastWonDate === todayKey) return prev; // already counted today
       const yesterday = yesterdayKey(todayKey);
       const next =
         prev.lastWonDate === yesterday ? prev.currentStreak + 1 : 1;
