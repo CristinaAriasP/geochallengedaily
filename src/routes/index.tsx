@@ -250,6 +250,33 @@ function Index() {
   }, [gameState]);
 
 
+  // DEV-ONLY: hidden hotkey to reset today's game (Ctrl+Shift+R).
+  // Lets us replay the same day during testing without exposing a Retry UI.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === "R" || e.key === "r")) {
+        e.preventDefault();
+        try {
+          window.localStorage.removeItem(STORAGE_KEY);
+        } catch {
+          // ignore
+        }
+        setHintIndex(0);
+        setAttempts(0);
+        setGuesses([]);
+        setGuess("");
+        setShowInvalid(false);
+        setGameState("playing");
+        streakAwardedRef.current = false;
+        confettiFiredRef.current = false;
+        freshWinRef.current = false;
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   // Keep meta tags in sync with current language (client-side)
   useEffect(() => {
     if (typeof document === "undefined") return;
