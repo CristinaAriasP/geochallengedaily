@@ -43,7 +43,7 @@ const SEO_BY_LANG = {
 const SEO_AUTHOR = "Cristina Arias";
 const SEO_URL = "https://geochallengedaily.lovable.app";
 const SEO_IMAGE =
-  "https://geochallengedaily.lovable.app/og-image.png?v=2";
+  "https://geochallengedaily.lovable.app/preview-v2.png";
 export const Route = createFileRoute("/")({
   head: () => {
     const seo = SEO_BY_LANG.es;
