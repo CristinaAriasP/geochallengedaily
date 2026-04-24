@@ -271,7 +271,7 @@ function Index() {
         setAttempts(0);
         setGuesses([]);
         setGuess("");
-        setShowInvalid(false);
+        setPopup(null);
         setGameState("playing");
         streakAwardedRef.current = false;
         confettiFiredRef.current = false;
@@ -349,7 +349,7 @@ function Index() {
     if (!value || isOver) return;
 
     if (!isRealCountry(value)) {
-      setShowInvalid(true);
+      setPopup("invalid");
       return;
     }
 
@@ -357,6 +357,16 @@ function Index() {
       freshWinRef.current = true;
       setGameState("won");
       setGuess("");
+      return;
+    }
+
+    // Reject duplicates: same country (in either language) already tried.
+    const normalizedInput = normalizeString(value);
+    const alreadyTried = guesses.some(
+      (g) => normalizeString(g) === normalizedInput,
+    );
+    if (alreadyTried) {
+      setPopup("duplicate");
       return;
     }
 
