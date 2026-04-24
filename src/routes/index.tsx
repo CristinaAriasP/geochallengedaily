@@ -152,7 +152,7 @@ function Index() {
   const [guess, setGuess] = useState("");
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
-  const [showInvalid, setShowInvalid] = useState(false);
+  const [popup, setPopup] = useState<null | "invalid" | "duplicate">(null);
   const [streak, setStreak] = useState<StreakState>({
     currentStreak: 0,
     bestStreak: 0,
@@ -271,7 +271,7 @@ function Index() {
         setAttempts(0);
         setGuesses([]);
         setGuess("");
-        setShowInvalid(false);
+        setPopup(null);
         setGameState("playing");
         streakAwardedRef.current = false;
         confettiFiredRef.current = false;
@@ -349,7 +349,7 @@ function Index() {
     if (!value || isOver) return;
 
     if (!isRealCountry(value)) {
-      setShowInvalid(true);
+      setPopup("invalid");
       return;
     }
 
@@ -357,6 +357,16 @@ function Index() {
       freshWinRef.current = true;
       setGameState("won");
       setGuess("");
+      return;
+    }
+
+    // Reject duplicates: same country (in either language) already tried.
+    const normalizedInput = normalizeString(value);
+    const alreadyTried = guesses.some(
+      (g) => normalizeString(g) === normalizedInput,
+    );
+    if (alreadyTried) {
+      setPopup("duplicate");
       return;
     }
 
@@ -635,11 +645,11 @@ function Index() {
 
 
 
-      {/* INVALID POPUP */}
-      {showInvalid && (
+      {/* FEEDBACK POPUP (invalid country / duplicate guess) */}
+      {popup && (
         <div
           className="gc-overlay-in fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
-          onClick={() => setShowInvalid(false)}
+          onClick={() => setPopup(null)}
         >
           <div
             className="gc-pop-in relative w-full max-w-sm rounded-[12px] bg-card p-6 text-center shadow-[var(--shadow-pop)]"
@@ -647,18 +657,22 @@ function Index() {
           >
             <button
               type="button"
-              onClick={() => setShowInvalid(false)}
+              onClick={() => setPopup(null)}
               aria-label={tx.close}
               className="absolute right-3 top-3 rounded-full p-1 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               <X className="h-4 w-4" />
             </button>
-            <div className="text-3xl">🤔</div>
-            <h2 className="mt-2 text-lg font-semibold">{tx.invalidTitle}</h2>
-            <p className="mt-1 text-sm text-muted-foreground">{tx.invalidBody}</p>
+            <div className="text-3xl">{popup === "duplicate" ? "🔁" : "🤔"}</div>
+            <h2 className="mt-2 text-lg font-semibold">
+              {popup === "duplicate" ? tx.duplicateTitle : tx.invalidTitle}
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {popup === "duplicate" ? tx.duplicateBody : tx.invalidBody}
+            </p>
             <button
               type="button"
-              onClick={() => setShowInvalid(false)}
+              onClick={() => setPopup(null)}
               className="mt-5 w-full rounded-[10px] bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-[0.98]"
             >
               {tx.gotIt}
