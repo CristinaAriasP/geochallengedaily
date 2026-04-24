@@ -39,8 +39,8 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "geochallengedaily" },
       { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. De experto a fácil. Bilingüe ES/EN." },
-      { property: "og:image", content: "https://geochallengedaily.lovable.app/og-image.png" },
-      { name: "twitter:image", content: "https://geochallengedaily.lovable.app/og-image.png" },
+      { property: "og:image", content: "https://geochallengedaily.lovable.app/og-image.png?v=2"},
+      { name: "twitter:image", content: "https://geochallengedaily.lovable.app/og-image.png?v=2" },
     ],
     links: [
       {
