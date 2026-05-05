@@ -190,6 +190,7 @@ export const VALID_COUNTRIES: string[] = [
   "Panamá", "Panama",
   "Paraguay",
   "Perú", "Peru",
+  "Puerto Rico",
   "República Dominicana", "Dominican Republic",
   "San Cristóbal y Nieves", "Saint Kitts and Nevis",
   "Santa Lucía", "Saint Lucia",
