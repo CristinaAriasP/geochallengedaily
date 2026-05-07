@@ -17,6 +17,7 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { NextCountryCountdown } from "@/components/NextCountryCountdown";
+import { ShareResult } from "@/components/ShareResult";
 import { useTheme } from "@/hooks/use-theme";
 
 const SEO_BY_LANG = {
