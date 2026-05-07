@@ -234,7 +234,14 @@ export const COUNTRY_ALIASES: Record<string, string[]> = {
   "Islas Marshall": ["Marshall Islands"],
 };
 
-import { normalizeString } from "@/lib/normalize";
+function normalizeString(str: string): string {
+  return str
+    .toLowerCase()
+    .trim()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ");
+}
 
 /**
  * Build a lookup: normalized name -> Set of all normalized accepted names for that country.
