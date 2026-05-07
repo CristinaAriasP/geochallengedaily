@@ -1,5 +1,6 @@
 import { countries, type Country, type Difficulty } from "@/data/countries";
 import { VALID_COUNTRIES } from "@/data/validCountries";
+import { getAcceptedNames } from "@/data/countryAliases";
 
 export type Lang = "es" | "en";
 
