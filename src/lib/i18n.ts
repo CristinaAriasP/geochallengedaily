@@ -17,6 +17,20 @@ export const TRANSLATIONS = {
     invalidBody: "Parece que ese país no existe o lo escribiste mal.",
     duplicateTitle: "Ups, ya probaste ese país",
     duplicateBody: "Prueba con otro distinto para no gastar pistas.",
+    shareTitle: "Comparte tu resultado",
+    shareText: (used: number, total: number, streak: number) => {
+      const bonus = used === 1 ? " 🔥" : used === total ? " 🤔" : "";
+      const streakLine =
+        streak >= 5
+          ? `\n\n🔥 ¡${streak} días seguidos! Estoy on fire en GeoChallenge!`
+          : "";
+      return `🌍 ¡Acerté el país de hoy en GeoChallenge!${bonus}\n\nIntentos usados: ${used}/${total} pistas${streakLine}\n\n¿Tú también lo adivinaste? 🎯\n\nJuega aquí: https://geochallengedaily.lovable.app`;
+    },
+    shareTwitter: "Twitter/X",
+    shareWhatsApp: "WhatsApp",
+    shareLinkedIn: "LinkedIn",
+    shareCopy: "Copiar",
+    shareCopied: "¡Copiado!",
     gotIt: "Entendido",
     close: "Cerrar",
     footer: "Un país diferente cada día 🌎",
