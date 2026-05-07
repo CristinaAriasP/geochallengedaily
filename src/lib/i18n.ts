@@ -60,6 +60,20 @@ export const TRANSLATIONS = {
     invalidBody: "That country doesn't exist or you misspelled it.",
     duplicateTitle: "Oops, you already tried that country",
     duplicateBody: "Try a different one so you don't waste hints.",
+    shareTitle: "Share your result",
+    shareText: (used: number, total: number, streak: number) => {
+      const bonus = used === 1 ? " 🔥" : used === total ? " 🤔" : "";
+      const streakLine =
+        streak >= 5
+          ? `\n\n🔥 ${streak} days straight! I'm on fire in GeoChallenge!`
+          : "";
+      return `🌍 I guessed today's country on GeoChallenge!${bonus}\n\nHints used: ${used}/${total}${streakLine}\n\nCan you guess it? 🎯\n\nPlay here: https://geochallengedaily.lovable.app`;
+    },
+    shareTwitter: "Twitter/X",
+    shareWhatsApp: "WhatsApp",
+    shareLinkedIn: "LinkedIn",
+    shareCopy: "Copy",
+    shareCopied: "Copied!",
     gotIt: "Got it",
     close: "Close",
     footer: "A different country every day 🌎",
