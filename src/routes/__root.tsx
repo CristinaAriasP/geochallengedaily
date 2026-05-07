@@ -40,6 +40,9 @@ export const Route = createRootRoute({
       { name: "twitter:title", content: "geochallengedaily" },
       { name: "twitter:description", content: "GeoChallenge: Adivina un país diferente cada día basándote en 4 pistas curiosas. De experto a fácil. Bilingüe ES/EN." },
       { property: "og:image", content: "https://geochallengedaily.lovable.app/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "GeoChallenge 🌍" },
+      { name: "twitter:description", content: "Adivina el país del día con 4 pistas de dificultad progresiva. ¿Cuánto sabes de geografía?" },
       { name: "twitter:image", content: "https://geochallengedaily.lovable.app/og-image.png" },
     ],
     links: [
