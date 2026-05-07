@@ -1,5 +1,6 @@
 import { countries, type Country, type Difficulty } from "@/data/countries";
 import { VALID_COUNTRIES } from "@/data/validCountries";
+import { getAcceptedNames } from "@/data/countryAliases";
 
 export type Lang = "es" | "en";
 
@@ -37,13 +38,11 @@ export function getCountryName(country: Country, lang: Lang): string {
   return lang === "es" ? country.name : country.name_en;
 }
 
-/** Match user input against a country in BOTH languages. */
+/** Match user input against a country in BOTH languages, including aliases. */
 export function matchesCountry(input: string, country: Country): boolean {
   const n = normalizeString(input);
-  return (
-    n === normalizeString(country.name) ||
-    n === normalizeString(country.name_en)
-  );
+  const accepted = getAcceptedNames(country.name, country.name_en);
+  return accepted.has(n);
 }
 
 export const DIFFICULTY_ORDER: Difficulty[] = ["expert", "hard", "medium", "easy"];
