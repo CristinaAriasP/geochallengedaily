@@ -17,6 +17,7 @@ import {
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { NextCountryCountdown } from "@/components/NextCountryCountdown";
+import { ShareResult } from "@/components/ShareResult";
 import { useTheme } from "@/hooks/use-theme";
 
 const SEO_BY_LANG = {
@@ -523,7 +524,13 @@ function Index() {
               </p>
             )}
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
-            <div className="mt-3 flex justify-center">
+            <ShareResult
+              lang={lang}
+              hintsUsed={attempts + 1}
+              totalHints={MAX_ATTEMPTS}
+              streak={displayStreak}
+            />
+            <div className="mt-4 flex justify-center">
               <NextCountryCountdown label={tx.nextCountryIn} />
             </div>
 
