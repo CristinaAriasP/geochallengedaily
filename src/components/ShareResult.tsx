@@ -18,12 +18,13 @@ export function ShareResult({ lang, hintsUsed, totalHints, streak }: Props) {
   const [copied, setCopied] = useState(false);
 
   const encoded = encodeURIComponent(text);
+  const encodedUrl = encodeURIComponent(SHARE_URL);
 
-  const openShare = (url: string) => {
-    if (typeof window !== "undefined") {
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
-  };
+  const twitterHref = `https://twitter.com/intent/tweet?text=${encoded}`;
+  // api.whatsapp.com works both on desktop and mobile reliably
+  const whatsappHref = `https://api.whatsapp.com/send?text=${encoded}`;
+  // LinkedIn's share-offsite only accepts a URL, not custom text.
+  const linkedinHref = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
 
   const handleCopy = async () => {
     try {
@@ -44,40 +45,41 @@ export function ShareResult({ lang, hintsUsed, totalHints, streak }: Props) {
         {tx.shareTitle}
       </p>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-        <button
-          type="button"
-          onClick={() =>
-            openShare(`https://twitter.com/intent/tweet?text=${encoded}`)
-          }
+        <a
+          href={twitterHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className={baseBtn}
           aria-label={tx.shareTwitter}
         >
           <Twitter className="h-4 w-4" />
           <span>{tx.shareTwitter}</span>
-        </button>
-        <button
-          type="button"
-          onClick={() => openShare(`https://wa.me/?text=${encoded}`)}
+        </a>
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-action="share/whatsapp/share"
           className={baseBtn}
           aria-label={tx.shareWhatsApp}
         >
           <MessageCircle className="h-4 w-4" />
           <span>{tx.shareWhatsApp}</span>
-        </button>
-        <button
-          type="button"
+        </a>
+        <a
+          href={linkedinHref}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => {
             void handleCopy();
-            openShare(
-              `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`,
-            );
           }}
           className={baseBtn}
           aria-label={tx.shareLinkedIn}
+          title={tx.shareLinkedIn}
         >
           <Linkedin className="h-4 w-4" />
           <span>{tx.shareLinkedIn}</span>
-        </button>
+        </a>
         <button
           type="button"
           onClick={handleCopy}
