@@ -26,11 +26,11 @@ export function getTodaysCountry(now: number = Date.now()): Country {
   return countries[dayIndex % countries.length];
 }
 
-/** Today's local date as YYYY-MM-DD (used for localStorage freshness). */
+/** Today's UTC date as YYYY-MM-DD (used for localStorage freshness). */
 export function getTodayKey(date: Date = new Date()): string {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, "0");
-  const d = String(date.getDate()).padStart(2, "0");
+  const y = date.getUTCFullYear();
+  const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(date.getUTCDate()).padStart(2, "0");
   return `${y}-${m}-${d}`;
 }
 
