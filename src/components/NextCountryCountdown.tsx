@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 
 function getMsUntilMidnight(now: Date = new Date()): number {
-  const tomorrow = new Date(now);
-  tomorrow.setHours(24, 0, 0, 0); // next local midnight
-  return Math.max(0, tomorrow.getTime() - now.getTime());
+  // Next 00:00 UTC — the same instant for every user worldwide.
+  const tomorrowUtc = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1,
+    0,
+    0,
+    0,
+    0,
+  );
+  return Math.max(0, tomorrowUtc - now.getTime());
 }
 
 function formatHMS(ms: number): string {
