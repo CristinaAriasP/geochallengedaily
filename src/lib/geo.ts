@@ -20,10 +20,44 @@ export function isRealCountry(name: string): boolean {
   return VALID_SET.has(normalizeString(name));
 }
 
-/** Deterministic country-of-the-day based on UTC day index. */
+/** Deterministic PRNG seeded by an integer. */
+function mulberry32(seed: number): () => number {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Fisher–Yates shuffle using a deterministic seed. */
+function seededShuffle<T>(arr: T[], seed: number): T[] {
+  const rand = mulberry32(seed + 1); // avoid seed 0 producing weak first value
+  const out = arr.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+/**
+ * Deterministic country-of-the-day based on UTC day index.
+ * Uses cycles of N=countries.length days; within each cycle the order is a
+ * seeded shuffle so no country repeats until the cycle completes.
+ */
 export function getTodaysCountry(now: number = Date.now()): Country {
+  const N = countries.length;
   const dayIndex = Math.floor(now / (1000 * 60 * 60 * 24));
-  return countries[dayIndex % countries.length];
+  const cycle = Math.floor(dayIndex / N);
+  const dayInCycle = ((dayIndex % N) + N) % N;
+  const order = seededShuffle(
+    Array.from({ length: N }, (_, i) => i),
+    cycle,
+  );
+  return countries[order[dayInCycle]];
 }
 
 /** Today's UTC date as YYYY-MM-DD (used for localStorage freshness). */
