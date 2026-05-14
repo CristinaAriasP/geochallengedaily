@@ -76,6 +76,13 @@ export const TRANSLATIONS = {
           : "";
       return `🌍 I guessed today's country on GeoChallenge!${bonus}\n\nHints used: ${used}/${total}${streakLine}\n\nCan you guess it? 🎯\n\nPlay here: https://geochallengedaily.lovable.app`;
     },
+    shareTextLost: (streak: number) => {
+      const streakLine =
+        streak >= 5
+          ? `\n\n🔥 Still, I've played ${streak} days in a row!`
+          : "";
+      return `🌍 I didn't get today's country on GeoChallenge 😔${streakLine}\n\nThink you can? 🎯\n\nPlay here: https://geochallengedaily.lovable.app`;
+    },
     shareTwitter: "Twitter/X",
     shareWhatsApp: "WhatsApp",
     shareLinkedIn: "LinkedIn",
