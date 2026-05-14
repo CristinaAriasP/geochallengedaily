@@ -574,7 +574,14 @@ function Index() {
               </p>
             )}
             <p className="mt-3 text-sm text-muted-foreground">{tx.comeBack}</p>
-            <div className="mt-3 flex justify-center">
+            <ShareResult
+              lang={lang}
+              hintsUsed={MAX_ATTEMPTS}
+              totalHints={MAX_ATTEMPTS}
+              streak={displayStreak}
+              won={false}
+            />
+            <div className="mt-4 flex justify-center">
               <NextCountryCountdown label={tx.nextCountryIn} />
             </div>
 
