@@ -8,6 +8,7 @@ interface Props {
   lang: Lang;
   placeholder?: string;
   className?: string;
+  onSuggestionsChange?: (count: number) => void;
 }
 
 const MAX_SUGGESTIONS = 5;
@@ -18,6 +19,7 @@ export function CountryAutocomplete({
   lang,
   placeholder,
   className,
+  onSuggestionsChange,
 }: Props) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -42,11 +44,18 @@ export function CountryAutocomplete({
     return results;
   }, [normalizedQuery, shouldShow, lang]);
 
+  const visibleCount = shouldShow ? suggestions.length : 0;
+
   useEffect(() => {
-    if (shouldShow && suggestions.length > 0) setOpen(true);
-    else setOpen(false);
+    setOpen(visibleCount > 0);
     setActiveIndex(-1);
-  }, [shouldShow, suggestions.length, value, lang]);
+    onSuggestionsChange?.(visibleCount);
+  }, [visibleCount, value, lang, onSuggestionsChange]);
+
+  // Notify parent on unmount that no suggestions are visible
+  useEffect(() => {
+    return () => onSuggestionsChange?.(0);
+  }, [onSuggestionsChange]);
 
   // Close on outside click
   useEffect(() => {
