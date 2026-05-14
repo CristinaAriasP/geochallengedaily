@@ -485,14 +485,11 @@ function Index() {
         {!isOver && (
           <section className="gc-fade-in mt-6" style={{ animationDelay: "180ms" }}>
             <form onSubmit={handleSubmit} className="flex items-stretch gap-2">
-              <input
-                type="text"
+              <CountryAutocomplete
                 value={guess}
-                onChange={(e) => setGuess(e.target.value)}
+                onChange={setGuess}
+                lang={lang}
                 placeholder={tx.placeholder}
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck={false}
                 className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
               />
               <button
