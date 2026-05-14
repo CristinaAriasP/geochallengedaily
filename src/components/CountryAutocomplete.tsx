@@ -103,7 +103,7 @@ export function CountryAutocomplete({
       {open && suggestions.length > 0 && (
         <ul
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-[10px] border border-border bg-card shadow-[var(--shadow-pop)]"
+          className="absolute left-0 right-0 top-full z-[100] mt-2 overflow-hidden rounded-[12px] border-2 border-border bg-popover text-popover-foreground shadow-2xl ring-1 ring-black/5 backdrop-blur-sm"
         >
           {suggestions.map((name, i) => (
             <li
@@ -115,8 +115,8 @@ export function CountryAutocomplete({
                 handleSelect(name);
               }}
               onMouseEnter={() => setActiveIndex(i)}
-              className={`cursor-pointer px-4 py-2 text-sm text-foreground transition-colors ${
-                i === activeIndex ? "bg-accent/40" : "hover:bg-accent/30"
+              className={`cursor-pointer px-4 py-3 text-sm font-medium text-foreground border-b border-border/50 last:border-b-0 transition-colors ${
+                i === activeIndex ? "bg-accent text-accent-foreground" : "hover:bg-accent/50"
               }`}
             >
               {highlightMatch(name, normalizedQuery)}
