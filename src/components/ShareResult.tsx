@@ -8,13 +8,14 @@ interface Props {
   hintsUsed: number;
   totalHints: number;
   streak: number;
+  won?: boolean;
 }
 
 const SHARE_URL = "https://geochallengedaily.lovable.app";
 
-export function ShareResult({ lang, hintsUsed, totalHints, streak }: Props) {
+export function ShareResult({ lang, hintsUsed, totalHints, streak, won = true }: Props) {
   const tx = t(lang);
-  const text = tx.shareText(hintsUsed, totalHints, streak);
+  const text = won ? tx.shareText(hintsUsed, totalHints, streak) : tx.shareTextLost(streak);
   const [copied, setCopied] = useState(false);
 
   const encoded = encodeURIComponent(text);

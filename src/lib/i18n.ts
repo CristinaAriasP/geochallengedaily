@@ -26,6 +26,13 @@ export const TRANSLATIONS = {
           : "";
       return `🌍 ¡Acerté el país de hoy en GeoChallenge!${bonus}\n\nIntentos usados: ${used}/${total} pistas${streakLine}\n\n¿Tú también lo adivinaste? 🎯\n\nJuega aquí: https://geochallengedaily.lovable.app`;
     },
+    shareTextLost: (streak: number) => {
+      const streakLine =
+        streak >= 5
+          ? `\n\n🔥 Aún así, ¡llevo ${streak} días seguidos jugando!`
+          : "";
+      return `🌍 Hoy no he acertado el país en GeoChallenge 😔${streakLine}\n\n¿Te atreves tú? 🎯\n\nJuega aquí: https://geochallengedaily.lovable.app`;
+    },
     shareTwitter: "Twitter/X",
     shareWhatsApp: "WhatsApp",
     shareLinkedIn: "LinkedIn",
@@ -68,6 +75,13 @@ export const TRANSLATIONS = {
           ? `\n\n🔥 ${streak} days straight! I'm on fire in GeoChallenge!`
           : "";
       return `🌍 I guessed today's country on GeoChallenge!${bonus}\n\nHints used: ${used}/${total}${streakLine}\n\nCan you guess it? 🎯\n\nPlay here: https://geochallengedaily.lovable.app`;
+    },
+    shareTextLost: (streak: number) => {
+      const streakLine =
+        streak >= 5
+          ? `\n\n🔥 Still, I've played ${streak} days in a row!`
+          : "";
+      return `🌍 I didn't get today's country on GeoChallenge 😔${streakLine}\n\nThink you can? 🎯\n\nPlay here: https://geochallengedaily.lovable.app`;
     },
     shareTwitter: "Twitter/X",
     shareWhatsApp: "WhatsApp",
