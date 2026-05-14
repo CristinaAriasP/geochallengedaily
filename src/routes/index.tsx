@@ -16,6 +16,7 @@ import {
 } from "@/lib/geo";
 import { t } from "@/lib/i18n";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { CountryAutocomplete } from "@/components/CountryAutocomplete";
 import { NextCountryCountdown } from "@/components/NextCountryCountdown";
 import { ShareResult } from "@/components/ShareResult";
 import { useTheme } from "@/hooks/use-theme";
