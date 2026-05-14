@@ -115,8 +115,8 @@ export function CountryAutocomplete({
                 handleSelect(name);
               }}
               onMouseEnter={() => setActiveIndex(i)}
-              className={`cursor-pointer px-4 py-2 text-sm text-foreground transition-colors ${
-                i === activeIndex ? "bg-accent/40" : "hover:bg-accent/30"
+              className={`cursor-pointer px-4 py-3 text-sm font-medium text-foreground border-b border-border/50 last:border-b-0 transition-colors ${
+                i === activeIndex ? "bg-accent text-accent-foreground" : "hover:bg-accent/50"
               }`}
             >
               {highlightMatch(name, normalizedQuery)}
