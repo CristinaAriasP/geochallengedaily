@@ -8,6 +8,7 @@ interface Props {
   hintsUsed: number;
   totalHints: number;
   streak: number;
+  won?: boolean;
 }
 
 const SHARE_URL = "https://geochallengedaily.lovable.app";
