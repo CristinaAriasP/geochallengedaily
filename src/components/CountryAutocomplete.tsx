@@ -103,7 +103,7 @@ export function CountryAutocomplete({
       {open && suggestions.length > 0 && (
         <ul
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-[10px] border border-border bg-card shadow-[var(--shadow-pop)]"
+          className="absolute left-0 right-0 top-full z-[100] mt-2 overflow-hidden rounded-[12px] border-2 border-border bg-popover text-popover-foreground shadow-2xl ring-1 ring-black/5 backdrop-blur-sm"
         >
           {suggestions.map((name, i) => (
             <li
