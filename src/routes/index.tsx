@@ -153,6 +153,7 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [popup, setPopup] = useState<null | "invalid" | "duplicate">(null);
+  const [suggestionCount, setSuggestionCount] = useState(0);
   const [streak, setStreak] = useState<StreakState>({
     currentStreak: 0,
     bestStreak: 0,
@@ -490,6 +491,7 @@ function Index() {
                 onChange={setGuess}
                 lang={lang}
                 placeholder={tx.placeholder}
+                onSuggestionsChange={setSuggestionCount}
                 className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
               />
               <button
@@ -500,6 +502,12 @@ function Index() {
                 <ArrowRight className="h-5 w-5" />
               </button>
             </form>
+            {/* Reserve space below input so the dropdown doesn't overlap content */}
+            <div
+              aria-hidden
+              className="transition-[height] duration-200 ease-out"
+              style={{ height: suggestionCount > 0 ? suggestionCount * 44 + 16 : 0 }}
+            />
           </section>
         )}
 
