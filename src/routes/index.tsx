@@ -490,6 +490,7 @@ function Index() {
                 onChange={setGuess}
                 lang={lang}
                 placeholder={tx.placeholder}
+                onSuggestionsChange={setSuggestionCount}
                 className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
               />
               <button
