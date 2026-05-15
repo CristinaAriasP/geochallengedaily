@@ -501,12 +501,6 @@ function Index() {
                 <ArrowRight className="h-5 w-5" />
               </button>
             </form>
-            {/* Reserve space below input so the dropdown doesn't overlap content */}
-            <div
-              aria-hidden
-              className="transition-[height] duration-200 ease-out"
-              style={{ height: suggestionCount > 0 ? suggestionCount * 44 + 16 : 0 }}
-            />
           </section>
         )}
 
