@@ -91,7 +91,7 @@ export function CountryAutocomplete({
   }
 
   return (
-    <div ref={containerRef} className="relative w-full">
+    <div ref={containerRef} className="w-full">
       <input
         type="text"
         value={value}
