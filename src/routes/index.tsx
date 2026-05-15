@@ -153,7 +153,7 @@ function Index() {
   const [gameState, setGameState] = useState<GameState>("playing");
   const [guesses, setGuesses] = useState<string[]>([]);
   const [popup, setPopup] = useState<null | "invalid" | "duplicate">(null);
-  const [suggestionCount, setSuggestionCount] = useState(0);
+  
   const [streak, setStreak] = useState<StreakState>({
     currentStreak: 0,
     bestStreak: 0,
