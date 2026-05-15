@@ -485,18 +485,21 @@ function Index() {
         {/* INPUT */}
         {!isOver && (
           <section className="gc-fade-in mt-6" style={{ animationDelay: "180ms" }}>
-            <form onSubmit={handleSubmit} className="relative flex items-stretch gap-2">
+            <form
+              onSubmit={handleSubmit}
+              className="relative flex items-stretch overflow-visible rounded-[10px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-200 focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/15"
+            >
               <CountryAutocomplete
                 value={guess}
                 onChange={setGuess}
                 lang={lang}
                 placeholder={tx.placeholder}
-                className="w-full rounded-[10px] border border-border bg-card px-4 py-3 text-base text-foreground shadow-[var(--shadow-soft)] outline-none transition-all duration-200 placeholder:text-muted-foreground focus:border-primary focus:ring-4 focus:ring-primary/15"
+                className="w-full rounded-l-[10px] rounded-r-none border-0 bg-transparent px-4 py-3 text-base text-foreground shadow-none outline-none placeholder:text-muted-foreground"
               />
               <button
                 type="submit"
                 aria-label={tx.submit}
-                className="flex shrink-0 items-center justify-center rounded-[10px] bg-primary px-5 text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:bg-primary/90 hover:shadow-md active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+                className="flex shrink-0 items-center justify-center rounded-r-[10px] rounded-l-none border-l border-border bg-primary px-5 text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
               >
                 <ArrowRight className="h-5 w-5" />
               </button>

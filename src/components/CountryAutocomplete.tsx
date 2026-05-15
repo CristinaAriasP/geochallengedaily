@@ -8,7 +8,6 @@ interface Props {
   lang: Lang;
   placeholder?: string;
   className?: string;
-  onSuggestionsChange?: (count: number) => void;
 }
 
 const MAX_SUGGESTIONS = 5;
@@ -19,7 +18,6 @@ export function CountryAutocomplete({
   lang,
   placeholder,
   className,
-  onSuggestionsChange,
 }: Props) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -44,18 +42,10 @@ export function CountryAutocomplete({
     return results;
   }, [normalizedQuery, shouldShow, lang]);
 
-  const visibleCount = shouldShow ? suggestions.length : 0;
-
   useEffect(() => {
-    setOpen(visibleCount > 0);
+    setOpen(shouldShow && suggestions.length > 0);
     setActiveIndex(-1);
-    onSuggestionsChange?.(visibleCount);
-  }, [visibleCount, value, lang, onSuggestionsChange]);
-
-  // Notify parent on unmount that no suggestions are visible
-  useEffect(() => {
-    return () => onSuggestionsChange?.(0);
-  }, [onSuggestionsChange]);
+  }, [shouldShow, suggestions.length, value, lang]);
 
   // Close on outside click
   useEffect(() => {
@@ -112,7 +102,7 @@ export function CountryAutocomplete({
       {open && suggestions.length > 0 && (
         <ul
           role="listbox"
-          className="absolute left-0 right-0 top-full z-[100] mt-2 overflow-hidden rounded-[12px] border-2 border-border bg-popover text-popover-foreground shadow-2xl ring-1 ring-black/5 backdrop-blur-sm"
+          className="absolute top-full left-0 z-[9999] mt-2 w-full overflow-hidden rounded-[10px] border border-border bg-popover text-popover-foreground shadow-[var(--shadow-pop)]"
         >
           {suggestions.map((name, i) => (
             <li
