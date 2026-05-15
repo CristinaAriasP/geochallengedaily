@@ -485,7 +485,7 @@ function Index() {
         {/* INPUT */}
         {!isOver && (
           <section className="gc-fade-in mt-6" style={{ animationDelay: "180ms" }}>
-            <form onSubmit={handleSubmit} className="flex items-stretch gap-2">
+            <form onSubmit={handleSubmit} className="relative flex items-stretch gap-2">
               <CountryAutocomplete
                 value={guess}
                 onChange={setGuess}
