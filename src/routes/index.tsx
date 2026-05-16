@@ -484,7 +484,7 @@ function Index() {
 
         {/* INPUT */}
         {!isOver && (
-          <section className="gc-fade-in mt-6" style={{ animationDelay: "180ms" }}>
+          <section className="gc-fade-in mt-6 relative z-50" style={{ animationDelay: "180ms" }}>
             <form
               onSubmit={handleSubmit}
               className="relative flex items-stretch overflow-visible rounded-[10px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-200 focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/15"
@@ -616,7 +616,7 @@ function Index() {
         {/* STATS */}
         {!isOver && (
           <section
-            className="gc-fade-in mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground"
+            className="gc-fade-in mt-6 relative z-10 flex items-center justify-center gap-2 text-sm text-muted-foreground"
             style={{ animationDelay: "240ms" }}
           >
             <span className="font-medium text-foreground">
@@ -628,7 +628,7 @@ function Index() {
 
         {/* FOOTER */}
         <footer
-          className="gc-fade-in mt-10 text-center text-xs text-muted-foreground"
+          className="gc-fade-in relative z-10 mt-10 text-center text-xs text-muted-foreground"
           style={{ animationDelay: "300ms" }}
         >
           <p>{tx.footer}</p>
