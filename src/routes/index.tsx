@@ -19,6 +19,8 @@ import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { CountryAutocomplete } from "@/components/CountryAutocomplete";
 import { NextCountryCountdown } from "@/components/NextCountryCountdown";
 import { ShareResult } from "@/components/ShareResult";
+import { NotificationPrompt } from "@/components/NotificationPrompt";
+import { initDailyReminder } from "@/lib/notifications";
 import { useTheme } from "@/hooks/use-theme";
 
 const SEO_BY_LANG = {
@@ -281,6 +283,11 @@ function Index() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+  // Kick off the daily reminder scheduler (no-op unless user has opted in).
+  useEffect(() => {
+    initDailyReminder();
   }, []);
 
   // Keep meta tags in sync with current language (client-side)
@@ -694,6 +701,8 @@ function Index() {
           </div>
         </div>
       )}
+
+      <NotificationPrompt lang={lang} show={isOver} />
     </div>
   );
 }
