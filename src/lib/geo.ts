@@ -44,21 +44,35 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
 }
 
 /**
+ * Day index (UTC) at which the country list expansion goes live.
+ * Before this day the game keeps using the original 105-country pool so that
+ * games already in progress / finished today are not altered mid-day.
+ * Streaks are date-based and are never affected by this.
+ */
+const EXPANSION_DAY_INDEX = 20689; // 2026-08-24 UTC
+const LEGACY_POOL_SIZE = 105;
+
+/**
  * Deterministic country-of-the-day based on UTC day index.
- * Uses cycles of N=countries.length days; within each cycle the order is a
- * seeded shuffle so no country repeats until the cycle completes.
+ * Uses cycles of N days; within each cycle the order is a seeded shuffle so no
+ * country repeats until the cycle completes.
  */
 export function getTodaysCountry(now: number = Date.now()): Country {
-  const N = countries.length;
   const dayIndex = Math.floor(now / (1000 * 60 * 60 * 24));
+  const pool =
+    dayIndex < EXPANSION_DAY_INDEX
+      ? countries.slice(0, Math.min(LEGACY_POOL_SIZE, countries.length))
+      : countries;
+  const N = pool.length;
   const cycle = Math.floor(dayIndex / N);
   const dayInCycle = ((dayIndex % N) + N) % N;
   const order = seededShuffle(
     Array.from({ length: N }, (_, i) => i),
     cycle,
   );
-  return countries[order[dayInCycle]];
+  return pool[order[dayInCycle]];
 }
+
 
 /** Today's UTC date as YYYY-MM-DD (used for localStorage freshness). */
 export function getTodayKey(date: Date = new Date()): string {
