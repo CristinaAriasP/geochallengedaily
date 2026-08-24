@@ -1,0 +1,5 @@
+Rumanía|Romania
+Ucrania|Ukraine
+Turquía|Turkey
+Guatemala|Guatemala
+Puerto Rico|Puerto Rico
