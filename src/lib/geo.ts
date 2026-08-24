@@ -49,7 +49,7 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
  * games already in progress / finished today are not altered mid-day.
  * Streaks are date-based and are never affected by this.
  */
-const EXPANSION_DAY_INDEX = 20689; // 2026-08-24 UTC
+const EXPANSION_DAY_INDEX = 20690; // 2026-08-25 UTC
 const LEGACY_POOL_SIZE = 105;
 
 /**

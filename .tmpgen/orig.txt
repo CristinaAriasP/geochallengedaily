@@ -1,0 +1,105 @@
+España|Spain
+Japón|Japan
+Noruega|Norway
+Brasil|Brazil
+Egipto|Egypt
+Australia|Australia
+Italia|Italy
+México|Mexico
+Francia|France
+Argentina|Argentina
+China|China
+India|India
+Alemania|Germany
+Canadá|Canada
+Grecia|Greece
+Suecia|Sweden
+Marruecos|Morocco
+Tailandia|Thailand
+Portugal|Portugal
+Islandia|Iceland
+Reino Unido|United Kingdom
+Estados Unidos|United States
+Rusia|Russia
+Países Bajos|Netherlands
+Suiza|Switzerland
+Austria|Austria
+Bélgica|Belgium
+Polonia|Poland
+República Checa|Czech Republic
+Hungría|Hungary
+Rumanía|Romania
+Ucrania|Ukraine
+Turquía|Turkey
+Israel|Israel
+Arabia Saudita|Saudi Arabia
+Emiratos Árabes Unidos|United Arab Emirates
+Irán|Iran
+Pakistán|Pakistan
+Bangladesh|Bangladesh
+Indonesia|Indonesia
+Filipinas|Philippines
+Vietnam|Vietnam
+Corea del Sur|South Korea
+Singapur|Singapore
+Malasia|Malaysia
+Nepal|Nepal
+Sri Lanka|Sri Lanka
+Sudáfrica|South Africa
+Nigeria|Nigeria
+Kenia|Kenya
+Etiopía|Ethiopia
+Argelia|Algeria
+Túnez|Tunisia
+Ghana|Ghana
+Senegal|Senegal
+Madagascar|Madagascar
+Chile|Chile
+Perú|Peru
+Colombia|Colombia
+Venezuela|Venezuela
+Cuba|Cuba
+República Dominicana|Dominican Republic
+Jamaica|Jamaica
+Costa Rica|Costa Rica
+Panamá|Panama
+Uruguay|Uruguay
+Paraguay|Paraguay
+Bolivia|Bolivia
+Ecuador|Ecuador
+Nueva Zelanda|New Zealand
+Finlandia|Finland
+Dinamarca|Denmark
+Irlanda|Ireland
+Croacia|Croatia
+Serbia|Serbia
+Mongolia|Mongolia
+Camboya|Cambodia
+Bután|Bhutan
+Luxemburgo|Luxembourg
+Mónaco|Monaco
+Guatemala|Guatemala
+Honduras|Honduras
+El Salvador|El Salvador
+Nicaragua|Nicaragua
+Haití|Haiti
+Puerto Rico|Puerto Rico
+Trinidad y Tobago|Trinidad and Tobago
+Bahamas|The Bahamas
+Barbados|Barbados
+Kazajistán|Kazakhstan
+Bulgaria|Bulgaria
+Eslovaquia|Slovakia
+Eslovenia|Slovenia
+Bosnia y Herzegovina|Bosnia and Herzegovina
+Albania|Albania
+Macedonia del Norte|North Macedonia
+Montenegro|Montenegro
+Kosovo|Kosovo
+Lituania|Lithuania
+Letonia|Latvia
+Estonia|Estonia
+Bielorrusia|Belarus
+Moldavia|Moldova
+Georgia|Georgia
+Armenia|Armenia

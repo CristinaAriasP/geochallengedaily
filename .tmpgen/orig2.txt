@@ -1,0 +1,66 @@
+Canadá|Canada
+Grecia|Greece
+Estados Unidos|United States
+Rusia|Russia
+República Checa|Czech Republic
+Hungría|Hungary
+Rumanía|Romania
+Ucrania|Ukraine
+Turquía|Turkey
+Israel|Israel
+Arabia Saudita|Saudi Arabia
+Irán|Iran
+Pakistán|Pakistan
+Indonesia|Indonesia
+Vietnam|Vietnam
+Singapur|Singapore
+Malasia|Malaysia
+Kenia|Kenya
+Etiopía|Ethiopia
+Argelia|Algeria
+Ghana|Ghana
+Cuba|Cuba
+República Dominicana|Dominican Republic
+Jamaica|Jamaica
+Costa Rica|Costa Rica
+Panamá|Panama
+Uruguay|Uruguay
+Paraguay|Paraguay
+Bolivia|Bolivia
+Ecuador|Ecuador
+Nueva Zelanda|New Zealand
+Finlandia|Finland
+Dinamarca|Denmark
+Irlanda|Ireland
+Croacia|Croatia
+Serbia|Serbia
+Mongolia|Mongolia
+Camboya|Cambodia
+Bután|Bhutan
+Luxemburgo|Luxembourg
+Mónaco|Monaco
+Guatemala|Guatemala
+Honduras|Honduras
+El Salvador|El Salvador
+Nicaragua|Nicaragua
+Haití|Haiti
+Puerto Rico|Puerto Rico
+Trinidad y Tobago|Trinidad and Tobago
+Bahamas|The Bahamas
+Barbados|Barbados
+Kazajistán|Kazakhstan
+Bulgaria|Bulgaria
+Eslovaquia|Slovakia
+Eslovenia|Slovenia
+Bosnia y Herzegovina|Bosnia and Herzegovina
+Albania|Albania
+Macedonia del Norte|North Macedonia
+Montenegro|Montenegro
+Kosovo|Kosovo
+Lituania|Lithuania
+Letonia|Latvia
+Estonia|Estonia
+Bielorrusia|Belarus
+Moldavia|Moldova
+Georgia|Georgia
+Armenia|Armenia
