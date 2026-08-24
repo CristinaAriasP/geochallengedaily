@@ -123,7 +123,7 @@ export const VALID_COUNTRIES: string[] = [
   "Esuatini", "Suazilandia", "Eswatini", "Swaziland",
   "Etiopía", "Ethiopia",
   "Gabón", "Gabon",
-  "Gambia",
+  "Gambia", "The Gambia",
   "Ghana",
   "Guinea",
   "Guinea-Bisáu", "Guinea-Bissau",
@@ -165,7 +165,7 @@ export const VALID_COUNTRIES: string[] = [
   // Americas
   "Antigua y Barbuda", "Antigua and Barbuda",
   "Argentina",
-  "Bahamas",
+  "Bahamas", "The Bahamas",
   "Barbados",
   "Belice", "Belize",
   "Bolivia",
