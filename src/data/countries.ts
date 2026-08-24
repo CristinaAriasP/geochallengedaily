@@ -322,6 +322,11 @@ export const countries: Country[] = [
         text_en: "It is home to the largest number of people practicing vegetarianism, approximately three hundred million, and its stock market is one of the oldest in Asia.",
       },
       {
+        difficulty: "hard",
+        text_es: "Su constitución, adoptada en mil novecientos cincuenta, es la más extensa del mundo entre las naciones soberanas, y reconoce más de veinte lenguas oficiales a nivel federal.",
+        text_en: "Its constitution, adopted in nineteen fifty, is the longest of any sovereign nation in the world, and it recognizes more than twenty official languages at the federal level.",
+      },
+      {
         difficulty: "medium",
         text_es: "Este subcontinente es conocido por su vasta diversidad lingüística, con cientos de lenguas indígenas que coexisten, muchas de ellas con sus propios sistemas de escritura En este país se inventó el sistema decimal y el concepto del número cero, además del juego del ajedrez y el champú.",
         text_en: "This subcontinent is known for its vast linguistic diversity, with hundreds of indigenous languages coexisting, many of them with their own writing systems. This country invented the decimal system and the concept of the number zero, as well as the game of chess and shampoo.",
