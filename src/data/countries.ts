@@ -21,8 +21,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país europeo que comparte una frontera física con una nación africana en su parte continental, excluyendo islas.",
-        text_en: "It is the only European country that shares a physical border with an African nation on its continental part, excluding islands.",
+        text_es: "Es el único país europeo con una frontera física con una nación africana, en sus enclaves de Ceuta y Melilla, los cuales están separados de la metrópoli por el Estrecho de Gibraltar y las aguas internacionales.",
+        text_en: "It is the only European country with a physical border with an African nation, in its enclaves of Ceuta and Melilla, which are separated from the metropolis by the Strait of Gibraltar and international waters.",
       },
       {
         difficulty: "hard",
@@ -48,8 +48,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor concentración de empresas con más de mil años de antigüedad del mundo. Existe incluso una palabra específica en su idioma para referirse a estas compañías que han sobrevivido a siglos de historia, guerras y desastres naturales.",
-        text_en: "It is the country with the highest concentration of companies with over a thousand years of history in the world. There is even a specific word in its language to refer to these companies that have survived centuries of history, wars, and natural disasters.",
+        text_es: "Alberga la tercera empresa más antigua del mundo aún en funcionamiento, Kongo Gumi, que ha estado en operación continua durante más de mil cuatrocientos años, especializándose en la construcción de templos.",
+        text_en: "It is home to the world's third oldest company still in operation, Kongo Gumi, which has been continuously operating for over one thousand four hundred years, specializing in temple construction.",
       },
       {
         difficulty: "hard",
@@ -75,8 +75,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Posee una de las costas más largas y accidentadas del mundo debido a miles de entradas de mar profundas talladas por glaciares. Además, es el hogar del túnel de carretera más largo del planeta, que mide más de 24 kilómetros y tiene una iluminación especial para evitar que los conductores se duerman.",
-        text_en: "It has one of the longest and most rugged coastlines in the world due to thousands of deep fjord entries carved by glaciers. Additionally, it is home to the world's longest road tunnel, which is over 24 kilometers long and has special lighting to prevent driver drowsiness.",
+        text_es: "Posee la tercera línea costera más larga del mundo, extendiéndose por más de cien mil kilómetros al incluir fiordos e islas, superando incluso la longitud del ecuador terrestre.",
+        text_en: "It boasts the world's third longest coastline, stretching over one hundred thousand kilometers when including fjords and islands, surpassing even the length of the Earth's equator.",
       },
       {
         difficulty: "hard",
@@ -102,8 +102,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor comunidad de ciudadanos de origen japonés fuera de las propias islas de ese país asiático. Esta migración comenzó a principios del siglo XX y ha influido profundamente en la agricultura y la cultura de sus ciudades más grandes.",
-        text_en: "It is the country with the largest community of Japanese-origin citizens outside of Japan itself. This migration began in the early 20th century and has profoundly influenced agriculture and culture in its largest cities.",
+        text_es: "Cuenta con la mayor biodiversidad de anfibios en el mundo, albergando aproximadamente mil doscientas sesenta especies, lo que representa el diecinueve por ciento del total global.",
+        text_en: "It boasts the highest amphibian biodiversity in the world, hosting approximately one thousand two hundred and sixty species, accounting for nineteen percent of the global total.",
       },
       {
         difficulty: "hard",
@@ -129,8 +129,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor población de lengua árabe del mundo y su industria cinematográfica y musical es tan potente que su dialecto es el más comprendido en toda la región, funcionando como una especie de \"Hollywood\" cultural para sus vecinos.",
-        text_en: "It is the country with the largest population of Arabic speakers in the world, and its film and music industries are so powerful that its dialect is the most widely understood in the region, functioning as a kind of \"Hollywood\" cultural hub for its neighbors.",
+        text_es: "Es el hogar de la única pirámide escalonada de piedra, construida para el faraón Djoser alrededor del año dos mil seiscientos cincuenta antes de Cristo, considerada la estructura de piedra más antigua a gran escala.",
+        text_en: "It is home to the world's first large-scale stone-built step pyramid, constructed for Pharaoh Djoser around two thousand six hundred and fifty BC.",
       },
       {
         difficulty: "hard",
@@ -156,8 +156,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que una vez le declaró la \"guerra\" formal a una especie de ave no voladora de gran tamaño porque estaban destruyendo los cultivos. Lo más curioso es que, tras varios intentos militares, las aves terminaron \"ganando\" y el ejército tuvo que retirarse.",
-        text_en: "It is the only country in the world that once formally declared war on a species of large flightless bird because they were destroying crops. What is most curious is that, after several military attempts, the birds ended up \"winning\" and the army had to withdraw.",
+        text_es: "Contiene aproximadamente el ochenta por ciento de sus mamíferos terrestres, el noventa por ciento de sus peces de agua dulce y el noventa y tres por ciento de sus anfibios como especies endémicas, encontradas exclusivamente allí.",
+        text_en: "Approximately eighty percent of its terrestrial mammals, ninety percent of its freshwater fish, and ninety-three percent of its amphibians are endemic species, found exclusively there.",
       },
       {
         difficulty: "hard",
@@ -210,8 +210,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Este país es el mayor exportador de plata del mundo. Además, su capital está construida sobre lo que antes era un enorme lago; debido a esto, la ciudad se hunde unos centímetros cada año, lo que supone un reto constante para la ingeniería y la arquitectura de sus edificios históricos.",
-        text_en: "This country is the world's largest exporter of silver. Furthermore, its capital is built on what was once a vast lake; because of this, the city sinks a few centimeters each year, posing a constant challenge to the engineering and architecture of its historic buildings.",
+        text_es: "Es el lugar de origen del cacao, y la bebida que de él se extrae fue tan valorada que sus granos se usaron como moneda. Su nombre oficial incluye el término 'Unidos' y es una de las quince naciones megadiversas del mundo.",
+        text_en: "It is the place of origin of cacao, and the drink extracted from it was so valued that its beans were used as currency. Its official name includes the term 'United' and it is one of the world's fifteen megadiverse nations.",
       },
       {
         difficulty: "hard",
@@ -237,8 +237,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que abarca más zonas horarias diferentes en todo el planeta (un total de 12), debido a sus numerosos territorios e islas repartidos por todos los océanos del mundo. Esto supera incluso a gigantes como Rusia o Estados Unidos.",
-        text_en: "It is the country that spans the most different time zones on the planet (a total of 12), due to its numerous territories and islands scattered across the world's oceans. This surpasses even giants like Russia or the United States.",
+        text_es: "Alberga el viñedo más pequeño del mundo, una parcela de tierra conocida como La Romanée que abarca apenas 0.8452 hectáreas. Es el país con más husos horarios debido a sus territorios de ultramar.",
+        text_en: "It hosts the world's smallest vineyard, a plot of land known as La Romanée spanning just 0.8452 hectares. It is the country with the most time zones due to its overseas territories.",
       },
       {
         difficulty: "hard",
@@ -264,8 +264,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la nación con la mayor cantidad de premios Nobel de ciencia de toda la región sudamericana, con tres galardones individuales.",
-        text_en: "It is the nation with the highest number of Nobel Prizes in science in the entire South American region, with three individual awards.",
+        text_es: "Ostenta la mayor población de liebres europeas fuera de su rango nativo y es el principal productor mundial de limones y peras frescas.",
+        text_en: "It holds the largest population of European hares outside their native range and is the world's leading producer of fresh lemons and pears.",
       },
       {
         difficulty: "hard",
@@ -291,8 +291,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que limita con 14 naciones soberanas, una característica compartida con otro gigante euroasiático.",
-        text_en: "It is the only country in the world bordering 14 sovereign nations, a characteristic shared with another Eurasian giant.",
+        text_es: "Su Gran Canal, de mil setecientos setenta y seis kilómetros de longitud, es la vía artificial o río artificial más largo del mundo.",
+        text_en: "Its Grand Canal, one thousand seven hundred and seventy-six kilometers long, is the longest artificial waterway or man-made river in the world.",
       },
       {
         difficulty: "hard",
@@ -318,13 +318,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "En su territorio se encuentra el lugar más húmedo de la Tierra, un pueblo que ostenta el récord mundial de precipitaciones anuales. Además, cuenta con un lago formado por el impacto de un meteorito hace 50,000 años que recientemente cambió de color a un rosa brillante de la noche a la mañana debido a unos microorganismos." ,
-        text_en: "Within its territory lies the wettest place on Earth, a town that holds the world record for annual rainfall. It also boasts a lake formed by a meteorite impact 50,000 years ago, which recently changed color to a brilliant pink overnight due to microorganisms.", 
-      },
-      {
-        difficulty: "hard",
-        text_es: "Es el país con la mayor cantidad de personas vegetarianas del mundo, tanto es así que las cadenas internacionales de comida rápida tienen menús completamente diferentes allí. Además, es el lugar donde se procesan y pulen la gran mayoría de los diamantes que se venden en todo el planeta.",
-        text_en: "It is the country with the highest number of vegetarians in the world, so much so that international fast-food chains have completely different menus there. Additionally, it is the place where most of the diamonds sold worldwide are processed and polished.",
+        text_es: "Alberga el mayor número de personas que practican el vegetarianismo, aproximadamente trescientos millones, y su mercado de valores es uno de los más antiguos de Asia.",
+        text_en: "It is home to the largest number of people practicing vegetarianism, approximately three hundred million, and its stock market is one of the oldest in Asia.",
       },
       {
         difficulty: "medium",
@@ -345,8 +340,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor cantidad de zoológicos del mundo (más de 400). Además, tienen una tradición cultural muy fuerte de clubes o asociaciones; se estima que hay uno por cada 130 habitantes, cubriendo desde huertos urbanos hasta coleccionismo de lo más extraño.",
-        text_en: "It is the nation with the highest number of zoos in the world (over 400). Additionally, they have a strong cultural tradition of clubs or associations; it is estimated that there is one for every 130 inhabitants, covering from urban gardens to collecting the most unusual items.",
+        text_es: "Es el país con el mayor número de fronteras terrestres internacionales, contando con nueve de ellas, dentro de la Unión Europea.",
+        text_en: "It is the country with the most international land borders, numbering nine of them, within the European Union.",
       },
       {
         difficulty: "hard",
@@ -399,8 +394,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor cantidad de museos arqueológicos por metro cuadrado del mundo y, curiosamente, su himno nacional tiene 158 estrofas, aunque casi nadie se las sabe todas.",
-        text_en: "It is the country with the highest number of archaeological museums per square meter in the world and, interestingly, its national anthem has 158 stanzas, although almost no one knows them all.",
+        text_es: "Alrededor de un octavo de la población masculina adulta se ha entrenado para ser sacerdote en algún momento de su vida, una de las proporciones más altas del mundo.",
+        text_en: "Approximately one-eighth of the adult male population has trained to be a priest at some point in their lives, one of the highest proportions worldwide.",
       },
       {
         difficulty: "hard",
@@ -426,8 +421,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país encargado de otorgar anualmente los premios más prestigiosos de la humanidad en ciencia y literatura, cumpliendo el último deseo de un inventor local que se enriqueció creando la dinamita pero que quería ser recordado por la paz.",
-        text_en: "It is the country in charge of annually awarding the most prestigious prizes for humanity in science and literature, fulfilling the last wish of a local inventor who grew rich creating dynamite but wanted to be remembered for peace.",
+        text_es: "Es el país con el segundo mayor número de islas habitadas en el mundo, con un total que supera las doscientas cincuenta mil.",
+        text_en: "It is the country with the second highest number of inhabited islands in the world, with a total exceeding two hundred and fifty thousand.",
       },
       {
         difficulty: "hard",
@@ -453,8 +448,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Alberga la Universidad de Al-Qarawiyyin, reconocida por la UNESCO como la institución de educación superior más antigua del mundo todavía en funcionamiento, la cual fue fundada por una mujer tunecina en el año 859.",
-        text_en: "It is home to the University of Al-Qarawiyyin, recognized by UNESCO as the oldest higher education institution in the world still in operation, which was founded by a Tunisian woman in the year 859.",
+        text_es: "La piel de las célebres pelotas de tenis de Wimbledon se produce tradicionalmente en curtidurías de una ciudad imperial cuyas técnicas se mantienen desde la Edad Media.",
+        text_en: "The leather for the famous Wimbledon tennis balls is traditionally produced in tanneries of an imperial city whose techniques have been maintained since the Middle Ages.",
       },
       {
         difficulty: "hard",
@@ -480,8 +475,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país de su región que logró evitar ser colonizado por las potencias occidentales durante los siglos diecinueve y veinte, en parte gracias a la astuta diplomacia de sus reyes, quienes adoptaron tecnologías europeas para modernizar el estado rápidamente.",
-        text_en: "It is the only country in its region that managed to avoid being colonized by Western powers during the nineteenth and twentieth centuries, partly thanks to the astute diplomacy of its kings, who adopted European technologies to modernize the state quickly.",
+        text_es: "El término para unirse a su realeza o establecer un nuevo linaje real es 'thao kae', una palabra que originalmente se refería a los inmigrantes chinos ricos y exitosos.",
+        text_en: "The term for joining its royalty or establishing a new royal lineage is 'thao kae', a word that originally referred to wealthy and successful Chinese immigrants.",
       },
       {
         difficulty: "hard",
@@ -507,8 +502,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue el primer imperio global de la historia moderna, extendiéndose desde Sudamérica hasta Asia, y hoy en día es el país que posee la alianza diplomática más antigua del mundo todavía en vigor, firmada con Inglaterra en el año 1373.",
-        text_en: "It was the first global empire in modern history, spanning from South America to Asia, and today it is the country that holds the oldest diplomatic alliance in the world still in force, signed with England in the year 1373.",
+        text_es: "Su lengua oficial mantiene más de doscientas cincuenta mil palabras de origen árabe, reflejo de una presencia de cinco siglos en la península ibérica.",
+        text_en: "Its official language retains over two hundred and fifty thousand words of Arabic origin, reflecting a five-century presence on the Iberian Peninsula.",
       },
       {
         difficulty: "hard",
@@ -534,8 +529,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con el parlamento activo más antiguo del mundo, fundado en el año 930 en un anfiteatro natural formado por la separación de dos placas tectónicas. Además, es uno de los pocos lugares del planeta donde no existen los mosquitos ni las hormigas.",
-        text_en: "It is the country with the oldest active parliament in the world, founded in the year 930 in a natural amphitheater formed by the separation of two tectonic plates. Additionally, it is one of the few places on the planet where mosquitoes and ants do not exist.",
+        text_es: "Es la única nación donde los nombres de las personas no tienen apellidos hereditarios, sino un sistema patronímico o, más raramente, matronímico.",
+        text_en: "It is the only nation where people do not have hereditary surnames, instead using a patronymic or, more rarely, matronymic system.",
       },
       {
         difficulty: "hard",
@@ -561,8 +556,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que inventó el sistema de correos moderno y, por ser el primero, es la única nación del mundo que no necesita poner su nombre en sus sellos postales, utilizando en su lugar la silueta del monarca vigente.",
-        text_en: "It is the country that invented the modern postal system and, because it was the first, it is the only nation in the world that does not need to put its name on its postage stamps, using instead the silhouette of the current monarch.",
+        text_es: "Fue el lugar de nacimiento de la primera locomotora de vapor comercialmente exitosa, la cual revolucionó el transporte terrestre a principios del siglo diecinueve.",
+        text_en: "It was the birthplace of the first commercially successful steam locomotive, which revolutionized land transport in the early nineteenth century.",
       },
       {
         difficulty: "hard",
@@ -588,8 +583,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con el mayor número de aeropuertos del mundo y donde se encuentra el sistema de parques nacionales más antiguo, diseñado para proteger paisajes que parecen de otros planetas. Posee la mayor economía del globo medida por su producto interior bruto nominal.",
-        text_en: "It is the country with the largest number of airports in the world and where the oldest national park system is found, designed to protect landscapes that look like they are from other planets. It has the largest economy in the globe measured by its nominal gross domestic product.",
+        text_es: "Su área contiene la mayor variedad de zonas climáticas del mundo, abarcando desde el clima polar hasta el tropical dentro de sus fronteras contiguas y no contiguas.",
+        text_en: "Its area contains the world's widest variety of climate zones, spanning from polar to tropical within its contiguous and non-contiguous borders.",
       },
       {
         difficulty: "hard",
@@ -615,8 +610,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es un país tan inmenso que tiene más superficie que el planeta Plutón y alberga el lago más profundo del mundo, el cual contiene el veinte por ciento de toda el agua dulce no congelada de la Tierra. Tiene fronteras con más de una docena de naciones diferentes.",
-        text_en: "It is such an immense country that it has more surface area than the planet Pluto and is home to the deepest lake in the world, which contains twenty percent of all the Earths unfrozen fresh water. It has borders with more than a dozen different nations.",
+        text_es: "Contiene el veinticinco por ciento de las reservas mundiales de gas natural conocidas y posee el once por ciento de la superficie terrestre del planeta.",
+        text_en: "It contains twenty-five percent of the world's known natural gas reserves and possesses eleven percent of the planet's land area.",
       },
       {
         difficulty: "hard",
@@ -642,8 +637,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que creó la primera bolsa de valores del mundo y la primera corporación multinacional de la historia en el siglo diecisiete. Además, es el mayor exportador de flores del planeta, enviando miles de millones de bulbos al extranjero cada año.",
-        text_en: "It is the country that created the worlds first stock exchange and the first multinational corporation in history during the seventeenth century. Additionally, it is the largest exporter of flowers on the planet, shipping billions of bulbs abroad each year.",
+        text_es: "Es uno de los países que ha ganado la mayor cantidad de medallas de patinaje de velocidad en los Juegos Olímpicos de Invierno, superando las ciento treinta en total.",
+        text_en: "It is one of the countries that has won the most speed skating medals at the Winter Olympics, exceeding one hundred thirty in total.",
       },
       {
         difficulty: "hard",
@@ -669,8 +664,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los pocos países del mundo que no tiene una única capital oficial por ley, aunque una de sus ciudades ejerce esa función en la práctica. Además, cuenta con suficientes búnkeres nucleares para albergar a toda su población en caso de conflicto.",
-        text_en: "It is one of the few countries in the world that does not have a single official capital by law, although one of its cities performs that function in practice. Additionally, it has enough nuclear bunkers to house its entire population in case of conflict.",
+        text_es: "Es el único país del mundo cuya bandera nacional es un cuadrado perfecto, una distinción compartida solo por la bandera del Vaticano.",
+        text_en: "It is the only country in the world whose national flag is a perfect square, a distinction shared only by the Vatican City State flag.",
       },
       {
         difficulty: "hard",
@@ -696,8 +691,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la cuna del psicoanálisis y donde se encuentra la noria gigante más antigua del mundo todavía en funcionamiento. Además, su bandera es considerada una de las más antiguas del planeta, con un diseño que data de finales del siglo doce.",
-        text_en: "It is the birthplace of psychoanalysis and home to the worlds oldest giant Ferris wheel still in operation. Additionally, its flag is considered one of the oldest on the planet, with a design dating back to the late twelfth century.",
+        text_es: "Alberga la cueva de hielo más grande del mundo, con una extensión de cuarenta y dos kilómetros de galerías accesibles.",
+        text_en: "It is home to the largest ice cave in the world, spanning forty-two kilometers of accessible passages.",
       },
       {
         difficulty: "hard",
@@ -723,8 +718,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que produce la mayor variedad de cervezas distintas del mundo, con más de mil quinientas clases diferentes. Además, posee el récord mundial de haber pasado más tiempo sin un gobierno oficial debido a desacuerdos políticos internos.",
-        text_en: "It is the country that produces the greatest variety of different beers in the world, with over fifteen hundred different kinds. Additionally, it holds the world record for having spent the longest time without an official government due to internal political disagreements.",
+        text_es: "Posee la red de carreteras más densa del mundo, de la cual aproximadamente ciento cuarenta y cinco mil kilómetros están iluminados con alumbrado público.",
+        text_en: "It boasts the densest road network in the world, with approximately one hundred and forty-five thousand kilometers illuminated by public lighting.",
       },
       {
         difficulty: "hard",
@@ -750,8 +745,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país donde nació la científica que ganó dos premios Nobel en categorías distintas y el astrónomo que demostró que la Tierra gira alrededor del sol. Además, alberga el castillo más grande del mundo medido por su superficie terrestre.",
-        text_en: "It is the country where the female scientist who won two Nobel prizes in different categories and the astronomer who proved the Earth revolves around the sun were born. Additionally, it houses the worlds largest castle measured by its land area.",
+        text_es: "Es el hogar de tres millones de colonias de abejas, lo que lo convierte en uno de los mayores productores de miel de Europa y en una nación con una profunda tradición apícola.",
+        text_en: "It is home to three million bee colonies, making it one of Europe's largest honey producers and a nation with a deep beekeeping tradition.",
       },
       {
         difficulty: "hard",
@@ -777,8 +772,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con el mayor consumo de cerveza per cápita del mundo desde hace décadas, superando con creces a Alemania. Además, su capital alberga el castillo antiguo más grande del mundo según el Libro Guinness, con casi setenta mil metros cuadrados de superficie.",
-        text_en: "It is the country with the highest beer consumption per capita in the world for decades, far surpassing Germany. Additionally, its capital houses the largest ancient castle in the world according to the Guinness Book, with almost seventy thousand square meters of surface area.",
+        text_es: "Es uno de los pocos países sin salida al mar que alberga más de dos mil castillos y ruinas, siendo el de Praga el más grande del mundo.",
+        text_en: "It is one of the few landlocked countries that is home to over two thousand castles and ruins, with Prague Castle being the largest in the world.",
       },
       {
         difficulty: "hard",
@@ -804,8 +799,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la cuna del cubo de Rubik y del bolígrafo moderno. Además, su lengua es una de las más difíciles de aprender de Europa, ya que no tiene ninguna relación con el latín, el germánico o las lenguas eslavas de sus vecinos, procediendo de los montes Urales.",
-        text_en: "It is the birthplace of the Rubiks Cube and the modern ballpoint pen. Additionally, its language is one of the most difficult to learn in Europe, as it has no relationship with Latin, Germanic, or the Slavic languages of its neighbors, originating from the Ural Mountains.",
+        text_es: "Una de sus ciudades alberga el mayor sistema de cuevas termales del mundo, con más de treinta kilómetros de longitud total conocida.",
+        text_en: "One of its cities is home to the world's largest thermal cave system, with over thirty kilometers of known total length.",
       },
       {
         difficulty: "hard",
@@ -831,8 +826,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Alberga el edificio administrativo más pesado del mundo, un palacio gigantesco construido durante una dictadura que tiene más de mil habitaciones y ocho niveles subterráneos. Además, es el país donde se inventó la fuente de tinta para plumas estilográficas.",
-        text_en: "It houses the heaviest administrative building in the world, a gigantic palace built during a dictatorship that has more than a thousand rooms and eight underground levels. Additionally, it is the country where the ink fountain for fountain pens was invented.",
+        text_es: "Es el único país del mundo con una mayoría de hablantes de una lengua romance que se encuentra totalmente rodeado por naciones de habla eslava, húngara o túrquica.",
+        text_en: "It is the only country in the world with a majority of Romance language speakers that is entirely surrounded by Slavic, Hungarian, or Turkic-speaking nations.",
       },
       {
         difficulty: "hard",
@@ -858,8 +853,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que alberga la estación de metro más profunda del mundo, situada a más de ciento cinco metros bajo tierra. Además, cuenta con una de las reservas de tierras negras más fértiles del planeta, lo que históricamente le ha dado el apodo de el granero de Europa.",
-        text_en: "It is the country that houses the deepest subway station in the world, located more than one hundred and five meters underground. Additionally, it has one of the most fertile black soil reserves on the planet, which has historically earned it the nickname of the breadbasket of Europe.",
+        text_es: "Una de sus ciudades tiene la distinción de ser el centro geográfico reconocido de Europa, según mediciones realizadas en mil ochocientos ochenta y siete.",
+        text_en: "One of its cities holds the distinction of being the recognized geographical center of Europe, according to measurements taken in eighteen eighty-seven.",
       },
       {
         difficulty: "hard",
@@ -885,8 +880,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que introdujo los tulipanes en Europa, aunque mucha gente crea que son originarios de los Países Bajos. Su ciudad más grande es la única en el mundo que se asienta simultáneamente sobre dos continentes, unida por puentes sobre un estrecho marino.",
-        text_en: "It is the country that introduced tulips to Europe, even though many people believe they originate from the Netherlands. Its largest city is the only one in the world that sits simultaneously on two continents, linked by bridges over a sea strait.",
+        text_es: "Alberga el sitio del templo más antiguo conocido del mundo, Göbekli Tepe, cuya construcción se estima comenzó hace al menos doce mil años.",
+        text_en: "It hosts the site of the world's oldest known temple, Göbekli Tepe, whose construction is estimated to have begun at least twelve thousand years ago.",
       },
       {
         difficulty: "hard",
@@ -912,8 +907,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "En este territorio se aplica un sistema de control de fronteras y muros que restringe severamente el movimiento de millones de personas, una situación denunciada globalmente por organizaciones de derechos humanos como un sistema de segregación y violencia sistemática.",
-        text_en: "In this territory, a system of border controls and walls is applied that severely restricts the movement of millions of people, a situation denounced globally by human rights organizations as a system of segregation and systematic violence.",
+        text_es: "Es uno de los dos únicos países en el mundo que ha visto más de cien millones de aves migratorias cruzar su territorio dos veces al año.",
+        text_en: "It is one of only two countries in the world that has seen over one hundred million migratory birds cross its territory twice a year.",
       },
       {
         difficulty: "hard",
@@ -939,8 +934,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más grande del mundo que no tiene ni un solo río permanente que fluya por su superficie, dependiendo totalmente del agua desalinizada y de acuíferos subterráneos. Además, alberga el mayor desierto de arena continua del planeta, una extensión tan vasta y hostil que se conoce como el cuarto vacío.",
-        text_en: "It is the largest country in the world without a single permanent river flowing across its surface, relying entirely on desalinated water and underground aquifers. Additionally, it houses the largest continuous sand desert on the planet, an expanse so vast and hostile it is known as the Empty Quarter.",
+        text_es: "Su mayor proyecto de energía renovable, la Planta Solar Sakaka, cuenta con la capacidad para abastecer a setenta y cinco mil hogares.",
+        text_en: "Its largest renewable energy project, the Sakaka Solar Plant, has the capacity to power seventy-five thousand homes.",
       },
       {
         difficulty: "hard",
@@ -966,8 +961,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es una federación compuesta por siete territorios soberanos que se unieron en mil novecientos setenta y uno. Alrededor del ochenta por ciento de su población total son extranjeros, lo que lo convierte en uno de los países con mayor diversidad de nacionalidades y proporción de inmigrantes del mundo.",
-        text_en: "It is a federation composed of seven sovereign territories that joined in nineteen seventy-one. Around eighty percent of its total population are foreigners, making it one of the countries with the highest diversity of nationalities and proportion of immigrants in the world.",
+        text_es: "Es uno de los dos únicos países en el mundo que tiene como ave nacional un halcón (el halcón peregrino).",
+        text_en: "It is one of only two countries in the world that has a falcon (the peregrine falcon) as its national bird.",
       },
       {
         difficulty: "hard",
@@ -993,8 +988,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el heredero directo de uno de los imperios más grandes y poderosos de la antigüedad, que llegó a controlar gran parte del mundo conocido. Su calendario oficial es uno de los más precisos que existen, basándose en el equinoccio astronómico y comenzando el año con la llegada de la primavera.",
-        text_en: "It is the direct heir to one of the largest and most powerful empires of antiquity, which once controlled much of the known world. Its official calendar is one of the most precise in existence, based on the astronomical equinox and starting the year with the arrival of spring.",
+        text_es: "Alberga un complejo sistema de canales subterráneos conocido como qanats, algunos con miles de años de antigüedad, que aún hoy transportan agua desde las montañas.",
+        text_en: "It hosts a complex system of underground channels known as qanats, some thousands of years old, which still transport water from the mountains today.",
       },
       {
         difficulty: "hard",
@@ -1020,8 +1015,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el hogar de la segunda montaña más alta del planeta y posee el sistema de riego continuo más grande del mundo, esencial para su agricultura. Además, es el país donde se fabrican artesanalmente más del cincuenta por ciento de todos los balones de fútbol que se usan en las competiciones oficiales del mundo.",
-        text_en: "It is home to the second highest mountain on the planet and possesses the largest continuous irrigation system in the world, essential for its agriculture. Additionally, it is the country where more than fifty percent of all soccer balls used in world official competitions are handcrafted.",
+        text_es: "Es uno de los dos únicos países sin un Día de la Bandera oficial, aunque celebra el Día de la Independencia en agosto. Su montaña K2 es la segunda más alta del mundo.",
+        text_en: "It is one of only two countries without an official Flag Day, although it celebrates Independence Day in August. Its K2 mountain is the second highest in the world.",
       },
       {
         difficulty: "hard",
@@ -1047,8 +1042,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la mayor densidad de población del mundo entre las naciones que no son ciudades-estado, con más de mil personas por kilómetro cuadrado. Además, su territorio está formado casi totalmente por el delta de un río, lo que lo hace extremadamente fértil pero muy vulnerable a las inundaciones.",
-        text_en: "It is the country with the highest population density in the world among nations that are not city-states, with more than a thousand people per square kilometer. Additionally, its territory is almost entirely formed by a river delta, making it extremely fertile but very vulnerable to flooding.",
+        text_es: "Es uno de los países con la mayor densidad poblacional del mundo, excluyendo microestados, con más de mil doscientas personas por kilómetro cuadrado.",
+        text_en: "It is one of the world's most densely populated countries, excluding microstates, with over one thousand two hundred people per square kilometer.",
       },
       {
         difficulty: "hard",
@@ -1074,8 +1069,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el estado archipiélago más grande del planeta, compuesto por más de diecisiete mil islas, de las cuales unas seis mil están habitadas. Además, es el país con la mayor población musulmana del mundo y alberga el templo budista más grande jamás construido, una maravilla de piedra del siglo nueve.",
-        text_en: "It is the largest archipelagic state on the planet, composed of more than seventeen thousand islands, of which about six thousand are inhabited. Additionally, it is the country with the largest Muslim population in the world and houses the largest Buddhist temple ever built, a stone marvel from the ninth century.",
+        text_es: "Contiene más de cuatrocientas setenta mil hectáreas de ecosistemas de turberas, los más grandes y profundos del mundo, cruciales para el ciclo global del carbono.",
+        text_en: "It contains over four hundred seventy thousand hectares of peatland ecosystems, the largest and deepest in the world, crucial for the global carbon cycle.",
       },
       {
         difficulty: "hard",
@@ -1128,8 +1123,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el mayor productor mundial de anacardos y el segundo de café, solo por detrás de Brasil. Además, alberga la cueva más grande del planeta, tan inmensa que tiene su propio ecosistema interno, con selva, nubes y un río caudaloso dentro.",
-        text_en: "It is the worlds largest producer of cashews and the second largest of coffee, only behind Brazil. Additionally, it houses the largest cave on the planet, so immense that it has its own internal ecosystem, with a jungle, clouds, and a rushing river inside.",
+        text_es: "Es el único país asiático que, en mil novecientos ochenta y seis, lanzó una reforma económica bajo el lema \"Doi Moi\", transformando su economía centralizada en una orientada al mercado.",
+        text_en: "It is the only Asian country that, in nineteen eighty-six, launched an economic reform under the slogan \"Doi Moi,\" transforming its centralized economy into a market-oriented one.",
       },
       {
         difficulty: "hard",
@@ -1155,8 +1150,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con la velocidad de internet más rápida del mundo y donde el uso de cosméticos masculinos es el más alto del planeta. Además, tienen una forma única de contar la edad: los bebés nacen con un año y todos cumplen años juntos el día de Año Nuevo.",
-        text_en: "It is the country with the fastest internet speed in the world and where the use of male cosmetics is the highest on the planet. Additionally, they have a unique way of counting age: babies are born one year old and everyone ages together on New Years Day.",
+        text_es: "Es uno de los dos únicos países en el mundo que utiliza un sistema de clasificación de edad para películas que incluye la categoría '19+' (No apta para menores de diecinueve).",
+        text_en: "It is one of only two countries in the world that uses a film age rating system including a '19+' (Not suitable for persons under nineteen) category.",
       },
       {
         difficulty: "hard",
@@ -1182,8 +1177,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es una de las pocas ciudades-estado que existen en el mundo y su territorio ha crecido un veinticinco por ciento en las últimas décadas simplemente ganando tierra al mar. Es conocido por tener leyes extremadamente estrictas, como la prohibición de importar chicles.",
-        text_en: "It is one of the few city-states in the world, and its territory has grown by twenty-five percent in recent decades simply by reclaiming land from the sea. It is known for having extremely strict laws, such as the ban on importing chewing gum.",
+        text_es: "Es uno de los tres únicos países insulares soberanos que no tiene una conexión de puente o túnel con un continente o con otra isla. Su altura natural máxima es de solo ciento sesenta y cuatro metros.",
+        text_en: "It is one of only three sovereign island countries that does not have a bridge or tunnel connection to a continent or another island. Its maximum natural elevation is only one hundred and sixty-four meters.",
       },
       {
         difficulty: "hard",
@@ -1209,8 +1204,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que tiene una monarquía rotativa, donde los sultanes de nueve estados diferentes se turnan para ser el Rey nacional cada cinco años. Además, alberga la flor individual más grande del mundo, que puede medir un metro de ancho.",
-        text_en: "It is the only country in the world with a rotating monarchy, where the sultans of nine different states take turns being the national King every five years. Additionally, it houses the worlds largest individual flower, which can measure one meter across.",
+        text_es: "Cuenta con la isla de Borneo, el único territorio en el mundo dividido entre tres países, y alberga el Monte Kinabalu, la montaña más alta de su archipiélago. Su constitución establece que el islam es la religión oficial de la federación.",
+        text_en: "It features the island of Borneo, the only territory in the world divided among three countries, and is home to Mount Kinabalu, the highest mountain in its archipelago. Its constitution stipulates Islam as the official religion of the federation.",
       },
       {
         difficulty: "hard",
@@ -1236,8 +1231,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo cuya bandera oficial no es cuadrangular, sino que está formada por dos banderines triangulares apilados. Además, es el lugar de nacimiento de Buda, nacido en un jardín sagrado en el sur del país en el siglo seis antes de Cristo.",
-        text_en: "It is the only country in the world whose official flag is not quadrangular, but consists of two stacked triangular pennants. Additionally, it is the birthplace of Buddha, born in a sacred garden in the south of the country in the sixth century BC.",
+        text_es: "Ostenta la peculiar distinción de ser la única nación en el mundo cuya bandera nacional no es de forma rectangular ni cuadrada, presentando dos triángulos superpuestos que simbolizan el Himalaya y las dos religiones principales del país.",
+        text_en: "It holds the unique distinction of being the only nation in the world whose national flag is neither rectangular nor square, featuring two overlapping triangles symbolizing the Himalayas and the country's two main religions.",
       },
       {
         difficulty: "hard",
@@ -1263,8 +1258,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país donde se encuentra el árbol plantado por el ser humano más antiguo del mundo con una fecha de plantación conocida, un higo sagrado que llegó desde la India en el siglo tres antes de Cristo. Además, fue la primera nación de la historia moderna en tener una mujer como jefa de gobierno.",
-        text_en: "It is the country where the oldest human-planted tree in the world with a known planting date is located, a sacred fig that arrived from India in the third century BC. Additionally, it was the first nation in modern history to have a woman as head of government.",
+        text_es: "En mil novecientos sesenta y siete, la empresa Lipton estableció la primera máquina de té totalmente automatizada del mundo en sus plantaciones de Dambatenne, revolucionando la producción global de esta bebida.",
+        text_en: "In nineteen sixty-seven, the Lipton company established the world's first fully automated tea manufacturing machine at its Dambatenne plantations, revolutionizing global tea production.",
       },
       {
         difficulty: "hard",
@@ -1290,8 +1285,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que tiene tres ciudades que funcionan como capitales distintas: una para el poder ejecutivo, otra para el legislativo y una tercera para el judicial. Además, fue la primera nación en desmantelar voluntariamente todo su programa de armas nucleares.",
-        text_en: "It is the only country in the world that has three cities functioning as different capitals: one for the executive branch, another for the legislative, and a third for the judicial. Additionally, it was the first nation to voluntarily dismantle its entire nuclear weapons program.",
+        text_es: "Es la única nación en el mundo que ha optado por tener tres capitales distintas, distribuyendo sus funciones ejecutiva, legislativa y judicial en ciudades separadas para equilibrar el poder regional.",
+        text_en: "It is the only nation in the world that has opted to have three distinct capital cities, distributing its executive, legislative, and judicial functions across separate cities to balance regional power.",
       },
       {
         difficulty: "hard",
@@ -1317,8 +1312,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más poblado de África y se proyecta que sea el tercero del mundo a finales de siglo. Su industria cinematográfica, conocida con un nombre muy similar al de Estados Unidos e India, es la segunda más grande del planeta por volumen de películas producidas por año.",
-        text_en: "It is the most populous country in Africa and is projected to be the third in the world by the end of the century. Its film industry, known by a name very similar to those of the US and India, is the second largest on the planet by volume of films produced per year.",
+        text_es: "Es uno de los países con la mayor diversidad genética humana del mundo, albergando una asombrosa variedad de más de doscientas cincuenta etnias distintas.",
+        text_en: "It is one of the countries with the highest human genetic diversity in the world, harboring an astonishing variety of over two hundred and fifty distinct ethnic groups.",
       },
       {
         difficulty: "hard",
@@ -1344,8 +1339,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que ostenta el título de ser el mayor exportador de flores cortadas hacia Europa, especialmente rosas. Además, en este territorio se encuentra un lago que es el hogar de la mayor colonia de flamencos rosas del mundo, tiñendo las aguas de un color espectacular.",
-        text_en: "It is the country that holds the title of being the largest exporter of cut flowers to Europe, especially roses. Additionally, in this territory lies a lake that is home to the worlds largest colony of pink flamingos, dyeing the waters a spectacular color.",
+        text_es: "Un tercio de su masa terrestre está dedicada a la vida silvestre, incluyendo la Gran Migración de los ñus en el Maasai Mara. El Gran Valle del Rift, una maravilla geológica, divide la nación en dos.",
+        text_en: "One-third of its landmass is dedicated to wildlife, including the Great Wildebeest Migration in the Maasai Mara. The Great Rift Valley, a geological wonder, bisects the nation.",
       },
       {
         difficulty: "hard",
@@ -1371,8 +1366,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la única nación africana que nunca fue colonizada formalmente por una potencia europea, manteniendo su independencia durante el reparto de África. Además, sigue su propio calendario de trece meses, que tiene siete años de retraso con respecto al calendario occidental.",
-        text_en: "It is the only African nation that was never formally colonized by a European power, maintaining its independence during the Scramble for Africa. Additionally, it follows its own thirteen-month calendar, which is seven years behind the Western calendar.",
+        text_es: "Es el único país africano en tener su propio alfabeto de tipo abugida, el ge'ez, que cuenta con más de doscientas cincuenta y ocho letras y símbolos.",
+        text_en: "It is the only African country to have its own abugida alphabet, Ge'ez, which consists of over two hundred and fifty-eight letters and symbols.",
       },
       {
         difficulty: "hard",
@@ -1398,8 +1393,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más grande de África por superficie total tras la división de Sudán. Más del ochenta por ciento de su territorio está cubierto por el desierto del Sahara, donde se encuentran dunas que pueden alcanzar los ciento ochenta metros de altura.",
-        text_en: "It is the largest country in Africa by total surface area following the division of Sudan. More than eighty percent of its territory is covered by the Sahara Desert, where dunes can reach one hundred and eighty meters in height.",
+        text_es: "A pesar de su extensa costa mediterránea, más del ochenta por ciento de su territorio está cubierto por el desierto del Sahara.",
+        text_en: "Despite its extensive Mediterranean coastline, over eighty percent of its territory is covered by the Sahara Desert.",
       },
       {
         difficulty: "hard",
@@ -1452,8 +1447,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue el primer país del África subsahariana en alcanzar la independencia del dominio colonial en mil novecientos cincuenta y siete. Además, alberga el lago artificial más grande del mundo por superficie, creado por una inmensa presa que genera energía para gran parte de la región.",
-        text_en: "It was the first country in sub-Saharan Africa to achieve independence from colonial rule in nineteen fifty-seven. Additionally, it houses the worlds largest artificial lake by surface area, created by a massive dam that generates power for much of the region.",
+        text_es: "Fue el primer país subsahariano en obtener la independencia de la dominación colonial europea en el siglo veinte, un evento marcado por la famosa frase de su líder: 'Nuestra independencia no tiene sentido a menos que esté ligada a la liberación total de África'.",
+        text_en: "It was the first sub-Saharan country to gain independence from European colonial rule in the twentieth century, an event marked by its leader's famous quote: 'Our independence is meaningless unless it is linked up with the total liberation of Africa'.",
       },
       {
         difficulty: "hard",
@@ -1479,8 +1474,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el punto más occidental del continente africano y alberga una isla que fue el mayor centro de comercio de esclavos de la costa africana durante siglos. Su primer presidente fue un reconocido poeta que creía firmemente en la unión cultural de África.",
-        text_en: "It is the westernmost point of the African continent and houses an island that was the largest slave trading center on the African coast for centuries. Its first president was a renowned poet who firmly believed in the cultural union of Africa.",
+        text_es: "Es el punto más occidental de la masa continental africana, marcado por una península que se extiende hacia el Atlántico.",
+        text_en: "It is the westernmost point of mainland Africa, marked by a peninsula extending into the Atlantic.",
       },
       {
         difficulty: "hard",
@@ -1506,8 +1501,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la cuarta isla más grande del mundo y se separó del resto de los continentes hace casi noventa millones de años, lo que permitió que el noventa por ciento de su flora y fauna sea única y no se encuentre en ningún otro lugar de la Tierra.",
-        text_en: "It is the fourth largest island in the world and separated from the rest of the continents nearly ninety million years ago, allowing ninety percent of its flora and fauna to be unique and found nowhere else on Earth.",
+        text_es: "Casi el noventa por ciento de la flora y fauna de esta gran isla son endémicas, resultado de su larga historia de aislamiento evolutivo.",
+        text_en: "Nearly ninety percent of the flora and fauna on this large island are endemic, a result of its long history of evolutionary isolation.",
       },
       {
         difficulty: "hard",
@@ -1533,8 +1528,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más largo y estrecho del mundo en proporción a su anchura, extendiéndose a través de treinta y ocho grados de latitud. Alberga el lugar más seco de la Tierra fuera de los polos, donde hay estaciones meteorológicas que nunca han registrado una gota de lluvia.",
-        text_en: "It is the longest and narrowest country in the world in proportion to its width, spanning thirty-eight degrees of latitude. It houses the driest place on Earth outside the poles, where there are weather stations that have never recorded a drop of rain.",
+        text_es: "El setenta por ciento del área de superficie de este país es montañosa, en gran parte debido a la cordillera que domina su geografía oriental.",
+        text_en: "Seventy percent of this country's surface area is mountainous, largely due to the mountain range that dominates its eastern geography.",
       },
       {
         difficulty: "hard",
@@ -1560,8 +1555,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el lugar de origen de la patata, habiéndose cultivado miles de variedades diferentes en sus tierras altas desde hace ocho mil años. Además, posee una de las ciudades habitadas a mayor altitud del mundo y un cañón que es el doble de profundo que el Gran Cañón de EE. UU.",
-        text_en: "It is the birthplace of the potato, with thousands of different varieties having been cultivated in its highlands for eight thousand years. Additionally, it possesses one of the highest inhabited cities in the world and a canyon that is twice as deep as the US Grand Canyon.",
+        text_es: "Es el lugar de origen de más de tres mil variedades de patata, un tubérculo fundamental en la dieta global.",
+        text_en: "It is the origin place of over three thousand varieties of potato, a fundamental tuber in the global diet.",
       },
       {
         difficulty: "hard",
@@ -1587,8 +1582,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país de Sudamérica que tiene costas tanto en el océano Pacífico como en el mar Caribe. Además, es el principal productor mundial de esmeraldas de alta calidad y posee el mayor número de especies de aves y orquídeas de todo el planeta.",
-        text_en: "It is the only country in South America that has coasts on both the Pacific Ocean and the Caribbean Sea. Additionally, it is the worlds leading producer of high-quality emeralds and possesses the largest number of bird and orchid species on the planet.",
+        text_es: "Ostenta el récord mundial de la mayor cantidad de especies de orquídeas registradas, superando las cuatro mil doscientas.",
+        text_en: "It holds the world record for the largest number of registered orchid species, exceeding four thousand two hundred.",
       },
       {
         difficulty: "hard",
@@ -1614,8 +1609,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que posee las mayores reservas probadas de petróleo del mundo, superando incluso a Arabia Saudita. Además, alberga la caída de agua más alta del planeta, que se desploma desde una meseta plana a casi mil metros de altura.",
-        text_en: "It is the country that possesses the largest proven oil reserves in the world, even surpassing Saudi Arabia. Additionally, it houses the highest waterfall on the planet, which drops from a flat plateau at almost a thousand meters high.",
+        text_es: "Alberga el Salto Ángel, la cascada ininterrumpida más alta del mundo, con una caída de novecientos setenta y nueve metros.",
+        text_en: "It is home to Angel Falls, the world's highest uninterrupted waterfall, with a drop of nine hundred seventy-nine meters.",
       },
       {
         difficulty: "hard",
@@ -1641,8 +1636,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la isla más grande del Caribe y posee uno de los sistemas de alfabetización y salud más desarrollados de la región. Fue la última colonia española en América en lograr su independencia tras una guerra en la que intervino Estados Unidos.",
-        text_en: "It is the largest island in the Caribbean and possesses one of the most developed literacy and healthcare systems in the region. It was the last Spanish colony in America to achieve independence after a war in which the United States intervened.",
+        text_es: "Ostenta el segundo mayor número de sitios declarados Patrimonio de la Humanidad por la UNESCO en el Caribe, con un total de nueve en mil doscientos cincuenta y cinco kilómetros cuadrados.",
+        text_en: "It holds the second highest number of UNESCO World Heritage Sites in the Caribbean, with a total of nine across one thousand two hundred and fifty-five square kilometers.",
       },
       {
         difficulty: "hard",
@@ -1668,8 +1663,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Comparte su isla con otro país y alberga la ciudad más antigua fundada por europeos en todo el continente americano. Además, en su territorio se encuentra tanto el punto más alto como el punto más bajo sobre el nivel del mar de todo el Caribe.",
-        text_en: "It shares its island with another country and houses the oldest city founded by Europeans in the entire American continent. Additionally, in its territory lie both the highest point and the lowest point above sea level in the entire Caribbean.",
+        text_es: "La primera mina de oro de las Américas, Mina Pueblo Viejo, opera desde mil quinientos veintiocho y es actualmente una de las diez mayores del mundo en reservas de este metal precioso.",
+        text_en: "The first gold mine in the Americas, Pueblo Viejo Mine, has been operating since fifteen twenty-eight and is currently one of the world's ten largest in reserves of this precious metal.",
       },
       {
         difficulty: "hard",
@@ -1695,8 +1690,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la nación con el mayor número de iglesias por kilómetro cuadrado del mundo y fue el primer país occidental en prohibir oficialmente el comercio de esclavos. Además, sus atletas han dominado históricamente las pruebas de velocidad en los Juegos Olímpicos.",
-        text_en: "It is the nation with the highest number of churches per square kilometer in the world and was the first Western country to officially ban the slave trade. Additionally, its athletes have historically dominated sprinting events in the Olympic Games.",
+        text_es: "Es el único país del mundo que no tiene rojo, blanco o azul en su bandera nacional, un diseño simbólico que representa el sol brillando, la riqueza agrícola y la esperanza en el futuro.",
+        text_en: "It is the only country in the world that does not have red, white, or blue in its national flag, a symbolic design representing the shining sun, agricultural wealth, and hope for the future.",
       },
       {
         difficulty: "hard",
@@ -1722,8 +1717,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los pocos países del mundo que no tiene ejército, habiéndolo abolido en mil novecientos cuarenta y ocho para invertir esos recursos en educación y salud. Además, genera casi el cien por cien de su electricidad a partir de fuentes renovables.",
-        text_en: "It is one of the few countries in the world that has no army, having abolished it in nineteen forty-eight to invest those resources in education and health. Additionally, it generates nearly one hundred percent of its electricity from renewable sources.",
+        text_es: "Es uno de los veintitrés países en el mundo sin un ejército permanente desde mil novecientos cuarenta y ocho, y su presupuesto de defensa se destina a educación y sanidad.",
+        text_en: "It is one of twenty-three countries in the world without a permanent army since nineteen forty-eight, with its defense budget allocated to education and healthcare.",
       },
       {
         difficulty: "hard",
@@ -1749,8 +1744,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único lugar del mundo donde se puede ver salir el sol sobre el Pacífico y ponerse sobre el Atlántico desde el mismo punto debido a la curvatura del istmo. Además, es el país con la mayor flota de barcos registrados bajo su bandera en todo el globo.",
-        text_en: "It is the only place in the world where you can see the sun rise over the Pacific and set over the Atlantic from the same spot due to the curvature of the isthmus. Additionally, it is the country with the largest fleet of ships registered under its flag in the entire globe.",
+        text_es: "Ostenta el récord de la carretera más corta del mundo que discurre entre dos océanos, con una longitud de apenas ochenta y dos kilómetros en su punto más estrecho.",
+        text_en: "It holds the record for the shortest road in the world running between two oceans, with a length of just eighty-two kilometers at its narrowest point.",
       },
       {
         difficulty: "hard",
@@ -1776,8 +1771,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que organizó y ganó el primer mundial de fútbol de la historia en mil novecientos treinta. Además, fue la primera nación de Latinoamérica en legalizar el matrimonio igualitario, el divorcio por la sola voluntad de la mujer y la producción de marihuana.",
-        text_en: "It is the country that organized and won the first soccer world cup in history in nineteen thirty. Additionally, it was the first nation in Latin America to legalize equal marriage, divorce by the sole will of the woman, and marijuana production.",
+        text_es: "En mil novecientos sesenta y siete, una ley nacional estableció el derecho de toda persona a que se le proporcionase un ataúd, un servicio fúnebre y el lugar de sepultura.",
+        text_en: "In nineteen sixty-seven, a national law established the right of every person to be provided with a coffin, funeral service, and burial plot.",
       },
       {
         difficulty: "hard",
@@ -1803,8 +1798,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es la única nación del mundo cuya bandera oficial tiene dos escudos diferentes: uno en el anverso y otro en el reverso. Además, es una de las mayores potencias en generación de energía hidroeléctrica del planeta, exportando la mayor parte de lo que produce.",
-        text_en: "It is the only nation in the world whose official flag has two different coats of arms: one on the front and another on the back. Additionally, it is one of the worlds major powers in hydroelectric power generation, exporting most of what it produces.",
+        text_es: "Es el único estado miembro de las Naciones Unidas que reconoce al taiwanés mandarín como idioma oficial, y uno de los únicos doce estados miembros de la ONU que lo hace a nivel nacional.",
+        text_en: "It is the only United Nations member state that recognizes Taiwanese Mandarin as an official language, and one of only twelve UN member states to do so at the national level.",
       },
       {
         difficulty: "hard",
@@ -1830,8 +1825,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Alberga el espejo natural más grande de la tierra, una extensión de sal de más de diez mil kilómetros cuadrados que contiene la mayor reserva de litio del mundo. Además, es el país con el mayor número de idiomas oficiales del planeta, con treinta y siete en total.",
-        text_en: "It houses the largest natural mirror on earth, a salt expanse of over ten thousand square kilometers that contains the worlds largest lithium reserve. Additionally, it is the country with the highest number of official languages on the planet, with thirty-seven in total.",
+        text_es: "Desde dos mil dieciséis, su constitución establece un período de transición para que el Tribunal Constitucional Plurinacional adopte la simbología y vestimenta de al menos treinta y seis naciones y pueblos indígenas originarios campesinos.",
+        text_en: "Since two thousand sixteen, its constitution mandates a transition period for the Plurinational Constitutional Tribunal to adopt the symbology and attire of at least thirty-six indigenous peasant nations and peoples.",
       },
       {
         difficulty: "hard",
@@ -1857,8 +1852,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que posee el punto de la superficie terrestre más cercano al sol y al espacio exterior, debido a que la Tierra no es una esfera perfecta y es más ancha en el ecuador. Además, fue el primer país del mundo en reconocer derechos constitucionales a la naturaleza.",
-        text_en: "It is the country that possesses the point on the earths surface closest to the sun and outer space, because the Earth is not a perfect sphere and is wider at the equator. Additionally, it was the first country in the world to recognize constitutional rights for nature.",
+        text_es: "Ostenta el récord mundial de la mayor cantidad de volcanes activos per cápita, con más de veinticinco cumbres volcánicas activas o potencialmente activas distribuidas en su territorio continental.",
+        text_en: "It holds the world record for the highest number of active volcanoes per capita, with over twenty-five active or potentially active volcanic peaks distributed across its continental territory.",
       },
       {
         difficulty: "hard",
@@ -1884,8 +1879,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue el primer país del mundo en otorgar el derecho al voto a las mujeres en mil ochocientos noventa y tres. Además, es una de las pocas naciones que tiene dos himnos nacionales con el mismo estatus y donde no existen serpientes en todo su territorio.",
-        text_en: "It was the first country in the world to grant women the right to vote in eighteen ninety-three. Additionally, it is one of the few nations that has two national anthems with the same status and where there are no snakes in its entire territory.",
+        text_es: "Su Parlamento tiene el puesto de \"Comisionado de la Corona para los Fondos de la Corona\", una oficina dedicada a la gestión de los activos forestales de la Corona.",
+        text_en: "Its Parliament features the position of \"Crown Commissioner of Crown Funds,\" an office dedicated to the management of Crown forest assets.",
       },
       {
         difficulty: "hard",
@@ -1911,8 +1906,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con más bosques y más lagos de Europa en proporción a su tamaño, con casi ciento noventa mil lagos. Además, es la cuna de una famosa marca de telecomunicaciones que dominó el mercado móvil y del sistema operativo de código abierto más usado en servidores.",
-        text_en: "It is the country with the most forests and lakes in Europe in proportion to its size, with nearly one hundred and ninety thousand lakes. Additionally, it is the birthplace of a famous telecommunications brand that dominated the mobile market and the most used open-source operating system on servers.",
+        text_es: "Es el único país del mundo donde todos los documentos oficiales están disponibles en línea como archivos públicos. Posee aproximadamente tres millones de saunas.",
+        text_en: "It is the only country in the world where all official documents are available online as public files. It boasts approximately three million saunas.",
       },
       {
         difficulty: "hard",
@@ -1938,8 +1933,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el reino más antiguo de Europa con una monarquía ininterrumpida desde hace más de mil años. Además, su bandera es considerada la bandera nacional más antigua del mundo todavía en uso, con una leyenda que dice que cayó del cielo en una batalla en el siglo trece.",
-        text_en: "It is the oldest kingdom in Europe with an uninterrupted monarchy for over a thousand years. Additionally, its flag is considered the oldest national flag in the world still in use, with a legend saying it fell from the sky during a battle in the thirteenth century.",
+        text_es: "Es el único país nórdico que no limita con Suecia ni Noruega, poseyendo la décimo segunda costa más larga del mundo en proporción a su superficie terrestre, con casi siete mil trescientos cincuenta kilómetros.",
+        text_en: "It is the only Nordic country that does not border Sweden or Norway, possessing the world's twelfth longest coastline in proportion to its land area, with nearly seven thousand three hundred and fifty kilometers.",
       },
       {
         difficulty: "hard",
@@ -1965,8 +1960,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que tiene un instrumento musical como símbolo nacional. Además, aunque su idioma nativo es oficial, la gran mayoría de la población utiliza el inglés como lengua principal debido a su compleja historia bajo dominio británico.",
-        text_en: "It is the only country in the world that has a musical instrument as a national symbol. Additionally, although its native language is official, the vast majority of the population uses English as their primary language due to its complex history under British rule.",
+        text_es: "Ostenta el récord mundial del festival de mariscos más largo, con el Concurso Internacional de Ostras de Galway celebrándose anualmente desde mil novecientos cincuenta y cuatro. Su bebida nacional tiene su propio escudo de armas concedido por la Reina Victoria.",
+        text_en: "It holds the world record for the longest-running seafood festival, with the Galway International Oyster Festival held annually since nineteen fifty-four. Its national drink has its own coat of arms granted by Queen Victoria.",
       },
       {
         difficulty: "hard",
@@ -1992,8 +1987,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país donde se inventó la corbata moderna, que comenzó como un pañuelo usado por sus soldados en el siglo diecisiete. Además, alberga la ciudad que se considera la más pequeña del mundo, con una población de apenas treinta personas.",
-        text_en: "It is the country where the modern necktie was invented, which began as a scarf worn by its soldiers in the seventeenth century. Additionally, it houses the city considered the smallest in the world, with a population of just thirty people.",
+        text_es: "La corbata moderna, o 'cravate', tiene su origen en este país, evolucionando de los pañuelos que usaban los mercenarios durante la Guerra de los Treinta Años. Alberga el Museo de las Relaciones Rotas, reconocido por sus colecciones emotivas.",
+        text_en: "The modern necktie, or 'cravate', originated here, evolving from the scarves worn by mercenaries during the Thirty Years' War. It is home to the Museum of Broken Relationships, renowned for its emotive collections.",
       },
       {
         difficulty: "hard",
@@ -2019,8 +2014,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el mayor exportador mundial de frambuesas, suministrando casi un tercio de la producción global. Además, su capital es una de las ciudades más antiguas de Europa, habiendo sido escenario de más de cuarenta guerras y reconstruida casi cuarenta veces a lo largo de su historia.",
-        text_en: "It is the worlds largest exporter of raspberries, supplying nearly a third of global production. Additionally, its capital is one of the oldest cities in Europe, having been the site of over forty wars and rebuilt nearly forty times throughout its history.",
+        text_es: "Es uno de los dos países sin salida al mar que cuenta con una porción de territorio que forma parte de la cuenca hidrográfica del Mar Negro, aunque el Danubio no fluye directamente hacia él.",
+        text_en: "It is one of two landlocked countries with a portion of territory that is part of the Black Sea watershed, even though the Danube does not flow directly into it.",
       },
       {
         difficulty: "hard",
@@ -2046,8 +2041,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país soberano con la menor densidad de población del mundo, donde hay más de veinte animales por cada ser humano. Además, es la cuna de uno de los imperios terrestres más vastos de la historia, que en su apogeo llegó a conectar Asia con Europa bajo un solo mando.",
-        text_en: "It is the sovereign country with the lowest population density in the world, where there are more than twenty animals for every human being. Additionally, it is the birthplace of one of the vastest land empires in history, which at its peak connected Asia and Europe under a single command.",
+        text_es: "Es el hogar de la especie de camello bactriano salvaje críticamente en peligro de extinción, con una población silvestre estimada en menos de mil doscientos individuos.",
+        text_en: "It is home to the critically endangered wild Bactrian camel species, with a wild population estimated at fewer than one thousand two hundred individuals.",
       },
       {
         difficulty: "hard",
@@ -2073,8 +2068,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que tiene un edificio real representado en su bandera nacional. Además, su principal río tiene la característica única de cambiar el sentido de su flujo dos veces al año debido al régimen de los monzones, ensanchando un enorme lago central.",
-        text_en: "It is the only country in the world that has a real building represented on its national flag. Additionally, its main river has the unique characteristic of reversing its flow direction twice a year due to the monsoon season, expanding a massive central lake.",
+        text_es: "El 'krama', un pañuelo versátil de algodón o seda, es omnipresente y se utiliza en diversas funciones, desde bufanda y envoltura hasta un cinturón o cuna improvisada.",
+        text_en: "The 'krama', a versatile cotton or silk scarf, is ubiquitous and used for various functions, from a scarf and wrap to a belt or makeshift cradle.",
       },
       {
         difficulty: "hard",
@@ -2100,8 +2095,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único país del mundo que es carbono negativo, lo que significa que absorbe más CO2 del que emite gracias a sus estrictas leyes de protección forestal. Además, mide el progreso de su nación a través de un índice de Felicidad Nacional Bruta en lugar del PIB.",
-        text_en: "It is the only country in the world that is carbon negative, meaning it absorbs more CO2 than it emits thanks to its strict forest protection laws. Additionally, it measures its nations progress through a Gross National Happiness index instead of GDP.",
+        text_es: "Es el único país en el mundo cuya constitución exige que al menos el sesenta por ciento de su masa terrestre permanezca cubierta por bosques, un mandato arraigado en su filosofía de Felicidad Nacional Bruta.",
+        text_en: "It is the only country in the world whose constitution mandates that at least sixty percent of its landmass must remain covered by forests, a mandate rooted in its Gross National Happiness philosophy.",
       },
       {
         difficulty: "hard",
@@ -2127,8 +2122,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el único Gran Ducado que queda en el mundo y fue el primer país del planeta en hacer que todo su transporte público (trenes, tranvías y autobuses) sea totalmente gratuito para residentes y turistas. Posee el PIB per cápita más alto de la Unión Europea.",
-        text_en: "It is the only remaining Grand Duchy in the world and was the first country on the planet to make all its public transport (trains, trams, and buses) completely free for residents and tourists. It has the highest GDP per capita in the European Union.",
+        text_es: "Es uno de los tres países en el mundo que tiene como jefe de estado a un gran duque o gran duquesa. La superficie de su territorio era solo de mil novecientos setenta y cinco kilómetros cuadrados tras la pérdida de su provincia occidental en mil ochocientos treinta y nueve.",
+        text_en: "It is one of only three countries in the world to have a Grand Duke or Grand Duchess as its head of state. Its territory's surface area was only one thousand nine hundred seventy-five square kilometers after the loss of its western province in eighteen thirty-nine.",
       },
       {
         difficulty: "hard",
@@ -2154,8 +2149,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el segundo país más pequeño del mundo y el que tiene la mayor densidad de población del planeta. Aproximadamente uno de cada tres de sus residentes es millonario, y es una de las pocas naciones que no tiene impuesto sobre la renta para sus ciudadanos.",
-        text_en: "It is the second smallest country in the world and has the highest population density on the planet. Approximately one out of three of its residents is a millionaire, and it is one of the few nations with no income tax for its citizens.",
+        text_es: "Su himno nacional, 'Hymne Monégasque', tiene una letra escrita únicamente en su dialecto tradicional, aunque existe una versión abreviada en francés.",
+        text_en: "Its national anthem, 'Hymne Monégasque', has lyrics written solely in its traditional dialect, though a shorter French version exists.",
       },
       {
         difficulty: "hard",
@@ -2181,8 +2176,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el corazón del mundo maya y el país con mayor número de sitios arqueológicos de esta civilización. Además, es la cuna de un invento moderno que todos usamos para demostrar que no somos un robot en internet y su nombre significa 'tierra de muchos árboles' en lengua náhuatl.",
-        text_en: "It is the heart of the Mayan world and the country with the highest number of archaeological sites of this civilization. Additionally, it is the birthplace of a modern invention we all use to prove we are not a robot on the internet, and its name means 'land of many trees' in the Nahuatl language.",
+        text_es: "Es el único país del mundo cuya bandera presenta un quetzal volando libremente sobre un pergamino que proclama su libertad, flanqueado por dos rifles y dos espadas desenvainadas.",
+        text_en: "It is the only country in the world whose flag features a quetzal flying freely over a scroll proclaiming its freedom, flanked by two rifles and two unsheathed swords.",
       },
       {
         difficulty: "hard",
@@ -2208,8 +2203,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que inspiró el término peyorativo 'república bananera' a principios del siglo veinte debido al enorme poder de las empresas fruteras extranjeras. Además, posee un fenómeno único donde, según los locales, una vez al año llueven peces en una de sus regiones debido a fuertes tormentas.",
-        text_en: "It is the country that inspired the pejorative term 'banana republic' in the early twentieth century due to the enormous power of foreign fruit companies. Additionally, it possesses a unique phenomenon where, according to locals, once a year it rains fish in one of its regions due to heavy storms.",
+        text_es: "Es uno de los tres países del mundo que posee una bandera con una representación de cinco estrellas celestes, ordenadas en forma de X, simbolizando los miembros de una antigua federación centroamericana.",
+        text_en: "It is one of three countries in the world whose flag features a representation of five blue stars, arranged in an X-shape, symbolizing the members of a former Central American federation.",
       },
       {
         difficulty: "hard",
@@ -2235,8 +2230,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más pequeño de Centroamérica y el único que no tiene costa en el mar Caribe. Además, fue la primera nación del mundo en adoptar una criptomoneda como moneda de curso legal junto al dólar estadounidense.",
-        text_en: "It is the smallest country in Central America and the only one without a Caribbean coast. Additionally, it was the first nation in the world to adopt a cryptocurrency as legal tender alongside the US dollar.",
+        text_es: "Este país es el único de Centroamérica que no tiene costa en el mar Caribe, y también el de menor extensión territorial continental en la región.",
+        text_en: "This country is the only one in Central America without a Caribbean Sea coastline, and also has the smallest continental land area in the region.",
       },
       {
         difficulty: "hard",
@@ -2262,8 +2257,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país más grande de Centroamérica por superficie y alberga el único lago de agua dulce del mundo donde habitan tiburones, los cuales se adaptaron tras entrar desde el mar a través de un río. Además, cuenta con el único volcán del mundo que tiene una laguna de lava activa visible permanentemente.",
-        text_en: "It is the largest country in Central America by area and houses the worlds only freshwater lake inhabited by sharks, which adapted after entering from the sea through a river. Additionally, it features the worlds only volcano with a permanently visible active lava lake.",
+        text_es: "Contiene los únicos tiburones de agua dulce conocidos del mundo, que habitan en un gran lago que también fue parte de un plan transcontinental para unir los océanos Atlántico y Pacífico.",
+        text_en: "It contains the world's only known freshwater sharks, which inhabit a large lake that was also part of a transcontinental plan to connect the Atlantic and Pacific oceans.",
       },
       {
         difficulty: "hard",
@@ -2289,8 +2284,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue la primera nación independiente de América Latina y el Caribe, y la primera república negra del mundo tras una exitosa rebelión de esclavos. Además, es el único país de América donde el francés es el idioma oficial junto con su propia lengua criolla nativa.",
-        text_en: "It was the first independent nation in Latin America and the Caribbean, and the worlds first black republic following a successful slave rebellion. Additionally, it is the only country in the Americas where French is an official language alongside its own native Creole language.",
+        text_es: "Una de sus festividades principales, que conmemora el levantamiento que dio inicio a su revolución, ocurre en el mes de agosto. Solo un año antes de obtener su independencia, su población indígena Taína había sido completamente aniquilada.",
+        text_en: "One of its main festivities, commemorating the uprising that started its revolution, occurs in August. Just one year before gaining independence, its indigenous Taíno population had been completely annihilated.",
       },
       {
         difficulty: "hard",
@@ -2316,8 +2311,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Técnicamente es un territorio no incorporado, pero compite de forma independiente en eventos deportivos internacionales y en certámenes de belleza. Alberga una de las bahías bioluminiscentes más brillantes del mundo, donde el agua brilla con un azul neón al ser agitada.",
-        text_en: "Technically an unincorporated territory, but it competes independently in international sporting events and beauty pageants. It houses one of the worlds brightest bioluminescent bays, where the water glows with a neon blue when disturbed.",
+        text_es: "Es el lugar de nacimiento del primer latino en ser elevado a las Grandes Ligas de Béisbol y el hogar del Observatorio de Arecibo, que albergó el radiotelescopio de plato único más grande del mundo durante cincuenta y siete años.",
+        text_en: "It is the birthplace of the first Latino to be elevated to Major League Baseball and home to the Arecibo Observatory, which housed the world's largest single-dish radio telescope for fifty-seven years.",
       },
       {
         difficulty: "hard",
@@ -2343,8 +2338,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el lugar de nacimiento del 'Steelpan', el único instrumento musical acústico inventado en el siglo veinte, fabricado originalmente a partir de bidones de petróleo. Además, posee el depósito natural de asfalto más grande del mundo, un lago sólido por el que se puede caminar.",
-        text_en: "It is the birthplace of the 'Steelpan', the only acoustic musical instrument invented in the twentieth century, originally made from oil drums. Additionally, it possesses the worlds largest natural asphalt deposit, a solid lake that can be walked upon.",
+        text_es: "Es uno de los pocos países que acoge una población natural de la colorida guacamaya roja, aunque introducida en el último siglo. Sus reservas de asfalto natural son de las más grandes del mundo.",
+        text_en: "It is one of the few countries that hosts a natural population of the colorful scarlet macaw, though introduced in the last century. Its natural asphalt reserves are among the largest in the world.",
       },
       {
         difficulty: "hard",
@@ -2370,8 +2365,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es un archipiélago de setecientas islas donde se encuentra el tercer sistema de arrecifes de barrera más grande del mundo. Además, alberga los agujeros azules más profundos del planeta, cuevas submarinas verticales que son un paraíso para los buceadores extremos.",
-        text_en: "It is an archipelago of seven hundred islands where the worlds third-largest barrier reef system is located. Additionally, it houses the planets deepest blue holes, vertical underwater caves that are a paradise for extreme divers.",
+        text_es: "Es uno de los dos únicos países en el mundo que oficialmente reconoce haber cambiado el color de uno de sus símbolos nacionales tras alcanzar su independencia.",
+        text_en: "It is one of only two countries in the world officially recognized for having changed the color of one of its national symbols after gaining independence.",
       },
       {
         difficulty: "hard",
@@ -2397,8 +2392,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es considerada la cuna del ron, con la destilería más antigua del mundo en funcionamiento desde mil setecientos tres. Además, fue una de las últimas naciones en convertirse en república, sustituyendo a la monarquía británica como jefa de estado en dos mil veintiuno.",
-        text_en: "It is considered the birthplace of rum, with the worlds oldest functioning distillery since seventeen hundred and three. Additionally, it was one of the last nations to become a republic, replacing the British monarchy as head of state in twenty-one.",
+        text_es: "Su nombre colonial inicial, para muchos, se refiere a una especie de higuera local, cuya raíz aérea colgante recuerda a barbas.",
+        text_en: "Its initial colonial name, for many, refers to a local fig species whose hanging aerial roots resemble beards.",
       },
       {
         difficulty: "hard",
@@ -2424,8 +2419,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país sin salida al mar más grande del mundo y el lugar desde donde se lanzó el primer satélite artificial y el primer ser humano al espacio. Además, se cree que es el lugar de origen de la manzana, que crecía de forma silvestre en sus montañas.",
-        text_en: "It is the worlds largest landlocked country and the place from which the first artificial satellite and the first human being were launched into space. Additionally, it is believed to be the birthplace of the apple, which grew wild in its mountains.",
+        text_es: "La palabra que se usa para describir el viento seco y caluroso que sopla sobre sus estepas ha sido adoptada internacionalmente por la comunidad científica.",
+        text_en: "The word used to describe the dry, hot wind blowing across its steppes has been internationally adopted by the scientific community.",
       },
       {
         difficulty: "hard",
@@ -2451,8 +2446,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los pocos países del mundo que ha conservado su nombre original desde su fundación en el siglo séptimo. Además, es el mayor productor mundial de aceite de rosa, un ingrediente esencial en la alta perfumería global.",
-        text_en: "It is one of the few countries in the world that has kept its original name since its foundation in the seventh century. Additionally, it is the worlds largest producer of rose oil, an essential ingredient in global high perfumery.",
+        text_es: "Es la única nación en Europa que no ha cambiado su nombre desde su establecimiento en el siglo séptimo, hace más de mil trescientos años.",
+        text_en: "It is the only nation in Europe that has not changed its name since its establishment in the seventh century, over one thousand three hundred years ago.",
       },
       {
         difficulty: "hard",
@@ -2478,8 +2473,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país con el mayor número de castillos y fortalezas per cápita del mundo, con cientos de ellos repartidos por su territorio. Además, es el mayor productor de automóviles del planeta en relación con su número de habitantes.",
-        text_en: "It is the country with the highest number of castles and fortresses per capita in the world, with hundreds of them scattered across its territory. Additionally, it is the worlds largest car producer relative to its population.",
+        text_es: "Es el único país del mundo cuyo himno nacional termina con una pregunta, una súplica para que cesen las tormentas sobre su tierra.",
+        text_en: "It is the only country in the world whose national anthem ends with a question, a plea for storms to cease over its land.",
       },
       {
         difficulty: "hard",
@@ -2505,8 +2500,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los países con mayor biodiversidad de Europa y fue el primero del mundo en ser declarado 'Destino Verde Global' por su sostenibilidad. Casi el sesenta por ciento de su territorio está cubierto por densos bosques.",
-        text_en: "It is one of the most biodiverse countries in Europe and was the first in the world to be declared a 'Global Green Destination' for its sustainability. Almost sixty percent of its territory is covered by dense forests.",
+        text_es: "Alberga la cueva más larga del mundo abierta a turistas, con sus veinticuatro kilómetros de pasajes subterráneos, aunque solo se puede visitar un pequeño tramo de poco más de cinco kilómetros.",
+        text_en: "It is home to the world's longest cave open to tourists, with its twenty-four kilometers of underground passages, although only a small section of just over five kilometers can be visited.",
       },
       {
         difficulty: "hard",
@@ -2532,8 +2527,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Su capital fue la primera ciudad de Europa y la segunda del mundo en tener una red de tranvía eléctrico a tiempo completo, utilizada para probar el sistema antes de instalarlo en Viena. Además, es el hogar de la última selva virgen que queda en el continente europeo.",
-        text_en: "Its capital was the first city in Europe and the second in the world to have a full-time electric tram network, used to test the system before installing it in Vienna. Additionally, it is home to the last remaining virgin rainforest in the European continent.",
+        text_es: "A principios del siglo veinte, el veintiocho de junio de mil novecientos catorce, ocurrió un asesinato que desencadenó una guerra mundial, en un puente sobre el río Miljacka.",
+        text_en: "In the early twentieth century, on June twenty-eighth, nineteen fourteen, an assassination that triggered a world war took place on a bridge over the Miljacka River.",
       },
       {
         difficulty: "hard",
@@ -2559,8 +2554,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue el primer país del mundo en declararse oficialmente como un 'estado ateo' en mil novecientos sesenta y siete. Durante décadas, su gobierno construyó más de ciento setenta mil búnkeres de hormigón por todo el país por temor a una invasión que nunca ocurrió.",
-        text_en: "It was the first country in the world to officially declare itself an 'atheist state' in nineteen sixty-seven. For decades, its government built more than one hundred and seventy thousand concrete bunkers throughout the country for fear of an invasion that never happened.",
+        text_es: "Ostenta la distinción de haber sido el único país europeo que, durante la Segunda Guerra Mundial, terminó con una población judía mayor que la que tenía al principio del conflicto.",
+        text_en: "It holds the distinction of being the only European country that, during World War Two, ended with a larger Jewish population than it had at the conflict's outset.",
       },
       {
         difficulty: "hard",
@@ -2586,8 +2581,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Alberga uno de los lagos más antiguos y profundos de Europa, que posee un ecosistema único con más de doscientas especies endémicas. Además, es el país donde se encuentra el observatorio megalítico de Kokino, calificado por la NASA como uno de los más importantes del mundo.",
-        text_en: "It houses one of Europes oldest and deepest lakes, which has a unique ecosystem with more than two hundred endemic species. Additionally, it is the country where the Kokino megalithic observatory is located, ranked by NASA as one of the most important in the world.",
+        text_es: "Es uno de los dos únicos países sin salida al mar en Europa cuya frontera exterior no toca directamente con un mar (o lago navegable) ni con la frontera exterior de la Unión Europea.",
+        text_en: "It is one of only two landlocked countries in Europe whose external border does not directly touch a sea (or navigable lake) nor the external border of the European Union.",
       },
       {
         difficulty: "hard",
@@ -2613,8 +2608,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que alberga el cañón más profundo de Europa y el segundo más profundo del mundo después del Gran Cañón. Además, fue el primer estado del mundo en ser declarado constitucionalmente como un 'estado ecológico' en mil novecientos noventa y uno.",
-        text_en: "It is the country that houses the deepest canyon in Europe and the second deepest in the world after the Grand Canyon. Additionally, it was the first state in the world to be constitutionally declared an 'ecological state' in nineteen ninety-one.",
+        text_es: "Es el único país europeo cuyo nombre se refiere directamente a un accidente geográfico; su litoral, aunque corto, se caracteriza por fiordos inusuales para el Mediterráneo y es una de las veinticinco naciones del mundo sin un solo sitio RAMSAR.",
+        text_en: "It is the only European country whose name directly refers to a geographical feature; its coastline, though short, is characterized by fjords unusual for the Mediterranean and it is one of twenty-five nations worldwide without a single RAMSAR site.",
       },
       {
         difficulty: "hard",
@@ -2640,8 +2635,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es una de las naciones con la población más joven de Europa, con más de la mitad de sus habitantes menores de veinticinco años. Es uno de los pocos países del mundo, junto con Chipre, que muestra el mapa de su propio territorio en su bandera nacional.",
-        text_en: "It is one of the nations with the youngest population in Europe, with more than half of its inhabitants under twenty-five. It is one of the few countries in the world, along with Cyprus, that shows the map of its own territory on its national flag.",
+        text_es: "La palabra que le da nombre proviene del eslavo meridional y significa 'campo de mirlos', evocando un acontecimiento clave del siglo catorce que es central para su identidad.",
+        text_en: "The word that gives it its name comes from Southern Slavic and means 'field of blackbirds', evoking a key fourteenth-century event central to its identity.",
       },
       {
         difficulty: "hard",
@@ -2667,8 +2662,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Su idioma es una de las lenguas vivas más antiguas del mundo y conserva estructuras del sánscrito que se han perdido en otros idiomas indoeuropeos. Además, fue el último país de Europa en convertirse oficialmente al cristianismo.",
-        text_en: "Its language is one of the oldest living languages in the world and preserves Sanskrit structures lost in other Indo-European languages. Additionally, it was the last country in Europe to officially convert to Christianity.",
+        text_es: "Hasta principios del siglo veinte, el noventa por ciento de sus habitantes hablaba una de las dos únicas lenguas bálticas vivas, que es el idioma indo-europeo vivo más cercano al sánscrito.",
+        text_en: "Until the early twentieth century, ninety percent of its inhabitants spoke one of the two only living Baltic languages, which is the closest living Indo-European language to Sanskrit.",
       },
       {
         difficulty: "hard",
@@ -2694,8 +2689,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es el país que ostenta el récord de tener una de las poblaciones con mayor promedio de estatura del mundo, especialmente entre las mujeres. Además, se dice que la tradición del árbol de Navidad decorado nació en su capital a principios del siglo dieciséis.",
-        text_en: "It is the country that holds the record for having one of the populations with the highest average height in the world, especially among women. Additionally, it is said that the tradition of the decorated Christmas tree was born in its capital in the early sixteenth century.",
+        text_es: "Su puerto de Ventspils ha sido reconocido por el Guinness World Records por tener la mayor cantidad de esculturas de vacas en la exposición CowParade, con veintisiete obras de arte.",
+        text_en: "Its port of Ventspils has been recognized by Guinness World Records for having the most cow sculptures in the CowParade exhibition, with twenty-seven artworks.",
       },
       {
         difficulty: "hard",
@@ -2721,8 +2716,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es considerada la nación más digital del mundo, donde casi todos los servicios gubernamentales se realizan online y el acceso a internet es un derecho humano. Fue el primer país en implementar el voto electrónico a nivel nacional y la cuna de una famosa aplicación de videollamadas.",
-        text_en: "It is considered the most digital nation in the world, where almost all government services are performed online and internet access is a human right. It was the first country to implement nationwide e-voting and the birthplace of a famous video calling app.",
+        text_es: "Es la nación soberana con la densidad de cráteres de impacto de meteoritos per área más alta del mundo, con una docena conocidos, incluyendo el campo de cráteres de Kaali, formado hace unos tres mil quinientos años.",
+        text_en: "It is the sovereign nation with the highest density of meteorite impact craters per area in the world, with a dozen known, including the Kaali crater field, formed approximately three thousand five hundred years ago.",
       },
       {
         difficulty: "hard",
@@ -2748,8 +2743,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Alberga el último bosque primario de las tierras bajas de Europa, donde vive el bisonte europeo, el animal terrestre más pesado del continente. Además, es el único país de Europa que todavía aplica la pena de muerte en su sistema judicial.",
-        text_en: "It houses Europes last lowland primary forest, home to the European bison, the continents heaviest land animal. Additionally, it is the only country in Europe that still applies the death penalty in its judicial system.",
+        text_es: "Ostenta la distinción de tener la mayor proporción de pantanos de Europa, cubriendo aproximadamente el quince por ciento de su territorio y albergando el Bosque de Belovezhskaya, Patrimonio de la Humanidad.",
+        text_en: "It holds the distinction of having the largest proportion of swamps in Europe, covering approximately fifteen percent of its territory and hosting the Belovezhskaya Pushcha, a World Heritage site.",
       },
       {
         difficulty: "hard",
@@ -2775,8 +2770,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Posee la bodega de vino más grande del mundo por número de botellas, con más de dos millones de ejemplares almacenados en túneles subterráneos de más de doscientos kilómetros de largo. Además, es estadísticamente uno de los países menos visitados de Europa.",
-        text_en: "It possesses the worlds largest wine cellar by number of bottles, with over two million specimens stored in underground tunnels over two hundred kilometers long. Additionally, it is statistically one of the least visited countries in Europe.",
+        text_es: "Con una profundidad de ciento ochenta y dos metros, la cueva de Criva es la tercera cueva de yeso más larga del mundo y la más grande de su tipo en Europa, destacando por sus siete niveles y sus numerosos lagos subterráneos.",
+        text_en: "At a depth of one hundred eighty-two meters, the Criva Cave is the third-longest gypsum cave in the world and the largest of its kind in Europe, noted for its seven levels and numerous underground lakes.",
       },
       {
         difficulty: "hard",
@@ -2802,8 +2797,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es considerada la cuna mundial del vino, con evidencia arqueológica de producción que se remonta a hace ocho mil años usando vasijas de barro enterradas llamadas Qvevri. Además, su idioma tiene un alfabeto propio único que no se parece a ningún otro en el mundo.",
-        text_en: "It is considered the world's birthplace of wine, with archaeological evidence of production dating back eight thousand years using buried clay vessels called Qvevri. Additionally, its language has its own unique alphabet that resembles no other in the world.",
+        text_es: "Es uno de los pocos países que conservan por ley la legalidad de los baños de vapor de azufre públicos, cuya tradición se remonta a varios siglos y ha sido elogiada por viajeros históricos de renombre.",
+        text_en: "It is one of the few countries that legally preserves public sulfur bathhouses, a tradition dating back centuries and praised by renowned historical travelers.",
       },
       {
         difficulty: "hard",
@@ -2829,8 +2824,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue la primera nación del mundo en adoptar el cristianismo como religión de estado en el año trescientos uno. Además, su capital es una de las ciudades continuamente habitadas más antiguas del mundo, fundada casi treinta años antes que Roma.",
-        text_en: "It was the first nation in the world to adopt Christianity as a state religion in the year three hundred and one. Additionally, its capital is one of the oldest continuously inhabited cities in the world, founded nearly thirty years before Rome.",
+        text_es: "Es la cuna del gambito de la Dama, una secuencia de movimientos de apertura en ajedrez que data de al menos el siglo quince.",
+        text_en: "It is the birthplace of the Queen's Gambit, an opening sequence of moves in chess dating back to at least the fifteenth century.",
       },
       {
         difficulty: "hard",
