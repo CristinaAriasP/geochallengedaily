@@ -117,35 +117,84 @@ function loadSaved(): SavedState | null {
 }
 
 function loadStreak(): StreakState {
-  if (typeof window === "undefined")
-    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  const empty: StreakState = {
+    currentStreak: 0,
+    bestStreak: 0,
+    lastWonDate: null,
+  };
+  if (typeof window === "undefined") return empty;
   try {
     const raw = window.localStorage.getItem(STREAK_KEY);
-    if (!raw) return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
-    return JSON.parse(raw) as StreakState;
+    if (!raw) return empty;
+    const parsed = JSON.parse(raw) as Partial<StreakState>;
+    const last =
+      typeof parsed.lastWonDate === "string" &&
+      /^\d{4}-\d{2}-\d{2}$/.test(parsed.lastWonDate)
+        ? parsed.lastWonDate
+        : null;
+    const current =
+      Number.isFinite(parsed.currentStreak) && (parsed.currentStreak as number) > 0
+        ? Math.floor(parsed.currentStreak as number)
+        : 0;
+    const best =
+      Number.isFinite(parsed.bestStreak) && (parsed.bestStreak as number) > 0
+        ? Math.floor(parsed.bestStreak as number)
+        : 0;
+    return {
+      currentStreak: last ? current : 0,
+      bestStreak: Math.max(best, last ? current : 0),
+      lastWonDate: last,
+    };
   } catch {
-    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+    return empty;
   }
 }
 
-function yesterdayKey(todayKey: string): string {
-  // todayKey format: YYYY-MM-DD (UTC-based from getTodayKey)
-  const d = new Date(`${todayKey}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() - 1);
-  return d.toISOString().slice(0, 10);
+/** Whole days between two YYYY-MM-DD (UTC) keys: b - a. */
+
+
+function dayDiff(a: string, b: string): number {
+  const ta = Date.parse(`${a}T00:00:00Z`);
+  const tb = Date.parse(`${b}T00:00:00Z`);
+  if (Number.isNaN(ta) || Number.isNaN(tb)) return Number.POSITIVE_INFINITY;
+  return Math.round((tb - ta) / 86400000);
 }
 
 function computeDisplayStreak(streak: StreakState, todayKey: string): number {
   if (!streak.lastWonDate) return 0;
-  if (streak.lastWonDate === todayKey) return streak.currentStreak;
-  if (streak.lastWonDate === yesterdayKey(todayKey)) return streak.currentStreak;
+  const diff = dayDiff(streak.lastWonDate, todayKey);
+  // Same day or yesterday → streak still alive.
+  if (diff >= 0 && diff <= 1) return streak.currentStreak;
   // Older than yesterday → streak is broken visually
   return 0;
 }
 
+/** Award the daily streak for `dateKey`, persisting to localStorage. */
+function awardStreak(prev: StreakState, dateKey: string): StreakState {
+  if (prev.lastWonDate === dateKey) return prev; // already counted
+  // Guard against clock skew: never move the record backwards.
+  if (prev.lastWonDate && dayDiff(prev.lastWonDate, dateKey) < 0) return prev;
+  const alive =
+    prev.lastWonDate !== null && dayDiff(prev.lastWonDate, dateKey) === 1;
+  const next = alive ? prev.currentStreak + 1 : 1;
+  const updated: StreakState = {
+    currentStreak: next,
+    bestStreak: Math.max(prev.bestStreak ?? 0, next),
+    lastWonDate: dateKey,
+  };
+  try {
+    window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
+  } catch {
+    // ignore quota / private-mode errors
+  }
+  return updated;
+}
+
 function Index() {
-  const todaysCountry = useMemo(() => getTodaysCountry(), []);
-  const todayKey = useMemo(() => getTodayKey(), []);
+  // Recomputed when the UTC day rolls over while the tab stays open.
+  const [todayKey, setTodayKey] = useState(() => getTodayKey());
+  const todaysCountry = useMemo(() => getTodaysCountry(), [todayKey]);
+
 
   const [lang, setLang] = useState<Lang>("es");
   const { theme, toggle: toggleTheme } = useTheme();
@@ -169,6 +218,8 @@ function Index() {
   // Load saved progress on mount (only if same day)
   useEffect(() => {
     const saved = loadSaved();
+    let loaded = loadStreak();
+
     if (saved && saved.date === todayKey) {
       setLang(saved.lang);
       setHintIndex(saved.hintIndex);
@@ -178,12 +229,23 @@ function Index() {
       // If today's game is already finished, don't re-award the streak or refire confetti
       if (saved.gameState === "won" || saved.gameState === "lost") {
         streakAwardedRef.current = true;
+        // Repair: the finished game exists but the streak was never recorded
+        // (e.g. the tab was closed before the write, or storage failed).
+        loaded = awardStreak(loaded, todayKey);
       }
       if (saved.gameState === "won") {
         confettiFiredRef.current = true;
       }
+    } else if (saved && saved.gameState !== "playing") {
+      // A finished game from a previous day whose streak was never credited
+      // (typical when the UTC day rolled over with the tab open).
+      const diff = dayDiff(saved.date, todayKey);
+      if (diff > 0 && (!loaded.lastWonDate || dayDiff(loaded.lastWonDate, saved.date) > 0)) {
+        loaded = awardStreak(loaded, saved.date);
+      }
     }
-    setStreak(loadStreak());
+
+    setStreak(loaded);
     hydrated.current = true;
   }, [todayKey]);
 
@@ -193,21 +255,44 @@ function Index() {
     if (!hydrated.current || typeof window === "undefined") return;
     if (gameState === "playing" || streakAwardedRef.current) return;
 
-    setStreak((prev) => {
-      if (prev.lastWonDate === todayKey) return prev; // already counted today
-      const yesterday = yesterdayKey(todayKey);
-      const next =
-        prev.lastWonDate === yesterday ? prev.currentStreak + 1 : 1;
-      const updated: StreakState = {
-        currentStreak: next,
-        bestStreak: Math.max(prev.bestStreak, next),
-        lastWonDate: todayKey,
-      };
-      window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
-      return updated;
-    });
+    setStreak((prev) => awardStreak(prev, todayKey));
     streakAwardedRef.current = true;
   }, [gameState, todayKey]);
+
+  // Detect UTC midnight rollover while the tab stays open, so the finished game
+  // is not saved under the previous day's key (which silently broke streaks).
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const check = () => {
+      const key = getTodayKey();
+      if (key !== todayKey) setTodayKey(key);
+    };
+    const id = window.setInterval(check, 30_000);
+    window.addEventListener("visibilitychange", check);
+    window.addEventListener("focus", check);
+    return () => {
+      window.clearInterval(id);
+      window.removeEventListener("visibilitychange", check);
+      window.removeEventListener("focus", check);
+    };
+  }, [todayKey]);
+
+  // New day → start a fresh game instead of keeping yesterday's board.
+  const prevDayRef = useRef(todayKey);
+  useEffect(() => {
+    if (prevDayRef.current === todayKey) return;
+    prevDayRef.current = todayKey;
+    setHintIndex(0);
+    setAttempts(0);
+    setGuesses([]);
+    setGuess("");
+    setPopup(null);
+    setGameState("playing");
+    streakAwardedRef.current = false;
+    confettiFiredRef.current = false;
+    freshWinRef.current = false;
+  }, [todayKey]);
+
 
   // Confetti burst on a fresh win (not on reload of an already-won game)
   useEffect(() => {
