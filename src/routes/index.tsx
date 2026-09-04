@@ -117,18 +117,41 @@ function loadSaved(): SavedState | null {
 }
 
 function loadStreak(): StreakState {
-  if (typeof window === "undefined")
-    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+  const empty: StreakState = {
+    currentStreak: 0,
+    bestStreak: 0,
+    lastWonDate: null,
+  };
+  if (typeof window === "undefined") return empty;
   try {
     const raw = window.localStorage.getItem(STREAK_KEY);
-    if (!raw) return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
-    return JSON.parse(raw) as StreakState;
+    if (!raw) return empty;
+    const parsed = JSON.parse(raw) as Partial<StreakState>;
+    const last =
+      typeof parsed.lastWonDate === "string" &&
+      /^\d{4}-\d{2}-\d{2}$/.test(parsed.lastWonDate)
+        ? parsed.lastWonDate
+        : null;
+    const current =
+      Number.isFinite(parsed.currentStreak) && (parsed.currentStreak as number) > 0
+        ? Math.floor(parsed.currentStreak as number)
+        : 0;
+    const best =
+      Number.isFinite(parsed.bestStreak) && (parsed.bestStreak as number) > 0
+        ? Math.floor(parsed.bestStreak as number)
+        : 0;
+    return {
+      currentStreak: last ? current : 0,
+      bestStreak: Math.max(best, last ? current : 0),
+      lastWonDate: last,
+    };
   } catch {
-    return { currentStreak: 0, bestStreak: 0, lastWonDate: null };
+    return empty;
   }
 }
 
 /** Whole days between two YYYY-MM-DD (UTC) keys: b - a. */
+
 
 function dayDiff(a: string, b: string): number {
   const ta = Date.parse(`${a}T00:00:00Z`);
