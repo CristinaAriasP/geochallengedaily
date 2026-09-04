@@ -194,6 +194,11 @@ function Index() {
   // Recomputed when the UTC day rolls over while the tab stays open.
   const [todayKey, setTodayKey] = useState(() => getTodayKey());
   const todaysCountry = useMemo(() => getTodaysCountry(), [todayKey]);
+  const [openHints, setOpenHints] = useState<number[]>([]);
+  const toggleHint = (i: number) =>
+    setOpenHints((prev) =>
+      prev.includes(i) ? prev.filter((n) => n !== i) : [...prev, i],
+    );
 
 
   const [lang, setLang] = useState<Lang>("es");
