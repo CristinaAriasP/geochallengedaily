@@ -201,6 +201,8 @@ function Index() {
   // Load saved progress on mount (only if same day)
   useEffect(() => {
     const saved = loadSaved();
+    let loaded = loadStreak();
+
     if (saved && saved.date === todayKey) {
       setLang(saved.lang);
       setHintIndex(saved.hintIndex);
@@ -210,12 +212,23 @@ function Index() {
       // If today's game is already finished, don't re-award the streak or refire confetti
       if (saved.gameState === "won" || saved.gameState === "lost") {
         streakAwardedRef.current = true;
+        // Repair: the finished game exists but the streak was never recorded
+        // (e.g. the tab was closed before the write, or storage failed).
+        loaded = awardStreak(loaded, todayKey);
       }
       if (saved.gameState === "won") {
         confettiFiredRef.current = true;
       }
+    } else if (saved && saved.gameState !== "playing") {
+      // A finished game from a previous day whose streak was never credited
+      // (typical when the UTC day rolled over with the tab open).
+      const diff = dayDiff(saved.date, todayKey);
+      if (diff > 0 && (!loaded.lastWonDate || dayDiff(loaded.lastWonDate, saved.date) > 0)) {
+        loaded = awardStreak(loaded, saved.date);
+      }
     }
-    setStreak(loadStreak());
+
+    setStreak(loaded);
     hydrated.current = true;
   }, [todayKey]);
 
@@ -225,21 +238,44 @@ function Index() {
     if (!hydrated.current || typeof window === "undefined") return;
     if (gameState === "playing" || streakAwardedRef.current) return;
 
-    setStreak((prev) => {
-      if (prev.lastWonDate === todayKey) return prev; // already counted today
-      const yesterday = yesterdayKey(todayKey);
-      const next =
-        prev.lastWonDate === yesterday ? prev.currentStreak + 1 : 1;
-      const updated: StreakState = {
-        currentStreak: next,
-        bestStreak: Math.max(prev.bestStreak, next),
-        lastWonDate: todayKey,
-      };
-      window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
-      return updated;
-    });
+    setStreak((prev) => awardStreak(prev, todayKey));
     streakAwardedRef.current = true;
   }, [gameState, todayKey]);
+
+  // Detect UTC midnight rollover while the tab stays open, so the finished game
+  // is not saved under the previous day's key (which silently broke streaks).
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const check = () => {
+      const key = getTodayKey();
+      if (key !== todayKey) setTodayKey(key);
+    };
+    const id = window.setInterval(check, 30_000);
+    window.addEventListener("visibilitychange", check);
+    window.addEventListener("focus", check);
+    return () => {
+      window.clearInterval(id);
+      window.removeEventListener("visibilitychange", check);
+      window.removeEventListener("focus", check);
+    };
+  }, [todayKey]);
+
+  // New day → start a fresh game instead of keeping yesterday's board.
+  const prevDayRef = useRef(todayKey);
+  useEffect(() => {
+    if (prevDayRef.current === todayKey) return;
+    prevDayRef.current = todayKey;
+    setHintIndex(0);
+    setAttempts(0);
+    setGuesses([]);
+    setGuess("");
+    setPopup(null);
+    setGameState("playing");
+    streakAwardedRef.current = false;
+    confettiFiredRef.current = false;
+    freshWinRef.current = false;
+  }, [todayKey]);
+
 
   // Confetti burst on a fresh win (not on reload of an already-won game)
   useEffect(() => {
