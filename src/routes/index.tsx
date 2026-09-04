@@ -128,14 +128,8 @@ function loadStreak(): StreakState {
   }
 }
 
-function yesterdayKey(todayKey: string): string {
-  // todayKey format: YYYY-MM-DD (UTC-based from getTodayKey)
-  const d = new Date(`${todayKey}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() - 1);
-  return d.toISOString().slice(0, 10);
-}
-
 /** Whole days between two YYYY-MM-DD (UTC) keys: b - a. */
+
 function dayDiff(a: string, b: string): number {
   const ta = Date.parse(`${a}T00:00:00Z`);
   const tb = Date.parse(`${b}T00:00:00Z`);
