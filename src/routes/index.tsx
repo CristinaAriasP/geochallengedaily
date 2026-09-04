@@ -538,41 +538,83 @@ function Index() {
               />
             </div>
 
-            {guesses.length > 0 && (
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <span className="text-xs font-medium text-muted-foreground">
-                  {tx.failedAttempts}
-                </span>
-                {guesses.map((country, i) => (
-                  <span
-                    key={`${country}-${i}`}
-                    className="inline-flex items-center gap-1 rounded-full bg-accent/30 px-3 py-1 text-xs font-medium text-accent-foreground"
+          </section>
+        )}
+
+        {/* PREVIOUS HINTS (collapsible) */}
+        {!isOver && hintIndex > 0 && (
+          <section className="gc-fade-in mt-4 space-y-2" style={{ animationDelay: "90ms" }}>
+            {Array.from({ length: hintIndex }, (_, i) => {
+              const diff = DIFFICULTY_ORDER[i];
+              const hint = todaysCountry.hints[i];
+              const text = hint ? (lang === "es" ? hint.text_es : hint.text_en) : "";
+              const isOpen = openHints.includes(i);
+              return (
+                <div
+                  key={i}
+                  className="overflow-hidden rounded-[10px] border border-border bg-card/80 shadow-[var(--shadow-soft)]"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleHint(i)}
+                    aria-expanded={isOpen}
+                    className="flex w-full items-center gap-2 px-4 py-2.5 text-left transition-colors hover:bg-secondary/50"
                   >
-                    ✗ {country}
-                  </span>
-                ))}
-              </div>
-            )}
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      {lang === "es" ? `Nivel ${i + 1}` : `Level ${i + 1}`}
+                    </span>
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${difficultyStyles[diff]}`}
+                    >
+                      {tx.difficulty[diff]}
+                    </span>
+                    {guesses[i] && (
+                      <span className="ml-auto inline-flex items-center gap-1 truncate rounded-full bg-accent/30 px-2.5 py-0.5 text-[11px] font-medium text-accent-foreground">
+                        ✗ {guesses[i]}
+                      </span>
+                    )}
+                    <ChevronDown
+                      className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                      } ${guesses[i] ? "" : "ml-auto"}`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <p className="gc-fade-in border-t border-border px-4 py-3 text-sm leading-relaxed text-foreground">
+                      {text}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
           </section>
         )}
 
         {/* HINT */}
         {!isOver && (
           <section
-            className="gc-fade-in mt-6 rounded-[10px] bg-card p-5 shadow-[var(--shadow-soft)]"
+            className="gc-fade-in mt-4 rounded-[10px] bg-card p-5 shadow-[var(--shadow-soft)]"
             style={{ animationDelay: "120ms" }}
             key={hintIndex}
           >
-            <span
-              className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${difficultyStyles[currentDifficulty]}`}
-            >
-              {tx.difficulty[currentDifficulty]}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-muted-foreground">
+                {lang === "es"
+                  ? `Nivel ${hintIndex + 1}`
+                  : `Level ${hintIndex + 1}`}
+              </span>
+              <span
+                className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${difficultyStyles[currentDifficulty]}`}
+              >
+                {tx.difficulty[currentDifficulty]}
+              </span>
+            </div>
             <p className="mt-4 text-lg leading-relaxed text-foreground sm:text-xl">
               {hintText}
             </p>
           </section>
         )}
+
 
         {/* INPUT */}
         {!isOver && (
