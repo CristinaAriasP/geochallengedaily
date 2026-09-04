@@ -135,17 +135,49 @@ function yesterdayKey(todayKey: string): string {
   return d.toISOString().slice(0, 10);
 }
 
+/** Whole days between two YYYY-MM-DD (UTC) keys: b - a. */
+function dayDiff(a: string, b: string): number {
+  const ta = Date.parse(`${a}T00:00:00Z`);
+  const tb = Date.parse(`${b}T00:00:00Z`);
+  if (Number.isNaN(ta) || Number.isNaN(tb)) return Number.POSITIVE_INFINITY;
+  return Math.round((tb - ta) / 86400000);
+}
+
 function computeDisplayStreak(streak: StreakState, todayKey: string): number {
   if (!streak.lastWonDate) return 0;
-  if (streak.lastWonDate === todayKey) return streak.currentStreak;
-  if (streak.lastWonDate === yesterdayKey(todayKey)) return streak.currentStreak;
+  const diff = dayDiff(streak.lastWonDate, todayKey);
+  // Same day or yesterday → streak still alive.
+  if (diff >= 0 && diff <= 1) return streak.currentStreak;
   // Older than yesterday → streak is broken visually
   return 0;
 }
 
+/** Award the daily streak for `dateKey`, persisting to localStorage. */
+function awardStreak(prev: StreakState, dateKey: string): StreakState {
+  if (prev.lastWonDate === dateKey) return prev; // already counted
+  // Guard against clock skew: never move the record backwards.
+  if (prev.lastWonDate && dayDiff(prev.lastWonDate, dateKey) < 0) return prev;
+  const alive =
+    prev.lastWonDate !== null && dayDiff(prev.lastWonDate, dateKey) === 1;
+  const next = alive ? prev.currentStreak + 1 : 1;
+  const updated: StreakState = {
+    currentStreak: next,
+    bestStreak: Math.max(prev.bestStreak ?? 0, next),
+    lastWonDate: dateKey,
+  };
+  try {
+    window.localStorage.setItem(STREAK_KEY, JSON.stringify(updated));
+  } catch {
+    // ignore quota / private-mode errors
+  }
+  return updated;
+}
+
 function Index() {
-  const todaysCountry = useMemo(() => getTodaysCountry(), []);
-  const todayKey = useMemo(() => getTodayKey(), []);
+  // Recomputed when the UTC day rolls over while the tab stays open.
+  const [todayKey, setTodayKey] = useState(() => getTodayKey());
+  const todaysCountry = useMemo(() => getTodaysCountry(), [todayKey]);
+
 
   const [lang, setLang] = useState<Lang>("es");
   const { theme, toggle: toggleTheme } = useTheme();
