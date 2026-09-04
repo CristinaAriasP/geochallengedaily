@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Flame, Moon, Sun, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Flame, Moon, Sun, X } from "lucide-react";
 import confetti from "canvas-confetti";
 import type { Difficulty } from "@/data/countries";
 import {
