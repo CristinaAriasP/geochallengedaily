@@ -296,6 +296,7 @@ function Index() {
     streakAwardedRef.current = false;
     confettiFiredRef.current = false;
     freshWinRef.current = false;
+    setOpenHints([]);
   }, [todayKey]);
 
 
