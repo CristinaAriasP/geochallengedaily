@@ -777,8 +777,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los pocos países sin salida al mar que alberga más de dos mil castillos y ruinas, siendo el de Praga el más grande del mundo.",
-        text_en: "It is one of the few landlocked countries that is home to over two thousand castles and ruins, with Prague Castle being the largest in the world.",
+        text_es: "Es uno de los pocos países sin salida al mar que alberga más de dos mil castillos y ruinas, la mayor concentración de fortificaciones de todo el continente.",
+        text_en: "It is one of the few landlocked countries that is home to over two thousand castles and ruins, the highest concentration of fortifications on the entire continent.",
       },
       {
         difficulty: "hard",
@@ -922,8 +922,8 @@ export const countries: Country[] = [
        },
       {
         difficulty: "medium",
-        text_es: "El control sobre lugares sagrados en ciudades como Jerusalén es un punto central del conflicto bélico en la región. A pesar de presentarse como una democracia moderna, su historia reciente está ligada a la destrucción de infraestructuras y el desplazamiento forzado de poblaciones nativas.",
-        text_en: "Control over sacred sites in cities like Jerusalem is a central point of the war conflict in the region. Despite presenting itself as a modern democracy, its recent history is linked to the destruction of infrastructure and the forced displacement of native populations.",
+        text_es: "El control sobre lugares sagrados de sus ciudades santas es un punto central del conflicto bélico en la región. A pesar de presentarse como una democracia moderna, su historia reciente está ligada a la destrucción de infraestructuras y el desplazamiento forzado de poblaciones nativas.",
+        text_en: "Control over sacred sites in its holy cities is a central point of the war conflict in the region. Despite presenting itself as a modern democracy, its recent history is linked to the destruction of infrastructure and the forced displacement of native populations.",
       },
       {
         difficulty: "easy",
@@ -2569,8 +2569,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "medium",
-        text_es: "Es una nación balcánica con una costa espectacular llamada la 'Riviera Albanesa'. Tras décadas de aislamiento total bajo un régimen comunista muy estricto, hoy es uno de los destinos emergentes de Europa. Posee un código de honor ancestral basado en la hospitalidad y la palabra dada.",
-        text_en: "It is a Balkan nation with a spectacular coastline called the 'Albanian Riviera'. After decades of total isolation under a very strict communist regime, today it is one of Europes emerging destinations. It possesses an ancient code of honor based on hospitality and ones word.",
+        text_es: "Es una nación balcánica con una costa espectacular repartida entre el Adriático y el Jónico. Tras décadas de aislamiento total bajo un régimen comunista muy estricto, hoy es uno de los destinos emergentes de Europa. Posee un código de honor ancestral basado en la hospitalidad y la palabra dada.",
+        text_en: "It is a Balkan nation with a spectacular coastline split between the Adriatic and the Ionian seas. After decades of total isolation under a very strict communist regime, today it is one of Europe's emerging destinations. It possesses an ancient code of honor based on hospitality and one's word.",
       },
       {
         difficulty: "easy",
@@ -2898,8 +2898,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Ubicado en los Pirineos, es uno de los estados más pequeños de Europa, entre Francia y España. Su capital, la ciudad más alta del país, es Andorra la Vieja. Su bandera presenta tres franjas verticales: azul, amarilla y roja, con el escudo en la franja central.",
-        text_en: "Located in the Pyrenees, it is one of Europe's smallest states, nestled between France and Spain. Its capital, the highest city in the country, is Andorra la Vella. Its flag features three vertical stripes: blue, yellow, and red, with the coat of arms in the central stripe.",
+        text_es: "Ubicado en los Pirineos, es uno de los estados más pequeños de Europa, entre Francia y España. Su capital es la más alta del continente y está gobernado por dos coprincipes. Su bandera presenta tres franjas verticales: azul, amarilla y roja, con el escudo en la franja central.",
+        text_en: "Located in the Pyrenees, it is one of Europe's smallest states, nestled between France and Spain. Its capital is the highest on the continent and it is governed by two co-princes. Its flag features three vertical stripes: blue, yellow, and red, with the coat of arms in the central stripe.",
       },
     ],
   },
@@ -3056,7 +3056,7 @@ export const countries: Country[] = [
       {
         difficulty: "medium",
         text_es: "Este país de África Occidental tiene una costa estrecha que da al golfo de Guinea. Posee una rica historia real y es famoso por su arte de bronce y sus intrincadas tallas en madera, que a menudo representan figuras ancestrales.",
-        text_en: "This West African country has a narrow coastline facing the Bight of Benin. It boasts a rich royal history and is famous for its bronze art and intricate wood carvings, often depicting ancestral figures.",
+        text_en: "This West African country has a narrow coastline facing the Gulf of Guinea. It boasts a rich royal history and is famous for its bronze art and intricate wood carvings, often depicting ancestral figures.",
       },
       {
         difficulty: "easy",
@@ -3126,8 +3126,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los dos países soberanos que son enclaves completos dentro de otro estado, pero con una porción más grande y una menor separadas por la Bahía de Brunéi.",
-        text_en: "It is one of two sovereign countries that are complete enclaves within another state, yet with a larger and a smaller portion separated by Brunei Bay.",
+        text_es: "Es uno de los dos países soberanos que son enclaves completos dentro de otro estado, con una porción mayor y otra menor separadas por una bahía.",
+        text_en: "It is one of two sovereign countries that are complete enclaves within another state, with a larger and a smaller portion separated by a bay.",
       },
       {
         difficulty: "hard",
@@ -3357,8 +3357,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Este país insular se encuentra en el Océano Índico, entre la costa de Mozambique y la isla de Madagascar. Está formado por tres islas principales: Gran Comora, Anjouan y Mohéli. Su capital es Moroni. Su bandera tiene cuatro franjas horizontales (amarilla, blanca, roja, azul) y un triángulo verde en el lado del mástil con una luna creciente y cuatro estrellas blancas.",
-        text_en: "This island nation is located in the Indian Ocean, between the coast of Mozambique and the island of Madagascar. It consists of three main islands: Grande Comore, Anjouan, and Mohéli. Its capital is Moroni. Its flag has four horizontal stripes (yellow, white, red, blue) and a green triangle on the hoist side with a white crescent moon and four white stars.",
+        text_es: "Este país insular se encuentra en el Océano Índico, entre la costa de Mozambique y la isla de Madagascar. Está formado por tres islas volcánicas principales, entre ellas Anjouan y Mohéli. Su capital es Moroni. Su bandera tiene cuatro franjas horizontales (amarilla, blanca, roja, azul) y un triángulo verde en el lado del mástil con una luna creciente y cuatro estrellas blancas.",
+        text_en: "This island nation is located in the Indian Ocean, between the coast of Mozambique and the island of Madagascar. It consists of three main volcanic islands, among them Anjouan and Mohéli. Its capital is Moroni. Its flag has four horizontal stripes (yellow, white, red, blue) and a green triangle on the hoist side with a white crescent moon and four white stars.",
       },
     ],
   },
@@ -3396,8 +3396,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Según registros históricos, los portugueses fueron los primeros europeos en establecer contacto con estas costas en el siglo quince, aunque el comercio de marfil ya existía previamente con el norte de África.",
-        text_en: "According to historical records, the Portuguese were the first Europeans to make contact with these shores in the fifteenth century, though ivory trade with North Africa had existed previously.",
+        text_es: "Según registros históricos, los portugueses fueron los primeros europeos en establecer contacto con estas costas en el siglo quince, atraídos por el comercio de colmillos de elefante y de oro.",
+        text_en: "According to historical records, the Portuguese were the first Europeans to make contact with these shores in the fifteenth century, drawn by trade in elephant tusks and gold.",
       },
       {
         difficulty: "hard",
@@ -3654,8 +3654,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Se encuentra en África Occidental, con una costa en el Océano Atlántico. Limita con Senegal y Guinea. Su capital es Bisáu. La bandera tiene una franja vertical roja con una estrella negra a la izquierda, y dos franjas horizontales de amarillo y verde a la derecha.",
-        text_en: "It is located in West Africa, with an Atlantic Ocean coastline. It borders Senegal and Guinea. Its capital is Bissau. The flag features a red vertical stripe with a black star on the left, and two horizontal stripes of yellow and green on the right.",
+        text_es: "Se encuentra en África Occidental, con una costa en el Océano Atlántico. Limita con Senegal y Guinea, e incluye el archipiélago de Bijagós. La bandera tiene una franja vertical roja con una estrella negra a la izquierda, y dos franjas horizontales de amarillo y verde a la derecha.",
+        text_en: "It is located in West Africa, with an Atlantic Ocean coastline. It borders Senegal and Guinea and includes the Bijagós archipelago. The flag features a red vertical stripe with a black star on the left, and two horizontal stripes of yellow and green on the right.",
       },
     ],
   },
@@ -3801,8 +3801,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "En mil novecientos veintidós, la Conferencia de El Cairo estableció las fronteras de esta nación, inicialmente conocida como el Emirato de Transjordania.",
-        text_en: "In nineteen twenty-two, the Cairo Conference established the borders of this nation, initially known as the Emirate of Transjordan.",
+        text_es: "En mil novecientos veintidós, la Conferencia de El Cairo estableció las fronteras de esta nación, creada como un emirato en la orilla oriental de un río bíblico.",
+        text_en: "In nineteen twenty-two, the Cairo Conference established the borders of this nation, created as an emirate on the eastern bank of a biblical river.",
       },
       {
         difficulty: "hard",
@@ -3897,8 +3897,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Su capital es Ciudad de Kuwait y limita con Irak y Arabia Saudita. Su bandera presenta tres franjas horizontales de verde, blanco y rojo, con un trapecio negro en el lado del asta.",
-        text_en: "Its capital is Kuwait City and it borders Iraq and Saudi Arabia. Its flag features three horizontal stripes of green, white, and red, with a black trapezoid on the hoist side.",
+        text_es: "Es un pequeño emirato del Golfo Pérsico, muy rico en petróleo, que limita con Irak y Arabia Saudita. Su bandera presenta tres franjas horizontales de verde, blanco y rojo, con un trapecio negro en el lado del asta.",
+        text_en: "It is a small, oil-rich emirate on the Persian Gulf that borders Iraq and Saudi Arabia. Its flag features three horizontal stripes of green, white, and red, with a black trapezoid on the hoist side.",
       },
     ],
   },
@@ -4125,8 +4125,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Fue el sitio de tres grandes imperios de África Occidental (Ghana, Malí y Songhai) que controlaron el comercio transahariano de oro, sal y esclavos durante más de setecientos años.",
-        text_en: "It was the site of three major West African empires (Ghana, Mali, and Songhai) that controlled the trans-Saharan trade in gold, salt, and slaves for over seven hundred years.",
+        text_es: "Fue el sitio de tres grandes imperios medievales de África Occidental que controlaron el comercio transahariano de oro, sal y esclavos durante más de setecientos años.",
+        text_en: "It was the site of three great medieval West African empires that controlled the trans-Saharan trade in gold, salt, and slaves for over seven hundred years.",
       },
       {
         difficulty: "hard",
@@ -4167,8 +4167,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Se encuentra en el Mediterráneo central, al sur de Sicilia, Italia. Es un archipiélago compuesto por tres islas principales: Malta, Gozo y Comino. Su capital es La Valeta.",
-        text_en: "It is located in the central Mediterranean, south of Sicily, Italy. It is an archipelago composed of three main islands: Malta, Gozo, and Comino. Its capital is Valletta.",
+        text_es: "Se encuentra en el Mediterráneo central, al sur de Sicilia, Italia. Es un archipiélago cuyas otras islas habitadas son Gozo y Comino. Su capital es La Valeta.",
+        text_en: "It is located in the central Mediterranean, south of Sicily, Italy. It is an archipelago whose other inhabited islands are Gozo and Comino. Its capital is Valletta.",
       },
     ],
   },
@@ -4194,8 +4194,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Se encuentra en el Océano Índico, a unos novecientos kilómetros al este de Madagascar. Sus islas principales son Mauricio y Rodrigues. Su capital y ciudad más grande es Port Louis.",
-        text_en: "It is located in the Indian Ocean, about nine hundred kilometers east of Madagascar. Its main islands are Mauritius and Rodrigues. Its capital and largest city is Port Louis.",
+        text_es: "Se encuentra en el Océano Índico, a unos novecientos kilómetros al este de Madagascar. Fue el único hogar del extinto dodo y su otra isla habitada es Rodrigues. Su capital y ciudad más grande es Port Louis.",
+        text_en: "It is located in the Indian Ocean, about nine hundred kilometers east of Madagascar. It was the only home of the extinct dodo and its other inhabited island is Rodrigues. Its capital and largest city is Port Louis.",
       },
     ],
   },
@@ -4297,8 +4297,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "medium",
-        text_es: "Es hogar del desierto de Namib, uno de los desiertos más antiguos y áridos del mundo, con dunas que alcanzan alturas impresionantes. Su escarpada Costa de los Esqueletos es famosa por sus densas nieblas y restos de naufragios.",
-        text_en: "It is home to the Namib Desert, one of the oldest and driest deserts in the world, with dunes reaching impressive heights. Its rugged Skeleton Coast is famous for its dense fogs and shipwrecks.",
+        text_es: "Es hogar de uno de los desiertos costeros más antiguos y áridos del mundo, con dunas que alcanzan alturas impresionantes. Su escarpada Costa de los Esqueletos es famosa por sus densas nieblas y restos de naufragios.",
+        text_en: "It is home to one of the oldest and driest coastal deserts in the world, with dunes reaching impressive heights. Its rugged Skeleton Coast is famous for its dense fogs and shipwrecks.",
       },
       {
         difficulty: "easy",
@@ -4314,8 +4314,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Con una población de alrededor de once mil habitantes, es la república independiente más pequeña del mundo por superficie y población. Su himno nacional es 'Nauru Bwiema', que significa 'Nauru, nuestra patria'.",
-        text_en: "With a population of around eleven thousand people, it is the world's smallest independent republic by both area and population. Its national anthem is 'Nauru Bwiema', which means 'Nauru, Our Homeland'.",
+        text_es: "Con una población de alrededor de once mil habitantes, es la república independiente más pequeña del mundo por superficie y población. Su economía dependió durante décadas de la exportación de fosfato acumulado por aves marinas.",
+        text_en: "With a population of around eleven thousand people, it is the world's smallest independent republic by both area and population. For decades its economy depended on exporting phosphate accumulated by seabirds.",
       },
       {
         difficulty: "hard",
@@ -4324,8 +4324,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "medium",
-        text_es: "Es uno de los tres estados soberanos del mundo sin una capital oficial, aunque Yaren es el distrito donde se encuentran la mayoría de las oficinas gubernamentales. La bandera presenta una franja horizontal amarilla y una estrella blanca de doce puntas sobre un fondo azul.",
-        text_en: "It is one of only three sovereign states in the world without an official capital city, although Yaren is the district where most government offices are located. The flag features a horizontal yellow stripe and a white twelve-pointed star against a blue background.",
+        text_es: "Es uno de los tres estados soberanos del mundo sin una capital oficial, ya que las oficinas gubernamentales se concentran en un único distrito costero. La bandera presenta una franja horizontal amarilla y una estrella blanca de doce puntas sobre un fondo azul.",
+        text_en: "It is one of only three sovereign states in the world without an official capital city, as government offices are concentrated in a single coastal district. The flag features a horizontal yellow stripe and a white twelve-pointed star against a blue background.",
       },
       {
         difficulty: "easy",
@@ -4341,8 +4341,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Es uno de los pocos países del mundo que ha utilizado en su papel moneda la imagen de un animal extinto hace milenios, el dinosaurio de Níger.",
-        text_en: "It is one of the few countries in the world that has featured an image of an animal extinct for millennia, the Niger dinosaur, on its banknotes.",
+        text_es: "Es uno de los pocos países del mundo que ha utilizado en su papel moneda la imagen de un dinosaurio hallado en sus desiertos, extinto hace millones de años.",
+        text_en: "It is one of the few countries in the world that has featured on its banknotes a dinosaur found in its deserts, extinct for millions of years.",
       },
       {
         difficulty: "hard",
@@ -4383,8 +4383,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Ubicado en el sureste de la península arábiga, limita con los Emiratos Árabes Unidos al noroeste, Arabia Saudita al oeste y Yemen al suroeste. Tiene costas en el Mar Arábigo y el Golfo de Omán. Su capital es Mascate. La bandera tiene una franja vertical roja en el lado del mástil con el emblema nacional en la parte superior, y tres franjas horizontales: blanca, roja y verde.",
-        text_en: "Located on the southeastern coast of the Arabian Peninsula, it borders the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen to the southwest. It has coastlines on the Arabian Sea and the Gulf of Oman. Its capital is Muscat. The flag features a red vertical stripe on the hoist side with the national emblem at the top, and three horizontal stripes: white, red, and green.",
+        text_es: "Ubicado en el sureste de la península arábiga, limita con los Emiratos Árabes Unidos al noroeste, Arabia Saudita al oeste y Yemen al suroeste. Tiene costas en el Mar Arábigo y cerca del estrecho de Ormuz. Su capital es Mascate. La bandera tiene una franja vertical roja en el lado del mástil con el emblema nacional en la parte superior, y tres franjas horizontales: blanca, roja y verde.",
+        text_en: "Located on the southeastern coast of the Arabian Peninsula, it borders the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen to the southwest. It has coastlines on the Arabian Sea and near the Strait of Hormuz. Its capital is Muscat. The flag features a red vertical stripe on the hoist side with the national emblem at the top, and three horizontal stripes: white, red, and green.",
       },
     ],
   },
@@ -4476,8 +4476,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Conocido históricamente como Oubangui-Chari, este territorio fue un dominio de la corona francesa hasta mil novecientos cincuenta y ocho.",
-        text_en: "Historically known as Oubangui-Chari, this territory was a French crown dominion until nineteen fifty-eight.",
+        text_es: "Este territorio interior, atravesado por dos grandes cuencas fluviales, fue un dominio de la corona francesa hasta mil novecientos cincuenta y ocho, cuando obtuvo la autonomía.",
+        text_en: "This inland territory, crossed by two great river basins, was a French crown dominion until nineteen fifty-eight, when it gained autonomy.",
       },
       {
         difficulty: "hard",
@@ -4557,8 +4557,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "En el siglo diecinueve, el Imperio de Ruanda, bajo el liderazgo del rey Kigeli Cuarto Rwabugiri, se expandió significativamente, anexando territorios y consolidando el poder político antes de la llegada de las potencias coloniales.",
-        text_en: "In the nineteenth century, the Rwandan Empire, under the leadership of King Kigeli the Fourth Rwabugiri, expanded significantly, annexing territories and consolidating political power before the arrival of colonial powers.",
+        text_es: "En el siglo diecinueve, su reino precolonial, bajo el liderazgo del rey Kigeli Cuarto Rwabugiri, se expandió significativamente, anexando territorios y consolidando el poder político antes de la llegada de las potencias coloniales.",
+        text_en: "In the nineteenth century, its precolonial kingdom, under the leadership of King Kigeli the Fourth Rwabugiri, expanded significantly, annexing territories and consolidating political power before the arrival of colonial powers.",
       },
       {
         difficulty: "hard",
@@ -4584,8 +4584,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Anteriormente conocida como Samoa Alemana y luego Samoa Occidental, fue el primer país polinesio en obtener la independencia en mil novecientos sesenta y dos, marcando un hito en la descolonización de la región.",
-        text_en: "Formerly known as German Samoa and then Western Samoa, it was the first Polynesian country to gain independence in nineteen sixty-two, marking a milestone in the region's decolonization.",
+        text_es: "Estuvo bajo administración alemana y después neozelandesa, y fue el primer país polinesio en obtener la independencia en mil novecientos sesenta y dos, marcando un hito en la descolonización de la región.",
+        text_en: "It was under German and later New Zealand administration, and was the first Polynesian country to gain independence in nineteen sixty-two, marking a milestone in the region's decolonization.",
       },
       {
         difficulty: "hard",
@@ -4594,8 +4594,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "medium",
-        text_es: "Famoso por sus playas de arena blanca, cascadas tropicales y los espectaculares pozos marinos de To Sua, este país es un destino popular para el ecoturismo y la exploración de arrecifes de coral. Su cultura está profundamente arraigada en el 'Fa'a Samoa', la forma de vida tradicional.",
-        text_en: "Famous for its white sandy beaches, tropical waterfalls, and the spectacular To Sua Ocean Trench, this country is a popular destination for ecotourism and coral reef exploration. Its culture is deeply rooted in 'Fa'a Samoa', the traditional way of life.",
+        text_es: "Famoso por sus playas de arena blanca, cascadas tropicales y los espectaculares pozos marinos de To Sua, este país es un destino popular para el ecoturismo y la exploración de arrecifes de coral. Su cultura sigue profundamente arraigada en un sistema tradicional de jefes y familias extensas.",
+        text_en: "Famous for its white sandy beaches, tropical waterfalls, and the spectacular To Sua Ocean Trench, this country is a popular destination for ecotourism and coral reef exploration. Its culture remains deeply rooted in a traditional system of chiefs and extended families.",
       },
       {
         difficulty: "easy",
@@ -4653,8 +4653,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Se encuentra en el sur de Europa, completamente rodeado por Italia. Su capital también se llama San Marino.",
-        text_en: "It is located in Southern Europe, completely surrounded by Italy. Its capital is also called San Marino.",
+        text_es: "Se encuentra en el sur de Europa, completamente rodeado por Italia. Presume de ser la república más antigua del mundo aún en funcionamiento y su capital, del mismo nombre que el país, se alza sobre el monte Titano.",
+        text_en: "It is located in Southern Europe, completely surrounded by Italy. It claims to be the world's oldest surviving republic, and its capital, which shares the country's name, sits atop Mount Titano.",
       },
     ],
   },
@@ -4773,8 +4773,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Posee uno de los puertos naturales más grandes del mundo, el Estuario de Freetown, que históricamente fue un punto clave para el comercio y el reasentamiento de esclavos liberados.",
-        text_en: "It possesses one of the world's largest natural harbors, the Freetown Estuary, which historically was a key point for trade and the resettlement of freed slaves.",
+        text_es: "Posee uno de los puertos naturales de aguas profundas más grandes del mundo, que históricamente fue un punto clave para el comercio y el reasentamiento de esclavos liberados.",
+        text_en: "It possesses one of the world's largest natural deep-water harbors, which historically was a key point for trade and the resettlement of freed slaves.",
       },
       {
         difficulty: "hard",
@@ -4869,8 +4869,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Se encuentra en el noreste de África, limitando con Egipto, el Mar Rojo, Eritrea, Etiopía, Sudán del Sur, la República Centroafricana, Chad y Libia. Su capital es Jartum, y su bandera es un tricolor de tres franjas horizontales (rojo, blanco, negro) con un triángulo verde en el lado del mástil.",
-        text_en: "It is located in Northeast Africa, bordering Egypt, the Red Sea, Eritrea, Ethiopia, South Sudan, the Central African Republic, Chad, and Libya. Its capital is Khartoum, and its flag is a tricolor of three horizontal stripes (red, white, black) with a green triangle on the hoist side.",
+        text_es: "Se encuentra en el noreste de África, limitando con Egipto, el Mar Rojo, Eritrea, Etiopía, la República Centroafricana, Chad y Libia, además del país que se separó de él en dos mil once. Su capital es Jartum, y su bandera es un tricolor de tres franjas horizontales (rojo, blanco, negro) con un triángulo verde en el lado del mástil.",
+        text_en: "It is located in Northeast Africa, bordering Egypt, the Red Sea, Eritrea, Ethiopia, the Central African Republic, Chad, and Libya, as well as the country that split from it in twenty eleven. Its capital is Khartoum, and its flag is a tricolor of three horizontal stripes (red, white, black) with a green triangle on the hoist side.",
       },
     ],
   },
@@ -5097,8 +5097,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "Su jurisdicción incluye una estación de ferrocarril, la Stazione Vaticana, que aunque raramente se usa para pasajeros, fue diseñada para facilitar el transporte de bienes y personalidades importantes directamente a su territorio.",
-        text_en: "Its jurisdiction includes a railway station, Stazione Vaticana, which, though rarely used for passengers, was designed to facilitate the transport of goods and important figures directly into its territory.",
+        text_es: "Su jurisdicción incluye una estación de ferrocarril propia que, aunque raramente se usa para pasajeros, fue diseñada para facilitar el transporte de bienes y personalidades importantes directamente a su territorio.",
+        text_en: "Its jurisdiction includes its own railway station, which, though rarely used for passengers, was designed to facilitate the transport of goods and important figures directly into its territory.",
       },
       {
         difficulty: "hard",
@@ -5112,8 +5112,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Este microestado se encuentra en el continente europeo, específicamente dentro de Roma, la capital de Italia, con la que comparte todas sus fronteras. Su capital es la Ciudad del Vaticano y su bandera es cuadrada, con dos bandas verticales de color amarillo y blanco, y las llaves de San Pedro y la tiara papal en la banda blanca.",
-        text_en: "This microstate is located on the European continent, specifically within Rome, the capital of Italy, with which it shares all its borders. Its capital is Vatican City, and its flag is square, with two vertical bands of yellow and white, and the Keys of Saint Peter and the papal tiara on the white band.",
+        text_es: "Este microestado se encuentra en el continente europeo, específicamente dentro de Roma, la capital de Italia, con la que comparte todas sus fronteras. Es la sede de la Iglesia católica y su bandera es cuadrada, con dos bandas verticales de color amarillo y blanco, y las llaves de San Pedro y la tiara papal en la banda blanca.",
+        text_en: "This microstate is located on the European continent, specifically within Rome, the capital of Italy, with which it shares all its borders. It is the seat of the Catholic Church, and its flag is square, with two vertical bands of yellow and white, and the Keys of Saint Peter and the papal tiara on the white band.",
       },
     ],
   },
@@ -5178,8 +5178,8 @@ export const countries: Country[] = [
     hints: [
       {
         difficulty: "expert",
-        text_es: "El lago Togo, una laguna en la costa, tiene un papel importante en la economía local, ya que la pesca es una actividad principal y es la principal fuente de agua dulce para las comunidades circundantes.",
-        text_en: "Lake Togo, a coastal lagoon, plays a significant role in the local economy, as fishing is a primary activity and it is the main source of fresh water for surrounding communities.",
+        text_es: "Una laguna costera del sur del país tiene un papel importante en la economía local, ya que la pesca es una actividad principal y es la principal fuente de agua dulce para las comunidades circundantes.",
+        text_en: "A coastal lagoon in the south of the country plays a significant role in the local economy, as fishing is a primary activity and it is the main source of fresh water for surrounding communities.",
       },
       {
         difficulty: "hard",
@@ -5355,8 +5355,8 @@ export const countries: Country[] = [
       },
       {
         difficulty: "easy",
-        text_es: "Un país sin salida al mar en el sur de África, haciendo frontera con Sudáfrica, Botsuana, Mozambique y Zambia. Su capital es Harare y su bandera tiene siete franjas horizontales de verde, amarillo, rojo y negro, con un triángulo blanco con una estrella roja y un pájaro de Zimbabue en el mástil.",
-        text_en: "A landlocked country in Southern Africa, bordering South Africa, Botswana, Mozambique, and Zambia. Its capital is Harare, and its flag features seven horizontal stripes of green, yellow, red, and black, with a white triangle containing a red star and a Zimbabwe bird at the hoist.",
+        text_es: "Un país sin salida al mar en el sur de África, haciendo frontera con Sudáfrica, Botsuana, Mozambique y Zambia. Su capital es Harare y su bandera tiene siete franjas horizontales de verde, amarillo, rojo y negro, con un triángulo blanco con una estrella roja y un pájaro de piedra tallado en el mástil.",
+        text_en: "A landlocked country in Southern Africa, bordering South Africa, Botswana, Mozambique, and Zambia. Its capital is Harare, and its flag features seven horizontal stripes of green, yellow, red, and black, with a white triangle containing a red star and a carved stone bird at the hoist.",
       },
     ],
   },
